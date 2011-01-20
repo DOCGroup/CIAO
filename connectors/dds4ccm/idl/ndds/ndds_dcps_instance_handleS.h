@@ -34,14 +34,14 @@
 
 #include /**/ "ace/pre.h"
 
-#include "dds_rtf2_dcps_i_handleC.h"
+#include "ndds_dcps_i_handleC.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
 
-#include /**/ "dds4ccm_skel_export.h"
+#include /**/ "ndds_skel_export.h"
 
 #include /**/ "ace/post.h"
 #endif /* ifndef */

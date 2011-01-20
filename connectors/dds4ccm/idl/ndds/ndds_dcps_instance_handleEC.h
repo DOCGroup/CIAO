@@ -42,7 +42,7 @@
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
 
-#include /**/ "dds4ccm_lem_stub_export.h"
+#include /**/ "ndds_lem_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
 #include "tao/ORB.h"
 #include "tao/SystemException.h"
@@ -56,7 +56,7 @@
 #include /**/ "tao/Versioned_Namespace.h"
 
 #include "ccm/CCM_ContainerC.h"
-#include "dds_rtf2_dcps_instance_handleC.h"
+#include "ndds_dcps_instance_handleC.h"
 
 
 #include /**/ "ace/post.h"
