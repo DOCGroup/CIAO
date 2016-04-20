@@ -9,8 +9,8 @@ env:
     - CCMLW=1
     - CCMNOEVENT=1
   global:
-    - ACE_ROOT=$TRAVIS_BUILD_DIR/ext/ATCD/ACE
-    - TAO_ROOT=$TRAVIS_BUILD_DIR/ext/ATCD/TAO
+    - ACE_ROOT=$TRAVIS_BUILD_DIR/ext/ACE_TAO/ACE
+    - TAO_ROOT=$TRAVIS_BUILD_DIR/ext/ACE_TAO/TAO
     - CIAO_ROOT=$TRAVIS_BUILD_DIR
     - DANCE_ROOT=$TRAVIS_BUILD_DIR/ext/DAnCE
     - MPC_ROOT=$TRAVIS_BUILD_DIR/ext/MPC
@@ -24,7 +24,7 @@ before_install:
   - mkdir ext
   - cd ext && git clone --depth 1 git://github.com/DOCGroup/MPC.git
   - git clone --depth 1 git://github.com/DOCGroup/DAnCE.git
-  - git clone --depth 1 git://github.com/DOCGroup/ATCD.git
+  - git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git
   - cd ..
 branches:
   only:
