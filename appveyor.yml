@@ -13,13 +13,13 @@ install:
   - git clone --depth 1 git://github.com/DOCGroup/DAnCE.git
   - cd ..
   - set MPC_ROOT=%CD%\ext\MPC
-  - set ACE_ROOT=%CD%\ATCD\ACE
-  - set TAO_ROOT=%CD%\ATCD\TAO
+  - set ACE_ROOT=%CD%\ext\ATCD\ACE
+  - set TAO_ROOT=%CD%\ext\ATCD\TAO
   - set CIAO_ROOT=%CD%\CIAO
-  - set DANCE_ROOT=%CD%\DAnCE
+  - set DANCE_ROOT=%CD%\ext\DAnCE
   - set PATH=%ACE_ROOT%\lib:%PATH%
   - ps: $CONTENT='#include "ace/config-win32.h"'
-  - ps: $CONTENT > ACE\ace\config.h
+  - ps: $CONTENT > ext\ATCD\ACE\ace\config.h
   - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
   - call perl %CD%\ACE\bin\mwc.pl -type vc14 %CD%\CIAO_TAO_DAnCE.mwc
 
