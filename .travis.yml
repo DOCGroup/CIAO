@@ -9,8 +9,8 @@ env:
     - CCMLW=1
     - CCMNOEVENT=1
   global:
-    - ACE_ROOT=$TRAVIS_BUILD_DIR/ACE
-    - TAO_ROOT=$TRAVIS_BUILD_DIR/TAO
+    - ACE_ROOT=$TRAVIS_BUILD_DIR/ATCD/ACE
+    - TAO_ROOT=$TRAVIS_BUILD_DIR/ATCD/TAO
     - CIAO_ROOT=$TRAVIS_BUILD_DIR/CIAO
     - DANCE_ROOT=$TRAVIS_BUILD_DIR/DAnCE
     - MPC_ROOT=$TRAVIS_BUILD_DIR/MPC
@@ -23,6 +23,7 @@ addons:
 before_install:
   - git clone --depth 1 git://github.com/DOCGroup/MPC.git
   - git clone --depth 1 git://github.com/DOCGroup/DAnCE.git
+  - git clone --depth 1 git://github.com/DOCGroup/ATCD.git
 branches:
   only:
     - master
