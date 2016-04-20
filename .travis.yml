@@ -9,11 +9,11 @@ env:
     - CCMLW=1
     - CCMNOEVENT=1
   global:
-    - ACE_ROOT=$TRAVIS_BUILD_DIR/ATCD/ACE
-    - TAO_ROOT=$TRAVIS_BUILD_DIR/ATCD/TAO
+    - ACE_ROOT=$TRAVIS_BUILD_DIR/ext/ATCD/ACE
+    - TAO_ROOT=$TRAVIS_BUILD_DIR/ext/ATCD/TAO
     - CIAO_ROOT=$TRAVIS_BUILD_DIR/CIAO
-    - DANCE_ROOT=$TRAVIS_BUILD_DIR/DAnCE
-    - MPC_ROOT=$TRAVIS_BUILD_DIR/MPC
+    - DANCE_ROOT=$TRAVIS_BUILD_DIR/ext/DAnCE
+    - MPC_ROOT=$TRAVIS_BUILD_DIR/ext/MPC
     - LD_LIBRARY_PATH=$ACE_ROOT/lib:$LD_LIBRARY_PATH
 addons:
   apt:
@@ -21,9 +21,11 @@ addons:
     - libssl-dev
     - libxerces-c-dev
 before_install:
-  - git clone --depth 1 git://github.com/DOCGroup/MPC.git
+  - mkdir ext
+  - cd ext && git clone --depth 1 git://github.com/DOCGroup/MPC.git
   - git clone --depth 1 git://github.com/DOCGroup/DAnCE.git
   - git clone --depth 1 git://github.com/DOCGroup/ATCD.git
+  - cd ..
 branches:
   only:
     - master
