@@ -15,7 +15,7 @@ install:
   - set MPC_ROOT=%CD%\ext\MPC
   - set ACE_ROOT=%CD%\ext\ATCD\ACE
   - set TAO_ROOT=%CD%\ext\ATCD\TAO
-  - set CIAO_ROOT=%CD%\CIAO
+  - set CIAO_ROOT=%CD%
   - set DANCE_ROOT=%CD%\ext\DAnCE
   - set PATH=%ACE_ROOT%\lib:%PATH%
   - ps: $CONTENT='#include "ace/config-win32.h"'
