@@ -284,8 +284,6 @@ namespace CIAO
     }
   }
 }
+         
+ACE_SINGLETON_TEMPLATE_INSTANTIATE(ACE_Singleton, CIAO::DDS4CCM::DomainParticipantManager, TAO_SYNCH_MUTEX)
 
-#if defined (ACE_HAS_EXPLICIT_STATIC_TEMPLATE_MEMBER_INSTANTIATION)
-template ACE_Singleton<CIAO::DDS4CCM::DomainParticipantManager, TAO_SYNCH_MUTEX> *
-         ACE_Singleton<CIAO::DDS4CCM::DomainParticipantManager, TAO_SYNCH_MUTEX>::singleton_;
-#endif /* ACE_HAS_EXPLICIT_STATIC_TEMPLATE_MEMBER_INSTANTIATION */
