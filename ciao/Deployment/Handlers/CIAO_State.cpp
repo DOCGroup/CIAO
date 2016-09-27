@@ -265,3 +265,5 @@ namespace CIAO
     return 0;
   }
 }
+
+ACE_SINGLETON_TEMPLATE_INSTANTIATE(ACE_Singleton, CIAO::Deployment_State, TAO_SYNCH_MUTEX)

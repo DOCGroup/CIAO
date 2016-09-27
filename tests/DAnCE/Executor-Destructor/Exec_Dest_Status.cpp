@@ -49,3 +49,5 @@ namespace dance_test
     return this->instances_[id].destructor_;
   }
 }
+
+ACE_SINGLETON_TEMPLATE_INSTANTIATE(ACE_Singleton, dance_test::Exec_Dest_Status, ACE_Null_Mutex)
