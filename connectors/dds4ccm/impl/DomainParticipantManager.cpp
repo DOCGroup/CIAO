@@ -284,6 +284,6 @@ namespace CIAO
     }
   }
 }
-         
+
 ACE_SINGLETON_TEMPLATE_INSTANTIATE(ACE_Singleton, CIAO::DDS4CCM::DomainParticipantManager, TAO_SYNCH_MUTEX)
 
