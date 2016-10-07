@@ -10,7 +10,6 @@
 #include "dds4ccm/idl/dds_rtf2_dcpsC.h"
 #include "dds4ccm/impl/dds4ccm_conf.h"
 
-
 inline void
 operator<<= (::CCM_DDS::ReadInfo& ccm_dds_readinfo, const ::DDS::SampleInfo& sample_info)
 {

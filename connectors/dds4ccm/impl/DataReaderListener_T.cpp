@@ -1,5 +1,6 @@
 #include "dds4ccm/impl/Utils.h"
 #include "dds4ccm/impl/logger/Log_Macros.h"
+#include "dds4ccm/impl/SampleInfo.h"
 #include "ace/Reactor.h"
 
 namespace CIAO
