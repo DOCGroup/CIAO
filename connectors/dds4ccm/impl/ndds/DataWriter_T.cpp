@@ -13,6 +13,7 @@
 #include "dds4ccm/impl/ndds/convertors/InstanceHandleSeq.h"
 #include "dds4ccm/impl/ndds/convertors/DataWriterQos.h"
 #include "dds4ccm/impl/ndds/convertors/SubscriptionBuiltinTopicData.h"
+#include "dds4ccm/impl/ndds/convertors/Time_t.h"
 
 #include "dds4ccm/impl/logger/Log_Macros.h"
 
