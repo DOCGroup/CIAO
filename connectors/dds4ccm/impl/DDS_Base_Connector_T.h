@@ -14,6 +14,7 @@
 #elif (CIAO_DDS4CCM_OPENDDS==1)
 # include "dds/DCPS/Service_Participant.h"
 # include "dds/DCPS/QOS_XML_Handler/QOS_XML_Loader.h"
+# include "dds/DCPS/transport/framework/TransportImpl_rch.h"
 #endif
 
 template <typename CCM_TYPE>
