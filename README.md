@@ -21,6 +21,11 @@ AppVeyor status
 
 master: [![Build Status](https://ci.appveyor.com/api/projects/status/9da6pofewpvwq845/branch/master?svg=true)](https://ci.appveyor.com/project/jwillemsen/ciao)
 
+Coverity Scan status
+====================
+
+master: [![Coverity Scan Build Status](https://scan.coverity.com/projects/1/badge.svg)](https://scan.coverity.com/projects/1)
+
 <!---
 GitHub does not support styles on HTML: https://github.com/github/markup/issues/57 so just
 use icons from...
