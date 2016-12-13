@@ -48,3 +48,374 @@ Date:   Mon Dec 5 09:04:22 2016 +0100
     Updated for next release
 
         * NEWS:
+
+commit 32cb2192cfc26323b1e08efb28dbd8b7fb539b43
+Merge: e6ef673731b 44d82a544f3
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Tue Nov 29 20:24:00 2016 +0100
+
+    Merge pull request #15 from mitza-oci/master
+
+    Added #include for dds4ccm OpenDDS.
+
+commit 44d82a544f30fbf95c71f3f923baed27e04a4329
+Author: Adam Mitz <mitza@ociweb.com>
+Date:   Tue Nov 29 13:16:00 2016 -0600
+
+    Added #include for dds4ccm OpenDDS.
+
+commit e6ef673731b183802863e135224847ca5f0930c6
+Merge: 75b789a6fdc aaf973f5ef4
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Thu Oct 13 20:24:11 2016 +0200
+
+    Merge pull request #14 from jwillemsen/master
+
+    Improved support for RTI DDS 5.2.3
+
+commit aaf973f5ef4ed130c998cfa3bb427932e8373314
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Oct 13 20:05:26 2016 +0200
+
+    Fixed base projects to resolve runtime crash due to unresolved externals on RHEL 6.5 and 7.0
+        * connectors/dds4ccm/performance-tests/DDSLatency/DDS_Receiver/DDS_Receiver.mpc:
+        * connectors/dds4ccm/performance-tests/DDSLatency/DDS_Sender/DDS_Sender.mpc:
+        * connectors/dds4ccm/performance-tests/DDSThroughput/DDS_Receiver/DDS_Receiver.mpc:
+        * connectors/dds4ccm/performance-tests/DDSThroughput/DDS_Sender/DDS_Sender.mpc:
+
+commit 7c3660131d061d6d0dff1a05c9c93a783e2ee5b2
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Oct 13 19:52:35 2016 +0200
+
+    Add missing include
+        * connectors/dds4ccm/impl/ndds/DataWriter_T.cpp:
+
+commit 75b789a6fdcb106808a8b7e58357cba2a3c6e6ba
+Merge: 5cd8a206ae0 0c68148640c
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Tue Oct 11 12:50:59 2016 +0200
+
+    Merge pull request #13 from jwillemsen/master
+
+    Don't refer to path within TAO
+
+commit 0c68148640c285946183742b5d9836c5363e7f15
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 11 12:50:36 2016 +0200
+
+    Don't refer to path within TAO
+        * VERSION:
+
+commit 5cd8a206ae0dcaa427bf71914d22168478664095
+Merge: 8d428ad6774 9a2f8a4eb10
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Tue Oct 11 12:45:20 2016 +0200
+
+    Merge pull request #12 from jwillemsen/master
+
+    New CIAO release script
+
+commit 9a2f8a4eb10236d5f6afb116a88debc09175b29a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 11 12:44:47 2016 +0200
+
+    New CIAO release script
+
+commit 8d428ad6774b7f5dc25538caa037c2194cf32b46
+Merge: 64fc349d55b 14dd23cc94a
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Fri Oct 7 22:35:17 2016 +0200
+
+    Merge pull request #11 from jwillemsen/master
+
+    Add missing include to fix compile problem as reported in issue #10
+
+commit 14dd23cc94a4470f0212f08f14cff8ece2c0b66c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Oct 7 21:15:21 2016 +0200
+
+    Zap empty line
+        * connectors/dds4ccm/impl/SampleInfo.h:
+
+commit f96c66c928f91d9ba2452329d6138319f96ca547
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Oct 7 21:15:10 2016 +0200
+
+    Add missing include to fix compile problems
+        * connectors/dds4ccm/impl/DataReaderListener_T.cpp:
+
+commit 64fc349d55b08a766c36bf06d0474455b2a0065e
+Merge: 0df812904c5 fe653ea9233
+Author: Adam Mitz <mitza@ociweb.com>
+Date:   Tue Sep 27 11:58:46 2016 -0500
+
+    Merge pull request #9 from huangminghuang/singleton_fix
+
+    Fix singleton usages with explicit template instantiation
+
+commit fe653ea9233f5d61868dc170a8fbe52dd9704911
+Author: Huang-Ming Huang <huangh@ociweb.com>
+Date:   Tue Sep 27 09:35:32 2016 -0500
+
+    Remove trailing spaces
+
+commit a5991a6e4285b99ec70d794e50d2fe0bdf7fffca
+Author: Huang-Ming Huang <huangh@ociweb.com>
+Date:   Mon Sep 26 10:51:54 2016 -0500
+
+    Fix singleton usages with explicit template instantiation
+
+commit 0df812904c5edc3434ffabd0e9042d9d404108b6
+Merge: ceedacfd8e9 6a51dbd5042
+Author: Adam Mitz <mitza@ociweb.com>
+Date:   Tue Jun 21 12:11:39 2016 -0500
+
+    Merge pull request #8 from mitza-oci/master
+
+    Adjusted to work with changes to ACE includes of Auto_Ptr.h
+
+commit 6a51dbd50426417c4eddd13949247ba57823f2bd
+Author: Adam Mitz <mitza@ociweb.com>
+Date:   Mon Jun 20 15:24:24 2016 -0500
+
+    Adjusted to work with changes to ACE includes of Auto_Ptr.h
+
+commit ceedacfd8e9a8b6c539439f09c10a683901f0df9
+Merge: 79e51729a21 9ab32a3e2b0
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Apr 21 08:52:00 2016 +0200
+
+    Merge pull request #7 from jwillemsen/master
+
+    Add gitignore
+
+commit 9ab32a3e2b0af3b41886bc1f8da92020bd933a12
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Apr 21 08:51:30 2016 +0200
+
+    Add gitignore
+
+commit 79e51729a21dc3b3684b903ff377cb18fd248041
+Merge: 4fdb174ba0f a3e377e312c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Apr 21 08:19:47 2016 +0200
+
+    Merge pull request #6 from jwillemsen/master
+
+    Change git checkout to not have false positives with fuzz
+
+commit a3e377e312c3adb1eb5afa2932f87a15593aa2ea
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Apr 21 08:19:16 2016 +0200
+
+    Change git checkout to not have false positives with fuzz
+        * .travis.yml:
+
+commit 4fdb174ba0fdc6eb9e2f4e418316da72341ec629
+Merge: 220c5e7d4fe 929254f9f82
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 19:26:16 2016 +0200
+
+    Merge pull request #5 from jwillemsen/master
+
+    Update of ATCD to ACE_TAO
+
+commit 929254f9f8296b30c09a54c1f0ad1b238710e858
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 17:23:45 2016 +0200
+
+    Update of ATCD to ACE_TAO
+        * .travis.yml:
+        * appveyor.yml:
+
+commit 68c7c22dcffd28ba77d4f0bb54890b838d919046
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 17:22:32 2016 +0200
+
+    Change of ATCD to ACE_TAO
+        * README.md:
+
+commit 220c5e7d4feb7a631cbdba338914527bd98e2d88
+Merge: 055b1f409b1 eb21d2e96ee
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 15:39:00 2016 +0200
+
+    Merge pull request #4 from jwillemsen/master
+
+    Zap coverity
+
+commit eb21d2e96eee6eebc765a7c062e53d1f41c8f4b0
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 15:38:15 2016 +0200
+
+    Zap coverity
+        * README.md:
+
+commit 055b1f409b12bda3ba62230bcd5bde35db6c0ee8
+Merge: e4c0ea0474e 4f48886442a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 15:36:52 2016 +0200
+
+    Merge pull request #3 from jwillemsen/master
+
+    Add appveyor badge
+
+commit 4f48886442a6c0852c1476e8749cc031708cae50
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 15:36:14 2016 +0200
+
+    Add appveyor badge
+        * README.md:
+
+commit e4c0ea0474e0029cf31c837a84fa212d747c771f
+Merge: ad5dbf49d27 d0fe2c8a7c5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 15:22:08 2016 +0200
+
+    Merge pull request #2 from jwillemsen/master
+
+    Own readme
+
+commit d0fe2c8a7c5ddc9afae33e587528aa2c35500d98
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 15:21:08 2016 +0200
+
+    Own readme
+
+commit ad5dbf49d27c52c897adfe24b533a1dc579aeea5
+Merge: bd87b6c8056 5c18b93864c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 15:16:56 2016 +0200
+
+    Merge pull request #1 from jwillemsen/master
+
+    Enable travis/appveyor for CIAO
+
+commit 5c18b93864c013b932255567f5ce135e56f36d2b
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 14:13:26 2016 +0200
+
+    Path fix
+        * appveyor.yml:
+
+commit d85de51ab24fee87ff5f9c84919b5a6f5b63a342
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 14:08:26 2016 +0200
+
+    Path fixes
+        * appveyor.yml:
+
+commit ab008f2d78fdca30e4b7e0f65827fa22312f7792
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 14:02:44 2016 +0200
+
+    Correct paths
+        * appveyor.yml:
+
+commit 099f9cc341b7cfccff7fe474691bb453daf06355
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 12:25:31 2016 +0200
+
+    Correct location CIAO_ROOT
+
+commit 5bdc5f05514a5603356bc7e60373417d2851bb9d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 12:23:14 2016 +0200
+
+    Correct git clone
+
+commit c02a58eaa88959223103d11ed33fed0ac329b483
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 12:15:43 2016 +0200
+
+    Tweak build configuration
+
+commit 0243f6c0ff12f08e6e491bdb6ea4f6c729ed48bf
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Apr 20 12:13:58 2016 +0200
+
+    Add travis config
+
+commit bd87b6c8056fce1f982bfcaadefaf853a9ee6bf0
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sun Jan 31 18:33:28 2016 +0100
+
+    Updated copyright year
+        * ACE/COPYING:
+        * CIAO/COPYING:
+        * DAnCE/COPYING:
+        * TAO/COPYING:
+
+commit 1f18d38696736d81ac27b493d405f8890936b42e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 21 15:57:20 2016 +0100
+
+    Use determine instead of determin
+        * CIAO/tests/DAnCE/EM-Launch-Failures/run_test.pl:
+        * CIAO/tests/DAnCE/EM-Shutdown-Failures/run_test.pl:
+        * CIAO/tests/DAnCE/StoreReferences/run_test.pl:
+
+commit 6c40726892904292b3133016578f6322169eea34
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 13 09:31:11 2016 +0100
+
+    Documentation changes and don't use CORBA::is_nil for a string
+        * CIAO/connectors/dds4ccm/impl/DDS_TopicBase_Connector_T.cpp:
+
+commit 3fde0e37c66e0f929561706c2830d024dde9422b
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Oct 12 20:04:31 2015 +0200
+
+    Fixed typo
+        * CIAO/connectors/dds4ccm/examples/Hello/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/examples/IDL2CPPWrapper/Shapes/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/examples/ShapesContr/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/performance-tests/DDSLatency/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/performance-tests/DDSThroughput/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/performance-tests/Keyed/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/performance-tests/Latency/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/performance-tests/Throughput/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/CSLDeadline/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/CSLQoS/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/CSLSampleRejected/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/CSLUnexpStat/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/CoherentUpdater/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/CoherentWriter/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/ContentFilteredTopic/ReadGet/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/Getter/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/HomeTest/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/KeyedWriter/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/ListenManyByMany/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/PSLDeadline/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/PSLSampleLost/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/Proxies/ReadWrite/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/QueryCondition/DDS/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/QueryCondition/DDS_OneByOne/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/QueryCondition/Different/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/QueryCondition/ReadGet/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/QueryCondition/TwoQueries/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/QueryCondition/TwoQueriesMany/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/Reader/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/SLManyByMany/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/SLOneByOne/descriptors/USER_QOS_PROFILES.xml:
+        * CIAO/connectors/dds4ccm/tests/UnkeyedWriter/descriptors/USER_QOS_PROFILES.xml:
+
+commit 54de442c157a5016959c0b5816d2f3e7b61d7718
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 17 09:11:26 2015 +0200
+
+    Make x.3.3 public available and prepare for the next release
+        * ACE/NEWS:
+        * ACE/bin/diff-builds-and-group-fixed-tests-only.sh:
+        * ACE/docs/Download.html:
+        * ACE/docs/bczar/bczar.html:
+        * ACE/etc/index.html:
+        * CIAO/NEWS:
+        * DAnCE/NEWS:
+        * TAO/NEWS:
+
+commit 9db26ded7d856f2866dce8c5064796c111ce1cf3
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 17 08:51:32 2015 +0200
+
+    ACE+TAO+CIAO-6_3_3
