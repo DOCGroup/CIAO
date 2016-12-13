@@ -2,7 +2,7 @@
 
 #----------------------------------------------------------------------------
 #
-#       
+#
 #
 #       Common Makefile rules for all of CIAO
 #
@@ -47,11 +47,11 @@ endif
 ifeq (cmd,$(findstring cmd,$(SHELL)))
 CIAO_MAJOR_VERSION := $(shell awk "/CIAO_MAJOR_VERSION/ { print $$3}" ${CIAO_ROOT}/ciao/Version.h)
 CIAO_MINOR_VERSION := $(shell awk "/CIAO_MINOR_VERSION/ { print $$3}" ${CIAO_ROOT}/ciao/Version.h)
-CIAO_BETA_VERSION := $(shell awk "/CIAO_BETA_VERSION/ { print $$3}" ${CIAO_ROOT}/ciao/Version.h)
+CIAO_MICRO_VERSION := $(shell awk "/CIAO_MICRO_VERSION/ { print $$3}" ${CIAO_ROOT}/ciao/Version.h)
 else
 CIAO_MAJOR_VERSION := $(shell awk '/CIAO_MAJOR_VERSION/ { print $$3}' ${CIAO_ROOT}/ciao/Version.h)
 CIAO_MINOR_VERSION := $(shell awk '/CIAO_MINOR_VERSION/ { print $$3}' ${CIAO_ROOT}/ciao/Version.h)
-CIAO_BETA_VERSION := $(shell awk '/CIAO_BETA_VERSION/ { print $$3}' ${CIAO_ROOT}/ciao/Version.h)
+CIAO_MICRO_VERSION := $(shell awk '/CIAO_MICRO_VERSION/ { print $$3}' ${CIAO_ROOT}/ciao/Version.h)
 endif
 
-GNUACE_PROJECT_VERSION ?= $(CIAO_MAJOR_VERSION).$(CIAO_MINOR_VERSION).$(CIAO_BETA_VERSION)
+GNUACE_PROJECT_VERSION ?= $(CIAO_MAJOR_VERSION).$(CIAO_MINOR_VERSION).$(CIAO_MICRO_VERSION)
