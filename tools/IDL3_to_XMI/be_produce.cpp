@@ -114,7 +114,7 @@ BE_produce (void)
       if (visitor.visit_root (ast_root) == -1)
         {
           ACE_ERROR ((LM_ERROR,
-                      ACE_TEXT ("error: an error occured in the ir_simulator visitor.")));
+                      ACE_TEXT ("error: an error occurred in the ir_simulator visitor.")));
           xercesc::XMLPlatformUtils::Terminate ();
           BE_cleanup ();
           return;
