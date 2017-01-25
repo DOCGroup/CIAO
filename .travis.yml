@@ -1,7 +1,9 @@
 sudo: false
 language: cpp
+
 compiler:
   - gcc
+
 env:
   matrix:
     - FUZZ=1
@@ -15,20 +17,42 @@ env:
     - DANCE_ROOT=$TRAVIS_BUILD_DIR/ext/DAnCE
     - MPC_ROOT=$TRAVIS_BUILD_DIR/ext/MPC
     - LD_LIBRARY_PATH=$ACE_ROOT/lib:$LD_LIBRARY_PATH
+    - COMPILER=g++-6
+
+matrix:
+  include:
+    - compiler: clang
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-precise-3.9
+          packages:
+            - libxerces-c-dev
+            - libssl-dev
+            - clang++-3.9
+      env: COMPILER=clang++-3.9 CCMLW=0 CCMNOEVENT=0
+
 addons:
   apt:
+    sources:
+      - ubuntu-toolchain-r-test
     packages:
-    - libssl-dev
-    - libxerces-c-dev
+      - libssl-dev
+      - libxerces-c-dev
+      - g++-6
+
 before_install:
   - mkdir ext
   - cd ext && git clone --depth 1 git://github.com/DOCGroup/MPC.git
   - git clone --depth 1 git://github.com/DOCGroup/DAnCE.git
   - git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git ATCD
   - cd ..
+
 branches:
   only:
     - master
+
 before_script:
   - export
   - echo -e "#include \"ace/config-linux.h\"" >> $ACE_ROOT/ace/config.h
@@ -40,12 +64,14 @@ before_script:
   - echo -e "xerces3=1\nssl=1\nipv6=1\n" >> $ACE_ROOT/include/makeinclude/platform_macros.GNU
   - echo -e "xerces3=1\nssl=1\n" >> $ACE_ROOT/bin/MakeProjectCreator/config/default.features
   - echo -e "TAO/tests/Hello/run_test.pl" >> $TAO_ROOT/bin/travis-ci.lst
+  - if [ "$CXX" == "g++" ]; then echo -e "c++11=1\n" >> $ACE_ROOT/include/makeinclude/platform_macros.GNU; fi
   - if [ "$CXX" == "g++" ]; then echo -e "include \$(ACE_ROOT)/include/makeinclude/platform_linux.GNU" >> $ACE_ROOT/include/makeinclude/platform_macros.GNU; fi
   - if [ "$CXX" == "clang++" ]; then echo -e "include \$(ACE_ROOT)/include/makeinclude/platform_linux_clang.GNU" >> $ACE_ROOT/include/makeinclude/platform_macros.GNU; fi
   - cat $TRAVIS_BUILD_DIR/travis.mwc
   - cat $ACE_ROOT/bin/MakeProjectCreator/config/default.features
   - cat $ACE_ROOT/ace/config.h
   - cat $ACE_ROOT/include/makeinclude/platform_macros.GNU
+  - if [[ "${COMPILER}" != "" ]]; then export CXX=${COMPILER}; fi
 
 script:
   - if [ "$FUZZ" == "1" ]; then exec perl $ACE_ROOT/bin/fuzz.pl; fi
