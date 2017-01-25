@@ -62,6 +62,9 @@ branches:
   only:
     - master
 
+install:
+  - if [[ "${COMPILER}" != "" ]]; then export CXX=${COMPILER}; fi
+
 before_script:
   - export
   - echo -e "#include \"ace/config-linux.h\"" >> $ACE_ROOT/ace/config.h
