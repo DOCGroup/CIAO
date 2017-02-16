@@ -270,16 +270,16 @@ Some of the biggest features of git are speed and efficiency of branching, and a
 
 Most topic branches will only affect the a single release branch, so a topic branch should be created based off master. It may be that fixes apply to multiple branches. In this case, the following workflow should apply:
 
-* Create topic branch off maintenance branch e.g. 6.3.1. For example:
-```git checkout -b <topic>_ACE+TAO+CIAO-6_3_1 ACE+TAO+CIAO-6_3_1```
+* Create topic branch off maintenance branch e.g. 1.3.4. For example:
+```git checkout -b <topic>_CIAO-1_3_4 CIAO-1_3_4```
 * Create topic branch off master. For example:
 ```git checkout -b <topic>_master master```
 * Do your work on `<topic>_master`, test and commit your fixes
-* Switch to `<topic>_ACE+TAO+CIAO-6_3_1`. For example:
-```git checkout <topic>_ACE+TAO+CIAO-6_3_1```
-* Cherry-pick your commit on `<topic>_master` onto `<topic>_ACE+TAO+CIAO-6_3_1`. For example:
+* Switch to `<topic>_CIAO-1_3_4`. For example:
+```git checkout <topic>_CIAO-1_3_4```
+* Cherry-pick your commit on `<topic>_master` onto `<topic>_CIAO-1_3_4`. For example:
 ```git cherry-pick <commit_id>```
-* Test `<topic>_ACE+TAO+CIAO-6_3_1` for correctness, modify as necessary
+* Test `<topic>_CIAO-1_3_4` for correctness, modify as necessary
 * Issue pull requests for both topic branches
 
 ### Comments
@@ -323,8 +323,8 @@ will often do the trick. You could then pull the specific branches you would nee
 ```
 $ git checkout master
 $ git pull origin master
-$ git checkout ACE+TAO+CIAO-6_3_1
-$ git pull origin ACE+TAO+CIAO-6_3_1
+$ git checkout CIAO-1_3_4
+$ git pull origin CIAO-1_3_4
 ```
 
 
@@ -339,8 +339,8 @@ $ git rebase master
 and/or
 
 ```
-$ git checkout topic_ACE+TAO+CIAO-6_3_1
-$ git rebase ACE+TAO+CIAO-6_3_1
+$ git checkout topic_CIAO-1_3_4
+$ git rebase CIAO-1_3_4
 ```
 
 ### If you have forked upstream
@@ -359,9 +359,9 @@ $ git fetch upstream --tags
 $ git checkout master
 $ git pull upstream master
 $ git push origin master
-$ git checkout ACE+TAO+CIAO-6_3_1
-$ git pull upstream ACE+TAO+CIAO-6_3_1
-$ git push origin ACE+TAO+CIAO-6_3_1
+$ git checkout CIAO-1_3_4
+$ git pull upstream CIAO-1_3_4
+$ git push origin CIAO-1_3_4
 ```
 
 A script can do this for you - have a look at [sync_with_upstream](https://github.com/maniksurtani/githelpers/blob/master/contributors/sync_with_upstream).
@@ -378,8 +378,8 @@ $ git rebase master
 and/or
 
 ```
-$ git checkout topic_ACE+TAO+CIAO-6_3_1
-$ git rebase ACE+TAO+CIAO-6_3_1
+$ git checkout topic_CIAO-1_3_4
+$ git rebase CIAO-1_3_4
 ```
 
 The sync_with_upstream script can do this for you if your topic branch naming conventions match the script.
