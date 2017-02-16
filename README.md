@@ -258,7 +258,7 @@ Releases can only be cut by Project Admins, and must be done off a recently upda
 
 ### Release branches
 
-CIAO currently has a primary release branch of master and a maintenance branch used by Red Hat JBoss. In future further release branches may be created. (e.g. for maintenance purposes). Work should never be committed directly to a release branch; topic branches should always be used for work, and these topic branches should be merged in.
+CIAO currently has a primary release branch of master. In future further release branches may be created. (e.g. for maintenance purposes). Work should never be committed directly to a release branch; topic branches should always be used for work, and these topic branches should be merged in.
 
 ### Topic branches
 
