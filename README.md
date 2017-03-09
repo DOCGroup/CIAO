@@ -11,11 +11,6 @@ Travis-CI status
 
 master: [![Build Status](https://travis-ci.org/DOCGroup/CIAO.svg?branch=master)](https://travis-ci.org/DOCGroup/CIAO)
 
-Snap-CI status
-================
-
-master: [![Build Status](https://snap-ci.com/DOCGroup/CIAO/branch/master/build_image)](https://snap-ci.com/DOCGroup/CIAO/branch/master)
-
 AppVeyor status
 ================
 
