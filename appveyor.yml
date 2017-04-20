@@ -21,7 +21,7 @@ install:
   - ps: $CONTENT='#include "ace/config-win32.h"'
   - ps: $CONTENT > ext\ACE_TAO\ACE\ace\config.h
   - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64
-  - call perl %ACE_ROOT%\bin\mwc.pl -type vs2017 %CIAO_ROOT%\CIAO_TAO_DAnCE.mwc
+  - perl %ACE_ROOT%\bin\mwc.pl -type vs2017 %CIAO_ROOT%\CIAO_TAO_DAnCE.mwc
 
 platform:
   - x64
