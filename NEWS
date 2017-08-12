@@ -1,6 +1,9 @@
 USER VISIBLE CHANGES BETWEEN CIAO-1.3.4 and CIAO-1.3.5
 =======================================================
 
+. Fixed static initialization order issue when using
+  DDS4CCM using RTI Connext DDS 5.2.3
+
 USER VISIBLE CHANGES BETWEEN CIAO-1.3.3 and CIAO-1.3.4
 =======================================================
 
