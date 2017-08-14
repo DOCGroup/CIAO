@@ -1,0 +1,420 @@
+commit f2a21c6585564ca3d1cd49a4e5d2fd013cb1a2a8
+Merge: abe0e2d2ad5 23b9005eb2a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Aug 12 15:19:02 2017 +0200
+
+    Merge pull request #41 from jwillemsen/master
+    
+    List major change
+
+commit 23b9005eb2ab5bd21d103cb30bf62c6aafa5ab20
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Aug 12 15:18:19 2017 +0200
+
+    List major change
+    
+        * NEWS:
+
+commit abe0e2d2ad539e35d8f4f5f55f1c9f9da3ff6633
+Merge: 8b9619c635d 9cfe70be975
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 9 13:01:46 2017 +0200
+
+    Merge pull request #40 from jwillemsen/jwi-zapid
+    
+    Remove left over id tags
+
+commit 9cfe70be975350ab928635acf4e23d9562e04066
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 9 13:00:46 2017 +0200
+
+    Remove left over id tags
+    
+        * bin/ciao_tests.lst:
+        * examples/ciao_android.lst:
+
+commit 8b9619c635dc5af45cd30d98f676097ec5177446
+Merge: 5029252a46c 31cf15de08a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 9 11:23:08 2017 +0200
+
+    Merge pull request #39 from jwillemsen/jwi-taoidllocation
+    
+    Fixed the location of tao_idl in case of a regular build or cross bui…
+
+commit 31cf15de08ac5c91de11759cda5d3918670c4a91
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 9 10:19:57 2017 +0200
+
+    Fixed the location of tao_idl in case of a regular build or cross build, tests probably failed silently on windows
+    
+        * tests/Bug_3936_Regression/run_test.pl:
+        * tests/Bug_3937_Regression/run_test.pl:
+        * tests/Bug_3944_Regression/run_test.pl:
+        * tests/IDL3/Connectors/run_test.pl:
+
+commit 5029252a46c15d12e817ee8c6867247b056880fb
+Merge: e4a26d873d4 8d922db4c26
+Author: mcorino <mcorino@remedy.nl>
+Date:   Wed May 10 12:19:17 2017 +0200
+
+    Merge pull request #38 from mcorino/master
+    
+    Fix unnecessary static initialization causing sometime segv problems.
+
+commit 8d922db4c26a7a51cf8fdf170ddb4ee50ff39151
+Author: Martin Corino <mcorino@remedy.nl>
+Date:   Wed May 10 11:30:19 2017 +0200
+
+    Fix unnecessary static initialization causing sometime segv problems.
+    
+        * connectors/dds4ccm/idl/ndds/ndds_dcps_instance_handleC.cpp:
+
+commit e4a26d873d43887e65c2522f174f5d9796d6d924
+Merge: ee1a3195598 c323facf649
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Apr 20 12:08:53 2017 +0200
+
+    Merge pull request #37 from jwillemsen/master
+    
+    No need to use call to invoke perl
+
+commit c323facf649439304396c6acbc5c7f633054a8d4
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Apr 20 11:09:45 2017 +0200
+
+    No need to use call to invoke perl
+
+commit ee1a3195598c28baaca4afd3b148db6570a44631
+Merge: 3a434a61bfa 15bf9dddbc2
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Apr 10 21:44:59 2017 +0200
+
+    Merge pull request #36 from jwillemsen/master
+    
+    Use Visual Studio 2017 on AppVeyor and small documentation changes
+
+commit 15bf9dddbc23b7402c8e749913278842c2891c37
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Apr 10 20:02:11 2017 +0200
+
+    Use Visual Studio 2017
+    
+        * appveyor.yml:
+
+commit 68e69af39a3c18054547f43711a211d3d0cc5cbf
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Apr 10 20:01:25 2017 +0200
+
+    Small documentation improvements
+    
+        * CIAO-INSTALL.html:
+        * connectors/dds4ccm/DDS4CCM-INSTALL.html:
+
+commit 3a434a61bfa2f84aca1d859ddb258c39c615fbc3
+Merge: 0ee2c67ab51 98a95752cdd
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Mar 27 13:59:12 2017 +0200
+
+    Merge pull request #35 from jwillemsen/master
+    
+    Removed instructions for how to use github, there are much better pla…
+
+commit 98a95752cdd8c7361214b0b081e67ca4cf8b2116
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Mar 27 13:57:22 2017 +0200
+
+    Removed instructions for how to use github, there are much better places for that kind of information, just let us focus on this project
+
+commit 0ee2c67ab51a84559c85fe5ccdc9cc9615cf3931
+Merge: 23088a7aee6 8a5401b2b6e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Mar 14 19:05:18 2017 +0100
+
+    Merge pull request #34 from jwillemsen/master
+    
+    Reduced header
+
+commit 8a5401b2b6eef3a8438a887eb839fb0318a46f68
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Mar 14 19:04:56 2017 +0100
+
+    Reduced header
+        * README.md:
+
+commit 1fa35a12a440a3cd0bd29153eb2de336ed802852
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Mar 14 19:00:59 2017 +0100
+
+    Just list the CI badges at the top
+    
+        * README.md:
+
+commit 23088a7aee64f923daa05798a014c38a469d110b
+Merge: ba73aa7b2fa b365551143d
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Thu Mar 9 20:43:56 2017 +0100
+
+    Merge pull request #33 from jwillemsen/master
+    
+    Remove snap-ci because it is end of life
+
+commit b365551143da205a3c30d9dc47e6530afe31c2bd
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Mar 9 20:36:51 2017 +0100
+
+    Remove snap-ci because it is end of life
+
+commit ba73aa7b2fa38670e1acde9a567888833893b888
+Merge: e275d5e8dac 8c7383aba51
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Fri Mar 3 09:11:47 2017 +0100
+
+    Merge pull request #32 from jwillemsen/master
+    
+    Fixed typo
+
+commit 8c7383aba51565e75ccc95b25f84d4d4a213ca20
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Mar 3 09:10:32 2017 +0100
+
+    Fixed typo
+    
+        * connectors/dds4ccm/examples/ShapesContr/README:
+        * examples/BasicSP/README.html:
+
+commit e275d5e8dacb482113f077f54b19b4335d8d51e6
+Merge: cd64bcb589e 2b1ef46f279
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Thu Feb 16 12:51:45 2017 +0100
+
+    Merge pull request #31 from jwillemsen/master
+    
+    Removed left over text
+
+commit 2b1ef46f27938e53684f6332ca3a8bd0c43417ad
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Feb 16 12:50:32 2017 +0100
+
+    Removed left over text
+    
+        * README.md:
+
+commit cd64bcb589e0994b616341956c2c856ed40ae4e0
+Merge: 39d7d872d12 a18c3030695
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Thu Feb 16 12:30:40 2017 +0100
+
+    Merge pull request #30 from jwillemsen/master
+    
+    Different icon
+
+commit a18c30306954f152ca5cd6739b082e4251bccf0a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Feb 16 12:30:17 2017 +0100
+
+    Different icon
+    
+        * README.md:
+
+commit 39d7d872d126ec634763c8bd76083dbbfdb13167
+Merge: 7177bc11124 692efe61e1e
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Thu Feb 16 12:22:19 2017 +0100
+
+    Merge pull request #29 from jwillemsen/master
+    
+    Updated examples now that CIAO has its own tag
+
+commit 692efe61e1e91e5f7b1b86715b2c43fcefb0f8e5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Feb 16 12:20:28 2017 +0100
+
+    Updated examples now that CIAO has its own tag
+    
+        * README.md:
+
+commit 7177bc11124ffc35d2269249553ad650b038d162
+Merge: 81c97a60748 9cb7cdb402a
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Thu Feb 16 12:16:23 2017 +0100
+
+    Merge pull request #28 from jwillemsen/master
+    
+    Use github icons instead of custom ones
+
+commit 9cb7cdb402a779217500aa702d0c6757a70c8399
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Feb 16 12:13:30 2017 +0100
+
+    Use github icons
+    
+        * README.md:
+
+commit 81c97a60748af8417530979537327d193f65e8de
+Merge: 49daabfb774 95986c80ecb
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Wed Jan 25 11:36:08 2017 +0100
+
+    Merge pull request #27 from jwillemsen/master
+    
+    Enable clang as compiler
+
+commit 95986c80ecb374808befaef512f5d7d00e10170f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 25 10:20:52 2017 +0100
+
+    Removed entity files, never supported in CIAO and no plans in the long future to add it
+    
+        * ccm/Entity/CCM_ComponentId.idl:
+        * ccm/Entity/CCM_Entity2Context.idl:
+        * ccm/Entity/CCM_EntityComponent.idl:
+        * ccm/Entity/CCM_EntityContext.idl:
+        * ccm/Entity/CCM_StateIdFactory.idl:
+        * ccm/Entity/CCM_entity_svnt.mpc:
+          Deleted.
+
+commit 21e8ab9c792b57db0a5d95c677f224b2f993501d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 25 10:16:00 2017 +0100
+
+    Build all code with clang++
+    
+        * .travis.yml:
+
+commit 78c0571a8c36a581b00fa1cbcf7a34c0dbf728aa
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 25 10:12:20 2017 +0100
+
+    Zap g++6 as separate matrix
+    
+        * .travis.yml:
+
+commit 0ec615d303c0ed9ab768b06eac40ac74b25d89ca
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 25 10:00:47 2017 +0100
+
+    Change cxx at the end of the before-script so that the gcc/clang checks are version indepdentn
+    
+        * .travis.yml:
+
+commit c29fb9d589ee2863b41d2aaab7c312d1e04ac4e1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 25 09:56:50 2017 +0100
+
+    Set CXX
+    
+        * .travis.yml:
+
+commit 2f74b536c1140294dad3c303980bf39668a00c10
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 25 09:48:46 2017 +0100
+
+    g++6 and clang 3.9
+    
+        * .travis.yml:
+
+commit e4d82d086a954a68953444c5ea610b36088b9f3e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 25 09:42:17 2017 +0100
+
+    Rework clang support
+    
+        * .travis.yml:
+
+commit b4f67aa456c8975a8499164fb6f88589eca26207
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 25 09:32:23 2017 +0100
+
+    Enable clang as compiler
+    
+        * .travis.yml:
+
+commit 49daabfb774b68734df65be5e8e96d34015fe78c
+Merge: fa3c80b594e 531df31e915
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Tue Jan 17 22:41:54 2017 +0100
+
+    Merge pull request #26 from huangminghuang/RcHandle_fix
+    
+    Fix compile problem due to the recent OpenDDS RcHandle interface changes
+
+commit 531df31e915543b24f77c2dddcdad14d5d01ca75
+Author: Huang-Ming Huang <huangming.huang@gmail.com>
+Date:   Tue Jan 17 14:50:42 2017 -0600
+
+    Use fully qualified namespace
+
+commit 061a9650a45fdec809479c66eb73dafc65427bde
+Author: Huang-Ming Huang <huangming.huang@gmail.com>
+Date:   Tue Jan 17 13:33:49 2017 -0600
+
+    Fix compile problem due to the recent OpenDDS RcHandle interface changes
+
+commit fa3c80b594e8bbac9dfe0e0b09e0a8ee9f04f0d2
+Merge: 7cd66851cf2 30018201d00
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Thu Jan 5 18:17:26 2017 +0100
+
+    Merge pull request #25 from jwillemsen/master
+    
+    Fixed typo
+
+commit 30018201d00a7ec77fe253abfe3d7927451f4bf9
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 5 18:09:33 2017 +0100
+
+    Fixed typo
+    
+        * tests/IDL3/ImpliedIDL/All/raw_include.idl:
+
+commit 7cd66851cf2432ac089fa741a069522f1686bd07
+Merge: 9e1bbac6d9d 1f3d8c53e67
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Mon Jan 2 12:41:41 2017 +0100
+
+    Merge pull request #24 from jwillemsen/master
+    
+    Fixed typo
+
+commit 1f3d8c53e676290993f9290be295774d0567cddd
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Jan 2 12:37:27 2017 +0100
+
+    Fixed typo
+    
+        * tools/IDL3_to_XMI/be_produce.cpp:
+
+commit 9e1bbac6d9daf1717fdd4dfd862408d2a294506b
+Merge: a6cbc579fa4 949f2b96b87
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Sun Jan 1 19:41:23 2017 +0100
+
+    Merge pull request #23 from jwillemsen/master
+    
+    Updated copyright year
+
+commit 949f2b96b87d66ef85f9bdbd7158db4079e43ebf
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sun Jan 1 19:40:22 2017 +0100
+
+    Updated copyright year
+    
+        * COPYING:
+
+commit a6cbc579fa484a31eaf12dd0f925006bc1dffc57
+Merge: 3f47e5348c1 db64a1273de
+Author: Johnny Willemsen <jwillemsen@users.noreply.github.com>
+Date:   Tue Dec 13 12:31:07 2016 +0100
+
+    Merge pull request #22 from jwillemsen/master
+    
+    Prepare for next release
+
+commit db64a1273de793ff7be3f5f88bb03ed34354e9d8
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Dec 13 12:29:56 2016 +0100
+
+    Prepare for next release
+    
+        * NEWS:
