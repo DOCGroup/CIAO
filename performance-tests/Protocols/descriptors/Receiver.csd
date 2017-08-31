@@ -1,6 +1,5 @@
 <?xml version="1.0"?> <!-- -*- SGML -*-  -->
 
-<!-- $Id$ -->
 <!-- If this file is moved to a different directory, make sure to change the
      path to the DTD below. Otherwise the examples won't work. -->
 <!DOCTYPE softpkg SYSTEM "../../../docs/XML/softpkg.dtd">

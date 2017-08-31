@@ -1,6 +1,5 @@
 <?xml version="1.0"?> <!-- -*- SGML -*-  -->
 
-<!-- $Id$ -->
 <!-- If this file is moved to a different directory, make sure to change the
      path to the DTD below. Otherwise the examples won't work. -->
 <!DOCTYPE softpkg SYSTEM "../../../docs/XML/softpkg.dtd">
@@ -11,7 +10,7 @@
 
   <title>componentizedSender::Receiver Servants</title>
 
-  <idl id="IDL:Protocols/Receiver:1.0" 
+  <idl id="IDL:Protocols/Receiver:1.0"
        homeid="IDL:Protocols/ReceiverHome:1.0">
    <fileinarchive name="Receiver.idl"/>
   </idl>

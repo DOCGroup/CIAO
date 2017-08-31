@@ -2,7 +2,6 @@
      implementations. The root element is <softpkg>.
      Elements are listed alphabetically.
   -->
-<!-- Revision $Id$ -->
 <!-- Simple xml link attributes based on W3C WD-xlink-19980303.
      May change when XLL is finalized. -->
 
