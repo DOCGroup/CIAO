@@ -17,7 +17,7 @@ env:
     - DANCE_ROOT=$TRAVIS_BUILD_DIR/ext/DAnCE
     - MPC_ROOT=$TRAVIS_BUILD_DIR/ext/MPC
     - LD_LIBRARY_PATH=$ACE_ROOT/lib:$LD_LIBRARY_PATH
-    - COMPILER=g++-6
+    - COMPILER=g++-7
 
 matrix:
   include:
@@ -40,7 +40,7 @@ addons:
     packages:
       - libssl-dev
       - libxerces-c-dev
-      - g++-6
+      - g++-7
 
 before_install:
   - mkdir ext
@@ -76,6 +76,6 @@ before_script:
 script:
   - if [ "$FUZZ" == "1" ]; then exec perl $ACE_ROOT/bin/fuzz.pl; fi
   - perl $ACE_ROOT/bin/mwc.pl -type gnuace -workers 2 travis.mwc
-  - make -j 2
+  - make -j 3
   - perl $ACE_ROOT/bin/auto_run_tests.pl -l $TAO_ROOT/bin/travis-ci.lst
 
