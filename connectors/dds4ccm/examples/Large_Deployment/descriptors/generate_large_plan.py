@@ -20,7 +20,7 @@ namespace = ""
 
 def create_names (prefix, number):
     retval = []
-    
+
     for x in range(number):
         retval.append (prefix + "_" + str(x))
     return retval
@@ -28,12 +28,12 @@ def create_names (prefix, number):
 def add_sub_connector (name, topic, node) :
     comp = ""
     conn = ""
-    
+
     config_prop = ""
     config_prop += generator.config_prop ("topic_name", "string", topic)
-    
+
     comp += generator.comp_inst (name + "DDSConnector", config_prop, )
-    
+
     deploy_req = generator.deploy_requirement ("edu.dre.vanderbilt.DAnCE.ConnectionType",
                                                "Local_Interface")
     conn += generator.connection (name + "info_out_data",
@@ -46,7 +46,7 @@ def add_sub_connector (name, topic, node) :
                                                                "true",
                                                                "Facet",
                                                                name + "DDSConnector" + "ComponentInstance"))
-    
+
     conn += generator.connection (name + "listenercontrol",
                                   deploy_req,
                                   generator.internal_endpoint ("info_out_data_control",
@@ -84,12 +84,12 @@ def add_sub_connector (name, topic, node) :
 def add_pub_connector (name, topic, node) :
     comp = ""
     conn = ""
-    
+
     config_prop = ""
     config_prop += generator.config_prop.template ("topic_name", "string", topic)
 
     comp += generator.comp_inst.template (name + "DDSConnector", config_prop, "Large_ConnectorComponentImplementation", node)
-    
+
     deploy_req = generator.deploy_requirement.template ("edu.dre.vanderbilt.DAnCE.ConnectionType",
                                                         "Local_Interface")
 
@@ -103,20 +103,20 @@ def add_pub_connector (name, topic, node) :
                                                                                  "true",
                                                                                  "Facet",
                                                                                  name + "DDSConnector" + "ComponentInstance"))
-    
+
     return (comp, conn)
 
 def add_provide_component (name, node) :
     retval = ""
-    
+
     retval += generator.comp_inst.template (name, "", "Single_ServiceComponentImplementation", node)
-    
+
     return retval
 
 def add_dds_pub_component (name, topic, node) :
     comps = ""
     conns = ""
-    
+
     comps += generator.comp_inst.template (name, "", "DDS_PubComponentImplementation", node)
 
     compname = name + "_prov1"
@@ -143,10 +143,10 @@ def add_dds_pub_component (name, topic, node) :
                                                                 "false",
                                                                 "SimplexReceptacle",
                                                                 name + "ComponentInstance" ))
-    
-                                                                
+
+
     (tmpcomp, tmpconn) = add_pub_connector (name, topic, node)
-    
+
     comps += tmpcomp
     conns += tmpconn
 
@@ -155,7 +155,7 @@ def add_dds_pub_component (name, topic, node) :
 def add_dds_sub_component (name, topic, node) :
     comps = ""
     conns = ""
-    
+
     comps += generator.comp_inst (name, "", "DDS_PubComponentImplementation", node)
 
     compname = name + "_prov"
@@ -169,31 +169,31 @@ def add_dds_sub_component (name, topic, node) :
                                    generator.internal_endpoint ("ping_one",
                                                                 "false",
                                                                 "SimplexReceptacle",
-                                                                name + "ComponentInstance"))    
-    
+                                                                name + "ComponentInstance"))
+
     (tmpcomp, tmpconn) = add_sub_connector (name, topic, node)
-    
+
     comps += tmpcomp
     conns += tmpconn
-    
+
     return (comps, conns)
 
 def main ():
-    
+
     import random
 
     retval = ""
-    
+
     retval += generator.header.template ("Large_Plan")
-    
+
     retval += generator.comp_impl.template ("Large_Connector", "")
     retval += generator.comp_impl.template ("Single_Service", "")
     retval += generator.comp_impl.template ("DDS_Pub", "")
     retval += generator.comp_impl.template ("DDS_Sub", "")
-    
+
     conns = ""
     comps = ""
-    
+
     nodenames = create_names ("Node", nodes)
     print nodenames
     topicnames = create_names ("Topic", topics)
@@ -218,30 +218,30 @@ def main ():
                 (tmpcomp, tmpconn) = add_dds_pub_component ('Sub' + '_' + name + '_' + str(proc) + '_' + str(comp) + '_',
                                                             random.choice (topicnames),
                                                             name)
-                
+
                 conns += tmpconn
                 comps += tmpcomp
-                
+
                 sub_count += 1
                 service_count += 1
-    
+
     retval += comps
     retval += conns
-    
+
     retval += generator.artifact.template ("Large_Connector")
     retval += generator.artifact.template ("Single_Service")
     retval += generator.artifact.template ("DDS_Pub")
     retval += generator.artifact.template ("DDS_Sub")
     retval += generator.footer.template ()
-    
+
     print "Writing a plan with " + str(pub_count) + " publish components, " + str (sub_count) + " subscribe components, and " + str(service_count) + " service components."
 
     outfile = open ("LargePlan.cdp", 'w')
     outfile.write (retval)
     outfile.close ()
-    
+
 if __name__ == "__main__":
     main ()
 
-            
-                
+
+
