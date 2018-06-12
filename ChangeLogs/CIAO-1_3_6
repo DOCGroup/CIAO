@@ -1,0 +1,277 @@
+commit 7736dd6973e9857d6291b57d7932d34ce9e10520
+Merge: 35f2bf864a0 6960dbc2122
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue May 29 10:45:45 2018 +0200
+
+    Merge pull request #57 from jwillemsen/master
+    
+    List changes
+
+commit 6960dbc212291634fbfe94d61e2a00c74a9e1809
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue May 29 08:27:59 2018 +0200
+
+    List changes
+    
+        * NEWS:
+
+commit 35f2bf864a023424a71134f2f0a6a8e6e613221f
+Merge: 132ebf2b37d 6d3153055a3
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed May 16 07:58:19 2018 +0200
+
+    Merge pull request #56 from jwillemsen/jwi-extend-travis
+    
+    Extend travis builds and use gcc-8 as default
+
+commit 6d3153055a3958f4aae1c20f778ca1294eff0ccb
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue May 15 21:06:29 2018 +0200
+
+    Extend travis builds and use gcc-8 as default
+    
+        * .travis.yml:
+
+commit 132ebf2b37dc3dea352070ad44c3d10eb0d0d27e
+Merge: 396f2ad9c75 98243294b34
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Apr 9 19:46:09 2018 +0200
+
+    Merge pull request #55 from jwillemsen/master
+    
+    Removed some comments about CIDLC, not used anymore
+
+commit 98243294b3451aefa16a26a7a1cba14a7d6e3fde
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Apr 9 18:32:29 2018 +0200
+
+    Removed some comments about CIDLC, not used anymore
+    
+        * performance-tests/Benchmark/README:
+        * performance-tests/Benchmark/RoundTrip/README:
+
+commit 396f2ad9c752ea9d00cf5f60bb9cebc78537e4aa
+Merge: bc841b0e43d 6d884a982e7
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Mar 7 09:36:24 2018 +0100
+
+    Merge pull request #54 from jwillemsen/master
+    
+    Added issue template
+
+commit 6d884a982e7483c739edd9402364603cf442638b
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Mar 7 09:34:33 2018 +0100
+
+    Added issue template
+    
+        * .github/issue_template.md:
+          Added.
+
+commit bc841b0e43d443ee69a0279f37da41d8c9e71ef7
+Merge: 750eb420046 8f6a6f034b1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Jan 27 17:53:41 2018 +0100
+
+    Merge pull request #53 from jwillemsen/master
+    
+    Removed trailing whitespaces
+
+commit 8f6a6f034b18bcb8a41ccd7f393fb39b302a5a79
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Jan 27 17:12:39 2018 +0100
+
+    Removed trailing whitespaces
+    
+        * README.md:
+        * connectors/dds4ccm/examples/Large_Deployment/descriptors/generate_large_plan.py:
+
+commit 750eb420046fbdd6010019369b31b951193a42ba
+Merge: fb3a1fe1739 ff3bf49bd9c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Jan 27 11:24:27 2018 +0100
+
+    Merge pull request #52 from jwillemsen/master
+    
+    Added codacy badge
+
+commit ff3bf49bd9c9cb602b2ad9b5dd9858e37c68e11f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Jan 27 10:26:00 2018 +0100
+
+    Added codacy badge
+    
+        * README.md:
+
+commit fb3a1fe173955166e2b5a4689d4fa8018cb51445
+Merge: a664ea7e444 3248ba43366
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Jan 2 12:56:05 2018 +0100
+
+    Merge pull request #51 from jwillemsen/master
+    
+    Updated copyright year
+
+commit 3248ba433668587297a4816bbc3c063ab56a8dc0
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Jan 1 11:24:32 2018 +0100
+
+    Updated copyright year
+    
+        * COPYING:
+
+commit a664ea7e4441669bf94c67670e64e447c08a959f
+Merge: 3d744604cdf 931932c6ae9
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Dec 12 08:26:16 2017 +0100
+
+    Merge pull request #50 from jwillemsen/master
+    
+    Use travis_latest
+
+commit 931932c6ae9dec04a9e57073001eef8ec1f2a316
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Dec 11 20:59:52 2017 +0100
+
+    Use travis_latest
+
+commit 3d744604cdf22e35410ad25be583c8cbdfac49ea
+Merge: 6c62634abc2 e9a8c113d47
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Nov 11 11:06:20 2017 +0100
+
+    Merge pull request #49 from codacy-badger/codacy-badge
+    
+    Add a Codacy badge to README.md
+
+commit e9a8c113d47dc0eac950664ad933a0d4352d6f93
+Author: The Codacy Badger <badger@codacy.com>
+Date:   Sat Nov 11 10:00:09 2017 +0000
+
+    Add Codacy badge
+
+commit 6c62634abc21a50ab58e50e3fbc82fe658a046ec
+Merge: 245c596c00e 5764432f22f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 21 17:09:17 2017 +0200
+
+    Merge pull request #48 from jwillemsen/jwi-travisclang5
+    
+    Upgrade to clang5
+
+commit 5764432f22f59b2fb01687edbb60f1d4c93cbbb4
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 21 15:41:48 2017 +0200
+
+    Try to reduce travis-ci build time
+    
+        * .travis.yml:
+
+commit f9236e0330c4f348ab5d2764d38c5c2b3ea992ff
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 21 09:49:30 2017 +0200
+
+    Upgrade to clang5
+
+commit 245c596c00e5aaaac2a7c6d469d502afbda1eb30
+Merge: dd5b24fc8f7 a44452bf98d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Sep 8 22:10:42 2017 +0200
+
+    Merge pull request #47 from jwillemsen/master
+    
+    More parallel make
+
+commit a44452bf98d3a8f178880bc9cd6b5ab5d4c4b620
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Sep 8 19:25:12 2017 +0200
+
+    More parallel make
+
+commit dd5b24fc8f71cf05fb0c8137e92052a2377c95f8
+Merge: 452aa70d205 a4e0dd22d8a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 7 12:55:53 2017 +0200
+
+    Merge pull request #46 from jwillemsen/jwi-gcc7
+    
+    Use gcc7 on travis-ci
+
+commit a4e0dd22d8af591bf1b7bb246f5e2c6f0925962d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Sep 6 15:31:16 2017 +0200
+
+    Make -j 3
+
+commit 082b17d2a64daf4629b5ad9a8fbe270627399ca4
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 5 16:36:06 2017 +0200
+
+    Use gcc7 on travis-ci
+
+commit 452aa70d205b25ac6b0cc5b62ea5c6c52e4a59cd
+Merge: eb21100d5d2 8c22369ba85
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Aug 31 13:25:50 2017 +0200
+
+    Merge pull request #45 from jwillemsen/master
+    
+    Remove left over old Id tags
+
+commit 8c22369ba852747c95c74c03c766f9bee13c56a3
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Aug 31 13:25:07 2017 +0200
+
+    Remove left over old Id tags
+
+commit eb21100d5d200fd1c7aa697d7117cc84b90f990f
+Merge: 762a7366d22 0a9df391d83
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Aug 21 10:23:39 2017 +0200
+
+    Merge pull request #44 from jwillemsen/master
+    
+    Updated links to point to Vanderbilt pages
+
+commit 0a9df391d835f6a60159026af5b639430489a8e4
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Aug 21 10:18:14 2017 +0200
+
+    Updated links to point to Vanderbilt pages
+    
+        * COPYING:
+
+commit 762a7366d22c8167073c8f7732b1e8c4f8ff9436
+Merge: b5c8bfdd959 2014801afc6
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Aug 14 14:10:27 2017 +0200
+
+    Merge pull request #43 from jwillemsen/jwi-doxygen
+    
+    Upgrade to latest doxygen
+
+commit 2014801afc64c0017bd5367a3c846f5bf654fd91
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Aug 14 14:04:16 2017 +0200
+
+    Upgrade to latest doxygen
+    
+        * etc/ciao.doxygen:
+        * etc/ciao_dds4ccm.doxygen:
+
+commit b5c8bfdd95953299337995b672215e2efa2e6075
+Merge: d8a05da0516 6201ffa96fd
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Aug 14 10:34:30 2017 +0200
+
+    Merge pull request #42 from jwillemsen/master
+    
+    Prepare for next release
+
+commit 6201ffa96fdf64baee6ccb9643ed1aaa49c6e838
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Aug 14 10:29:43 2017 +0200
+
+    Prepare for next release
+    
+        * NEWS:
