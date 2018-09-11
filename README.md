@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/DOCGroup/CIAO.svg?branch=master)](https://travis-ci.org/DOCGroup/CIAO)
 [![Build Status](https://ci.appveyor.com/api/projects/status/9da6pofewpvwq845/branch/master?svg=true)](https://ci.appveyor.com/project/jwillemsen/ciao)
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/1/badge.svg)](https://scan.coverity.com/projects/1)
+[![Azure DevOps](https://dev.azure.com/docgroup/CIAO/_apis/build/status/DOCGroup.CIAO)](https://dev.azure.com/docgroup/CIAO/_build/latest?definitionId=1)
 
 # CIAO #
 
