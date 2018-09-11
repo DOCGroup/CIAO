@@ -1,0 +1,73 @@
+variables:
+   ACE_ROOT: $(Build.SourcesDirectory)\ACE_TAO\ACE
+   TAO_ROOT: $(Build.SourcesDirectory)\ACE_TAO\TAO
+   CIAO_ROOT: $(Build.SourcesDirectory)
+   DAnCE_ROOT: $(Build.SourcesDirectory)\DAnCE
+
+resources:
+- repo: self
+  fetchDepth: 1
+
+queue:
+  name: Hosted VS2017
+  demands:
+  - Cmd
+  - msbuild
+  - visualstudio
+
+- powershell: |
+   $client = new-object System.Net.WebClient
+   $client.DownloadFile("http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.zip","strawberry-perl.zip");
+  displayName: 'PowerShell Script'
+
+- task: ExtractFiles@1
+  displayName: 'Extract files '
+  inputs:
+    archiveFilePatterns: 'strawberry-perl.zip'
+    destinationFolder: perl
+
+- task: fakhrulhilal-maktum.GitDownloader.git-downloader.GitDownloader@0
+  displayName: 'Fetch git: git://github.com/DOCGroup/ACE_TAO.git'
+  inputs:
+    RepositoryUrl: 'git://github.com/DOCGroup/ACE_TAO.git'
+    RepositoryPath: '$(Build.SourcesDirectory)\ACE_TAO'
+
+- task: fakhrulhilal-maktum.GitDownloader.git-downloader.GitDownloader@0
+  displayName: 'Fetch git: git://github.com/DOCGroup/MPC.git'
+  inputs:
+    RepositoryUrl: 'git://github.com/DOCGroup/MPC.git'
+    RepositoryPath: '$(Build.SourcesDirectory)\ACE_TAO\ACE\MPC'
+
+- task: fakhrulhilal-maktum.GitDownloader.git-downloader.GitDownloader@0
+  displayName: 'Fetch git: git://github.com/DOCGroup/DAnCE.git'
+  inputs:
+    RepositoryUrl: 'git://github.com/DOCGroup/DAnCE.git'
+    RepositoryPath: '$(Build.SourcesDirectory)\DAnCE'
+
+steps:
+- task: eliostruyf.build-task.custom-build-task.file-creator@2
+  displayName: 'File Creator'
+  inputs:
+    filepath: '$(Build.SourcesDirectory)\ACE_TAO\ACE\ace\config.h'
+    filecontent: '#include "ace/config-win32.h"'
+
+
+- task: BatchScript@1
+  displayName: 'Run script perl\perl\bin\perl'
+  inputs:
+    filename: 'perl\perl\bin\perl'
+    arguments: 'ACE\bin\mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc'
+    modifyEnvironment: false
+
+- task: VSBuild@1
+  displayName: 'Build solution CIAO_TAO_DAnCE.sln'
+  inputs:
+    solution: 'CIAO_TAO_DAnCE.sln'
+    maximumCpuCount: true
+
+
+
+
+
+
+
