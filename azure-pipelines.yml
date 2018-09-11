@@ -55,7 +55,7 @@ steps:
   displayName: 'Run script perl\perl\bin\perl'
   inputs:
     filename: 'perl\perl\bin\perl'
-    arguments: 'ACE\bin\mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc'
+    arguments: 'ACE_TAO\ACE\bin\mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc'
     modifyEnvironment: false
 
 - task: VSBuild@1
