@@ -45,11 +45,9 @@ steps:
     RepositoryUrl: 'git://github.com/DOCGroup/DAnCE.git'
     RepositoryPath: '$(Build.SourcesDirectory)\DAnCE'
 
-- task: eliostruyf.build-task.custom-build-task.file-creator@2
-  displayName: 'File Creator'
-  inputs:
-    filepath: '$(Build.SourcesDirectory)\ACE_TAO\ACE\ace\config.h'
-    filecontent: '#include "ace/config-win32.h"'
+- powershell: |
+   '#include "ace/config-win32.h"' > $(Build.SourcesDirectory)\ACE_TAO\ACE\ace\config.h
+  displayName: 'Create config.h file'
 
 - task: BatchScript@1
   displayName: 'Run script perl\perl\bin\perl'
