@@ -40,7 +40,7 @@ jobs:
     displayName: 'git clone DAnCE'
 
   - powershell: |
-    '#include "ace/config-win32.h"' > $(Build.SourcesDirectory)\ACE_TAO\ACE\ace\config.h
+      '#include "ace/config-win32.h"' > $(Build.SourcesDirectory)\ACE_TAO\ACE\ace\config.h
     displayName: 'Create config.h file'
 
   - task: BatchScript@1
