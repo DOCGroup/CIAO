@@ -20,8 +20,8 @@ jobs:
 
   steps:
   - powershell: |
-    $client = new-object System.Net.WebClient
-    $client.DownloadFile("http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.zip","strawberry-perl.zip");
+      $client = new-object System.Net.WebClient
+      $client.DownloadFile("http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.zip","strawberry-perl.zip")
     displayName: 'PowerShell Script'
 
   - task: ExtractFiles@1
