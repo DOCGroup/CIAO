@@ -10,6 +10,7 @@ clone_depth: 5
 install:
   - cmd: if "%platform%"=="Win32" set VCPKG_ARCH=x86-windows
   - cmd: if "%platform%"=="x64"   set VCPKG_ARCH=x64-windows
+  - cmd: vcpkg remove --outdated --recurse
   - cmd: vcpkg install --recurse --triplet %VCPKG_ARCH% xerces-c
   - cmd: vcpkg integrate install
   - cmd: mkdir ext && cd ext
@@ -37,5 +38,8 @@ configuration:
 build:
   parallel: true
   project: CIAO_TAO_DAnCE.sln
+
+cache:
+  - c:\tools\vcpkg\installed\
 
 test: off
