@@ -2,26 +2,37 @@ branches:
   only:
     - master
 
-os: Visual Studio 2017
+environment:
+  MPC_ROOT: ${APPVEYOR_BUILD_FOLDER}\ext\MPC
+  ACE_ROOT: ${APPVEYOR_BUILD_FOLDER}\ext\ACE_TAO\ACE
+  TAO_ROOT: ${APPVEYOR_BUILD_FOLDER}\ext\ACE_TAO\TAO
+  CIAO_ROOT: ${APPVEYOR_BUILD_FOLDER}
+  DANCE_ROOT: ${APPVEYOR_BUILD_FOLDER}\ext\DAnCE
+  matrix:
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+      MPC_TYPE: vc14
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+      MPC_TYPE: vs2017
 
-clone_depth: 15
+clone_depth: 5
 
 install:
-  - mkdir ext && cd ext
+  - cmd: if "%platform%"=="Win32" set VCPKG_ARCH=x86-windows
+  - cmd: if "%platform%"=="x64"   set VCPKG_ARCH=x64-windows
+  - cmd: vcpkg remove --outdated --recurse
+  - cmd: vcpkg install --recurse --triplet %VCPKG_ARCH% xerces-c
+  - cmd: vcpkg integrate install
+  - cmd: mkdir ext && cd ext
   - git clone --depth 1 git://github.com/DOCGroup/MPC.git
   - git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git
   - git clone --depth 1 git://github.com/DOCGroup/DAnCE.git
   - cd ..
-  - set MPC_ROOT=%CD%\ext\MPC
-  - set ACE_ROOT=%CD%\ext\ACE_TAO\ACE
-  - set TAO_ROOT=%CD%\ext\ACE_TAO\TAO
-  - set CIAO_ROOT=%CD%
-  - set DANCE_ROOT=%CD%\ext\DAnCE
   - set PATH=%ACE_ROOT%\lib:%PATH%
   - ps: $CONTENT='#include "ace/config-win32.h"'
   - ps: $CONTENT > ext\ACE_TAO\ACE\ace\config.h
-  - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64
-  - perl %ACE_ROOT%\bin\mwc.pl -type vs2017 %CIAO_ROOT%\CIAO_TAO_DAnCE.mwc
+  - ps: $CONTENT2='xerces3=1'
+  - ps: $CONTENT2 > ext\ACE_TAO\ACE\bin\MakeProjectCreator\config\default.features
+  - perl %ACE_ROOT%\bin\mwc.pl -type %MPC_TYPE% %CIAO_ROOT%\CIAO_TAO_DAnCE.mwc
 
 platform:
   - x64
@@ -32,5 +43,8 @@ configuration:
 build:
   parallel: true
   project: CIAO_TAO_DAnCE.sln
+
+cache:
+  - c:\tools\vcpkg\installed\
 
 test: off
