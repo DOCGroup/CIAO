@@ -77,3 +77,22 @@ jobs:
     inputs:
       solution: 'CIAO_TAO_DAnCE.sln'
       maximumCpuCount: true
+
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - bash: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
+    displayName: 'git clone ACE_TAO'
+  - bash: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(Build.SourcesDirectory)\ACE_TAO\ACE\MPC
+    displayName: 'git clone MPC'
+  - bash: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(Build.SourcesDirectory)\DAnCE
+    displayName: 'git clone DAnCE'
+  - bash: echo -e "#include \"ace/config-linux.h\"" >> $ACE_ROOT/ace/config.h;
+    displayName: 'Create config.h file'
+  - bash: echo -e "include \$(ACE_ROOT)/include/makeinclude/platform_linux.GNU" >> $ACE_ROOT/include/makeinclude/platform_macros.GNU;
+    displayName: 'Create platform_macros file'
+  - bash: perl ACE_TAO\ACE\bin\mwc.pl -type gnuace CIAO_TAO_DAnCE.mwc
+    displayName: 'Run mwc.pl'
+  - bash: make -j 6
+    displayName: 'Build project'
