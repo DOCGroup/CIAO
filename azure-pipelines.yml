@@ -33,8 +33,8 @@ jobs:
   - powershell: |
       '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
     displayName: 'Create config.h file'
-  - powershell: perl/perl/bin/perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE
-    displayName: 'Run script mwc.pl on CIAO_TAO_DAnCE'
+  - powershell: perl/perl/bin/perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc
+    displayName: 'Run script mwc.pl on CIAO_TAO_DAnCE.mwc'
   - task: VSBuild@1
     displayName: 'Build solution CIAO_TAO_DAnCE.sln'
     inputs:
@@ -63,8 +63,8 @@ jobs:
   - powershell: |
       '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
     displayName: 'Create config.h file'
-  - powershell: perl/perl/bin/perl $(ACE_ROOT)/bin/mwc.pl -type vc14 CIAO_TAO_DAnCE
-    displayName: 'Run script mwc.pl on CIAO_TAO_DAnCE'
+  - powershell: perl/perl/bin/perl $(ACE_ROOT)/bin/mwc.pl -type vc14 CIAO_TAO_DAnCE.mwc
+    displayName: 'Run script mwc.pl on CIAO_TAO_DAnCE.mwc'
   - task: VSBuild@1
     displayName: 'Build solution CIAO_TAO_DAnCE.sln'
     inputs:
