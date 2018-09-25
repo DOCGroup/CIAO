@@ -26,7 +26,7 @@ install:
   - git clone --depth 1 git://github.com/DOCGroup/MPC.git
   - git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git
   - git clone --depth 1 git://github.com/DOCGroup/DAnCE.git
-  - cd %APPVEYOR_BUILD_FOLDER%
+  - cd ..
   - set PATH=%ACE_ROOT%\lib:%PATH%
   - ps: $CONTENT='#include "ace/config-win32.h"'
   - ps: $CONTENT > ext\ACE_TAO\ACE\ace\config.h
