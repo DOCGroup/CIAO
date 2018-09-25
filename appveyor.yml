@@ -30,8 +30,8 @@ install:
   - set PATH=%ACE_ROOT%\lib:%PATH%
   - ps: $CONTENT='#include "ace/config-win32.h"'
   - ps: $CONTENT > ext\ACE_TAO\ACE\ace\config.h
-  - ps: $CONTENT='xerces3=1'
-  - ps: $CONTENT > ext\ACE_TAO\ACE\bin\MakeProjectCreator\config\default.features
+  - ps: $CONTENT2='xerces3=1'
+  - ps: $CONTENT2 > ext\ACE_TAO\ACE\bin\MakeProjectCreator\config\default.features
   - perl %ACE_ROOT%\bin\mwc.pl -type %MPC_TYPE% %CIAO_ROOT%\CIAO_TAO_DAnCE.mwc
 
 platform:
