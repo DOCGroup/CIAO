@@ -1,55 +1,93 @@
 variables:
-   ACE_ROOT: $(Build.SourcesDirectory)\ACE_TAO\ACE
-   TAO_ROOT: $(Build.SourcesDirectory)\ACE_TAO\TAO
+   ACE_ROOT: $(Build.SourcesDirectory)/ACE_TAO/ACE
+   MPC_ROOT: $(Build.SourcesDirectory)/ACE_TAO/ACE/MPC
+   TAO_ROOT: $(Build.SourcesDirectory)/ACE_TAO/TAO
    CIAO_ROOT: $(Build.SourcesDirectory)
-   DAnCE_ROOT: $(Build.SourcesDirectory)\DAnCE
+   DAnCE_ROOT: $(Build.SourcesDirectory)/DAnCE
    system.prefergit: true
 
 resources:
 - repo: self
   fetchDepth: 1
 
-queue:
-  name: Hosted VS2017
-  demands:
-  - Cmd
-  - msbuild
-  - visualstudio
+jobs:
+- job: VisualStudio2017
+  pool:
+    vmImage: 'vs2017-win2016'
+  steps:
+  - powershell: |
+      $client = new-object System.Net.WebClient
+      $client.DownloadFile("http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.zip","strawberry-perl.zip")
+    displayName: 'PowerShell Script'
+  - task: ExtractFiles@1
+    displayName: 'Extract files '
+    inputs:
+      archiveFilePatterns: 'strawberry-perl.zip'
+      destinationFolder: perl
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
+    displayName: 'git clone ACE_TAO'
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
+    displayName: 'git clone MPC'
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
+    displayName: 'git clone DAnCE'
+  - powershell: |
+      '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
+    displayName: 'Create config.h file'
+  - powershell: perl/perl/bin/perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc
+    displayName: 'Run script mwc.pl on CIAO_TAO_DAnCE.mwc'
+  - task: VSBuild@1
+    displayName: 'Build solution CIAO_TAO_DAnCE.sln'
+    inputs:
+      solution: 'CIAO_TAO_DAnCE.sln'
+      maximumCpuCount: true
 
-steps:
-- powershell: |
-   $client = new-object System.Net.WebClient
-   $client.DownloadFile("http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.zip","strawberry-perl.zip");
-  displayName: 'PowerShell Script'
+- job: VisualStudio2015
+  pool:
+    vmImage: 'vs2015-win2012r2'
+  steps:
+  - powershell: |
+      $client = new-object System.Net.WebClient
+      $client.DownloadFile("http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.zip","strawberry-perl.zip")
+    displayName: 'PowerShell Script'
+  - task: ExtractFiles@1
+    displayName: 'Extract files '
+    inputs:
+      archiveFilePatterns: 'strawberry-perl.zip'
+      destinationFolder: perl
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
+    displayName: 'git clone ACE_TAO'
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
+    displayName: 'git clone MPC'
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
+    displayName: 'git clone DAnCE'
+  - powershell: |
+      '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
+    displayName: 'Create config.h file'
+  - powershell: perl/perl/bin/perl $(ACE_ROOT)/bin/mwc.pl -type vc14 CIAO_TAO_DAnCE.mwc
+    displayName: 'Run script mwc.pl on CIAO_TAO_DAnCE.mwc'
+  - task: VSBuild@1
+    displayName: 'Build solution CIAO_TAO_DAnCE.sln'
+    inputs:
+      solution: 'CIAO_TAO_DAnCE.sln'
+      maximumCpuCount: true
 
-- task: ExtractFiles@1
-  displayName: 'Extract files '
-  inputs:
-    archiveFilePatterns: 'strawberry-perl.zip'
-    destinationFolder: perl
-
-- powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
-  displayName: 'git clone ACE_TAO'
-
-- powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(Build.SourcesDirectory)\ACE_TAO\ACE\MPC
-  displayName: 'git clone MPC'
-
-- powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(Build.SourcesDirectory)\DAnCE
-  displayName: 'git clone DAnCE'
-
-- powershell: |
-   '#include "ace/config-win32.h"' > $(Build.SourcesDirectory)\ACE_TAO\ACE\ace\config.h
-  displayName: 'Create config.h file'
-
-- task: BatchScript@1
-  displayName: 'Run script perl\perl\bin\perl'
-  inputs:
-    filename: 'perl\perl\bin\perl'
-    arguments: 'ACE_TAO\ACE\bin\mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc'
-    modifyEnvironment: false
-
-- task: VSBuild@1
-  displayName: 'Build solution CIAO_TAO_DAnCE.sln'
-  inputs:
-    solution: 'CIAO_TAO_DAnCE.sln'
-    maximumCpuCount: true
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
+    displayName: 'git clone ACE_TAO'
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
+    displayName: 'git clone MPC'
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
+    displayName: 'git clone DAnCE'
+  - powershell: |
+      '#include "ace/config-linux.h"' > $(ACE_ROOT)/ace/config.h
+    displayName: 'Create config.h file'
+  - powershell: |
+      'include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU' > $(ACE_ROOT)/include/makeinclude/platform_macros.GNU;
+    displayName: 'Create platform_macros file'
+  - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type gnuace CIAO_TAO_DAnCE.mwc
+    displayName: 'Run mwc.pl on CIAO_TAO_DAnCE.mwc'
+  - bash: make -j 6
+    displayName: 'Build project'
