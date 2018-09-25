@@ -92,7 +92,7 @@ jobs:
     displayName: 'Create config.h file'
   - bash: echo -e "include \$(ACE_ROOT)/include/makeinclude/platform_linux.GNU" >> $ACE_ROOT/include/makeinclude/platform_macros.GNU;
     displayName: 'Create platform_macros file'
-  - bash: perl ACE_TAO\ACE\bin\mwc.pl -type gnuace CIAO_TAO_DAnCE.mwc
+  - bash: perl ACE_TAO/ACE/bin/mwc.pl -type gnuace CIAO_TAO_DAnCE.mwc
     displayName: 'Run mwc.pl'
   - bash: make -j 6
     displayName: 'Build project'
