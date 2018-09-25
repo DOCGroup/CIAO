@@ -1,8 +1,8 @@
 variables:
-   ACE_ROOT: $(Build.SourcesDirectory)\ACE_TAO\ACE
-   TAO_ROOT: $(Build.SourcesDirectory)\ACE_TAO\TAO
+   ACE_ROOT: $(Build.SourcesDirectory)/ACE_TAO/ACE
+   TAO_ROOT: $(Build.SourcesDirectory)/ACE_TAO/TAO
    CIAO_ROOT: $(Build.SourcesDirectory)
-   DAnCE_ROOT: $(Build.SourcesDirectory)\DAnCE
+   DAnCE_ROOT: $(Build.SourcesDirectory)/DAnCE
    system.prefergit: true
 
 resources:
@@ -82,11 +82,11 @@ jobs:
   pool:
     vmImage: 'ubuntu-16.04'
   steps:
-  - bash: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
+  - bash: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
     displayName: 'git clone ACE_TAO'
-  - bash: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(Build.SourcesDirectory)\ACE_TAO\ACE\MPC
+  - bash: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(Build.SourcesDirectory)/ACE_TAO/ACE/MPC
     displayName: 'git clone MPC'
-  - bash: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(Build.SourcesDirectory)\DAnCE
+  - bash: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(Build.SourcesDirectory)/DAnCE
     displayName: 'git clone DAnCE'
   - bash: echo -e "#include \"ace/config-linux.h\"" >> $ACE_ROOT/ace/config.h;
     displayName: 'Create config.h file'
