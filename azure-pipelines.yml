@@ -91,3 +91,24 @@ jobs:
     displayName: 'Run mwc.pl on CIAO_TAO_DAnCE.mwc'
   - bash: make -j 6
     displayName: 'Build project'
+
+- job: MacOSX
+  pool:
+    vmImage: 'macOS-10.13'
+  steps:
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
+    displayName: 'git clone ACE_TAO'
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
+    displayName: 'git clone MPC'
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
+    displayName: 'git clone DAnCE'
+  - powershell: |
+      '#include "ace/config-macosx.h"' > $(ACE_ROOT)/ace/config.h
+    displayName: 'Create config.h file'
+  - powershell: |
+      'include $(ACE_ROOT)/include/makeinclude/platform_macosx.GNU' > $(ACE_ROOT)/include/makeinclude/platform_macros.GNU;
+    displayName: 'Create platform_macros file'
+  - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type gnuace CIAO_TAO_DAnCE.mwc
+    displayName: 'Run mwc.pl on CIAO_TAO_DAnCE.mwc'
+  - bash: make -j 6
+    displayName: 'Build project'
