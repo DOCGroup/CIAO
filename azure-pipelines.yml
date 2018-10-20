@@ -105,10 +105,10 @@ jobs:
     displayName: Create config.h file
   - powershell: |
       'xerces3=1\nssl=1'n' > $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
-    displayName: 'Create default.features file'
+    displayName: Create default.features file
   - powershell: |
       'xerces3=1\nssl=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU' > $(ACE_ROOT)/include/makeinclude/platform_macros.GNU;
-    displayName: 'Create platform_macros file'
+    displayName: Create platform_macros file
   - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type gnuace CIAO_TAO_DAnCE.mwc
     displayName: Run mwc.pl on CIAO_TAO_DAnCE.mwc
   - bash: make -j 6
