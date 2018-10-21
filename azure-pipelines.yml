@@ -4,6 +4,7 @@ variables:
    TAO_ROOT: $(Build.SourcesDirectory)/ACE_TAO/TAO
    CIAO_ROOT: $(Build.SourcesDirectory)
    DAnCE_ROOT: $(Build.SourcesDirectory)/DAnCE
+   DDS_ROOT: $(Build.SourcesDirectory)/DDS
    system.prefergit: true
 
 resources:
@@ -100,20 +101,25 @@ jobs:
     displayName: git clone MPC
   - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
     displayName: git clone DAnCE
+  - powershell: git clone --depth 1 git://github.com/objectcomputing/OpenDDS $(DDS_ROOT)
+    displayName: git clone OpenDDS
   - powershell: |
       '#include "ace/config-linux.h"' > $(ACE_ROOT)/ace/config.h
     displayName: Create config.h file
   - powershell: |
       'xerces3=1' > $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
+      'dds4ccm_opendds=1' >> $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
+      'dds_suppress_anys=0' >> $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
       'ssl=1' >> $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
     displayName: Create default.features file
   - powershell: |
       'xerces3=1' > $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
       'ssl=1' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
+      'dds4ccm_opendds=1' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
       'include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
     displayName: Create platform_macros file
-  - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type gnuace CIAO_TAO_DAnCE.mwc
-    displayName: Run mwc.pl on CIAO_TAO_DAnCE.mwc
+  - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type gnuace CIAO_TAO_DAnCE_OpenDDS.mwc
+    displayName: Run mwc.pl on CIAO_TAO_DAnCE_OpenDDS.mwc
   - bash: make -j 6
     displayName: Build project
 
