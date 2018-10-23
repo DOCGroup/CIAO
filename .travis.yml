@@ -32,7 +32,7 @@ matrix:
             - libxerces-c-dev
             - libssl-dev
             - clang++-5.0
-      env: COMPILER='clang++-5.0' CCMLW=0 CCMNOEVENT=0
+      env: COMPILER=clang++-5.0 CCMLW=0 CCMNOEVENT=0
     - compiler: clang
       addons:
         apt:
@@ -43,7 +43,18 @@ matrix:
             - libxerces-c-dev
             - libssl-dev
             - clang++-6.0
-      env: COMPILER='clang++-6.0' CCMLW=0 CCMNOEVENT=0
+      env: COMPILER=clang++-6.0 CCMLW=0 CCMNOEVENT=0
+    - compiler: clang
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-trusty-7
+          packages:
+            - libxerces-c-dev
+            - libssl-dev
+            - clang++-7
+      env: COMPILER=clang++-7 CCMLW=0 CCMNOEVENT=0
     - compiler: gcc
       addons:
         apt:
@@ -53,7 +64,7 @@ matrix:
             - libxerces-c-dev
             - libssl-dev
             - g++-6
-      env: COMPILER='g++-6' CCMLW=0 CCMNOEVENT=0
+      env: COMPILER=g++-6 CCMLW=0 CCMNOEVENT=0
     - compiler: gcc
       addons:
         apt:
@@ -63,7 +74,7 @@ matrix:
             - libxerces-c-dev
             - libssl-dev
             - g++-7
-      env: COMPILER='g++-7' CCMLW=0 CCMNOEVENT=0
+      env: COMPILER=g++-7 CCMLW=0 CCMNOEVENT=0
 
 addons:
   apt:
