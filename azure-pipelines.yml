@@ -47,14 +47,14 @@ jobs:
     displayName: git clone MPC
   - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
     displayName: git clone DAnCE
-  - powershell: |
+  - cmd: |
       '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
     displayName: Create config.h file
-  - powershell: |
+  - cmd: |
       'xerces3=1' > $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
       'ssl=1' >> $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
     displayName: Create default.features file
-  - powershell: |
+  - cmd: |
       cat $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
     displayName: Cat default.features file
   - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc
