@@ -20,7 +20,7 @@ install:
   - cmd: if "%platform%"=="Win32" set VCPKG_ARCH=x86-windows
   - cmd: if "%platform%"=="x64"   set VCPKG_ARCH=x64-windows
   - cmd: vcpkg remove --outdated --recurse
-  - cmd: vcpkg install --recurse --triplet %VCPKG_ARCH% xerces-c
+  - cmd: vcpkg install --recurse --triplet %VCPKG_ARCH% xerces-c openssl
   - cmd: vcpkg integrate install
   - cmd: mkdir ext && cd ext
   - git clone --depth 1 git://github.com/DOCGroup/MPC.git

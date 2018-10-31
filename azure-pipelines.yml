@@ -31,6 +31,8 @@ jobs:
         BuildPlatform: Win32
         BuildConfiguration: Release
   steps:
+  - powershell: git clone --depth 1 git://github.com/Microsoft/vcpkg.git $(Build.SourcesDirectory)\vcpkg
+    displayName: git clone vcpkg
   - script: .\vcpkg\bootstrap-vcpkg.bat
     displayName: Bootstrap vcpkg
   - script: .\vcpkg\vcpkg.exe install openssl xerces-c
