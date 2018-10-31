@@ -55,7 +55,7 @@ matrix:
             - libxerces-c-dev
             - libssl-dev
             - clang++-7
-      env: CXX=clang++-7.0 CC=clang-7.0 CCMLW=0 CCMNOEVENT=0
+      env: CXX=clang++-7 CC=clang-7 CCMLW=0 CCMNOEVENT=0
     - compiler: gcc
       addons:
         apt:
