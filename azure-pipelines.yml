@@ -1,7 +1,8 @@
 variables:
-   ACE_ROOT: $(Build.SourcesDirectory)/ACE_TAO/ACE
-   MPC_ROOT: $(Build.SourcesDirectory)/ACE_TAO/ACE/MPC
-   TAO_ROOT: $(Build.SourcesDirectory)/ACE_TAO/TAO
+   DOC_ROOT: $(Build.SourcesDirectory)/ACE_TAO
+   ACE_ROOT: $(DOC_ROOT)/ACE
+   MPC_ROOT: $(ACE_ROOT)/MPC
+   TAO_ROOT: $(DOC_ROOT)/TAO
    CIAO_ROOT: $(Build.SourcesDirectory)
    DAnCE_ROOT: $(Build.SourcesDirectory)/DAnCE
    DDS_ROOT: $(Build.SourcesDirectory)/DDS
@@ -105,7 +106,7 @@ jobs:
       sudo apt-get --yes update
       sudo apt-get --yes install libxerces-c-dev libssl-dev g++-8
     displayName: install system package dependencies
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(DOC_ROOT)
     displayName: git clone ACE_TAO
   - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
     displayName: git clone MPC
@@ -137,7 +138,7 @@ jobs:
   pool:
     vmImage: macOS-10.13
   steps:
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(DOC_ROOT)
     displayName: git clone ACE_TAO
   - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
     displayName: git clone MPC
