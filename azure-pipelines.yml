@@ -99,7 +99,8 @@ jobs:
   pool:
     vmImage: ubuntu-16.04
   variables:
-    COMPILER: g++-8
+    CC: gcc-8
+    CXX: g++-8
   steps:
   - script: |
       sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
