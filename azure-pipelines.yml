@@ -21,31 +21,26 @@ jobs:
       Debug64:
         BuildPlatform: x64
         BuildConfiguration: Debug
+        vcpkgarch: x64-windows
       Release64:
         BuildPlatform: x64
         BuildConfiguration: Release
+        vcpkgarch: x64-windows
       Debug32:
         BuildPlatform: Win32
         BuildConfiguration: Debug
+        vcpkgarch: x86-windows
       Release32:
         BuildPlatform: Win32
         BuildConfiguration: Release
+        vcpkgarch: x86-windows
   steps:
   - powershell: git clone --depth 1 git://github.com/Microsoft/vcpkg.git $(Build.SourcesDirectory)\vcpkg
     displayName: git clone vcpkg
   - script: .\vcpkg\bootstrap-vcpkg.bat
     displayName: Bootstrap vcpkg
-  - script: .\vcpkg\vcpkg.exe install openssl xerces-c
+  - script: .\vcpkg\vcpkg.exe install --recurse --triplet $(vcpkgarch) openssl xerces-c
     displayName: vcpkg install dependencies
-  - powershell: |
-      $client = new-object System.Net.WebClient
-      $client.DownloadFile("http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.zip","strawberry-perl.zip")
-    displayName: PowerShell Script
-  - task: ExtractFiles@1
-    displayName: Extract files
-    inputs:
-      archiveFilePatterns: strawberry-perl.zip
-      destinationFolder: perl
   - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
     displayName: git clone ACE_TAO
   - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
@@ -56,10 +51,10 @@ jobs:
       '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
     displayName: Create config.h file
   - powershell: |
-      'xerces3=1' > $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
-      'ssl=1' >> $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
+      'xerces3=1' > $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
+      'ssl=1' >> $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
     displayName: Create default.features file
-  - powershell: perl/perl/bin/perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc
+  - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc
     displayName: Run script mwc.pl on CIAO_TAO_DAnCE.mwc
   - task: VSBuild@1
     displayName: Build solution CIAO_TAO_DAnCE.sln
