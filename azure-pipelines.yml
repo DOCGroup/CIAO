@@ -102,18 +102,34 @@ jobs:
       GCC4:
         CC: gcc
         CXX: g++
+        platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU
       GCC6:
         CC: gcc-6
         CXX: g++-6
         PackageDeps: g++-6
+        platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU
       GCC7:
         CC: gcc-7
         CXX: g++-7
         PackageDeps: g++-7
+        platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU
       GCC8:
         CC: gcc-8
         CXX: g++-8
         PackageDeps: g++-8
+        platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU
+      CLANG5:
+        CC: clang-5.0
+        CXX: clang++-5.0
+        platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux_clang.GNU
+      CLANG6:
+        CC: clang-6.0
+        CXX: clang++-6.0
+        platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux_clang.GNU
+      CLANG7:
+        CC: clang-7
+        CXX: clang++-7
+        platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux_clang.GNU
   steps:
   - script: |
       sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
@@ -141,7 +157,7 @@ jobs:
       'xerces3=1' > $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
       'ssl=1' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
       'dds4ccm_opendds=1' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
-      'include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
+      "$(platform_file)" >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
     displayName: Create platform_macros file
   - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type gnuace CIAO_TAO_DAnCE_OpenDDS.mwc
     displayName: Run mwc.pl on CIAO_TAO_DAnCE_OpenDDS.mwc
