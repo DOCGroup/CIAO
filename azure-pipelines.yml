@@ -54,9 +54,6 @@ jobs:
       echo "xerces3=1" | out-file -encoding ASCII $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
       echo "ssl=1" | out-file -append -encoding ASCII $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
     displayName: Create default.features file
-  - powershell: |
-      cat $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
-    displayName: Cat default.features file
   - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc
     displayName: Run script mwc.pl on CIAO_TAO_DAnCE.mwc
   - task: VSBuild@1
@@ -100,6 +97,8 @@ jobs:
 - job: Linux
   pool:
     vmImage: ubuntu-16.04
+  variables:
+    COMPILER: g++-8
   steps:
   - script: |
       sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
