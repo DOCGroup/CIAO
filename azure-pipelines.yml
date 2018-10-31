@@ -48,10 +48,10 @@ jobs:
   - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
     displayName: git clone DAnCE
   - powershell: |
-      echo "#include ""ace/config-win32.h""" | out-file -encoding ASCII > $(ACE_ROOT)\ace\config.h
+      echo "#include ""ace/config-win32.h""" | out-file -encoding ASCII $(ACE_ROOT)\ace\config.h
     displayName: Create config.h file
   - powershell: |
-      echo "xerces3=1" | out-file -encoding ASCII  $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
+      echo "xerces3=1" | out-file -encoding ASCII $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
       echo "ssl=1" | out-file -append -encoding ASCII $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
     displayName: Create default.features file
   - powershell: |
