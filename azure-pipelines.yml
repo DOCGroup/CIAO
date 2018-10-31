@@ -31,6 +31,10 @@ jobs:
         BuildPlatform: Win32
         BuildConfiguration: Release
   steps:
+  - script: .\vcpkg\bootstrap-vcpkg.bat
+    displayName: Bootstrap vcpkg
+  - script: .\vcpkg\vcpkg.exe install openssl xerces-c
+    displayName: vcpkg install dependencies
   - powershell: |
       $client = new-object System.Net.WebClient
       $client.DownloadFile("http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.zip","strawberry-perl.zip")
@@ -49,6 +53,10 @@ jobs:
   - powershell: |
       '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
     displayName: Create config.h file
+  - powershell: |
+      'xerces3=1' > $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
+      'ssl=1' >> $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
+    displayName: Create default.features file
   - powershell: perl/perl/bin/perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc
     displayName: Run script mwc.pl on CIAO_TAO_DAnCE.mwc
   - task: VSBuild@1
@@ -93,7 +101,7 @@ jobs:
   pool:
     vmImage: ubuntu-16.04
   steps:
-  - script: sudo apt-get --yes update && sudo apt-get --yes install libxerces-c-dev libssl-dev
+  - script: sudo apt-get --yes update && sudo apt-get --yes install libxerces-c-dev libssl-dev g++-8
     displayName: install system package dependencies
   - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
     displayName: git clone ACE_TAO
