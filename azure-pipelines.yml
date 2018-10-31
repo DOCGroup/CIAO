@@ -47,19 +47,26 @@ jobs:
     displayName: git clone MPC
   - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
     displayName: git clone DAnCE
+  - powershell: git clone --depth 1 git://github.com/objectcomputing/OpenDDS $(DDS_ROOT)
+    displayName: git clone OpenDDS
   - powershell: |
       '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
     displayName: Create config.h file
   - powershell: |
       'xerces3=1' > $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
+      'dds4ccm_opendds=1' >> $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
+      'dds_suppress_anys=0' >> $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
       'ssl=1' >> $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
     displayName: Create default.features file
-  - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc
-    displayName: Run script mwc.pl on CIAO_TAO_DAnCE.mwc
+  - powershell: |
+      cat $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
+    displayName: Cat default.features file
+  - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE_OpenDDS.mwc
+    displayName: Run script mwc.pl on CIAO_TAO_DAnCE_OpenDDS.mwc
   - task: VSBuild@1
-    displayName: Build solution CIAO_TAO_DAnCE.sln
+    displayName: Build solution CIAO_TAO_DAnCE_OpenDDS.sln
     inputs:
-      solution: CIAO_TAO_DAnCE.sln
+      solution: CIAO_TAO_DAnCE_OpenDDS.sln
       platform: $(BuildPlatform)
       configuration: $(BuildConfiguration)
       maximumCpuCount: true
