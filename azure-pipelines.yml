@@ -101,7 +101,10 @@ jobs:
   pool:
     vmImage: ubuntu-16.04
   steps:
-  - script: sudo apt-get --yes update && sudo apt-get --yes install libxerces-c-dev libssl-dev g++-7
+  - script: |
+      sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+      sudo apt-get --yes update
+      sudo apt-get --yes install libxerces-c-dev libssl-dev g++-8
     displayName: install system package dependencies
   - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
     displayName: git clone ACE_TAO
