@@ -1,7 +1,8 @@
 variables:
-   ACE_ROOT: $(Build.SourcesDirectory)/ACE_TAO/ACE
-   MPC_ROOT: $(Build.SourcesDirectory)/ACE_TAO/ACE/MPC
-   TAO_ROOT: $(Build.SourcesDirectory)/ACE_TAO/TAO
+   DOC_ROOT: $(Build.SourcesDirectory)/ACE_TAO
+   ACE_ROOT: $(DOC_ROOT)/ACE
+   MPC_ROOT: $(ACE_ROOT)/MPC
+   TAO_ROOT: $(DOC_ROOT)/TAO
    CIAO_ROOT: $(Build.SourcesDirectory)
    DAnCE_ROOT: $(Build.SourcesDirectory)/DAnCE
    DDS_ROOT: $(Build.SourcesDirectory)/DDS
@@ -92,10 +93,34 @@ jobs:
 - job: Linux
   pool:
     vmImage: ubuntu-16.04
+  strategy:
+    matrix:
+      GCC4:
+        CC: gcc
+        CXX: g++
+        platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU
+      GCC6:
+        CC: gcc-6
+        CXX: g++-6
+        PackageDeps: g++-6
+        platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU
+      GCC7:
+        CC: gcc-7
+        CXX: g++-7
+        PackageDeps: g++-7
+        platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU
+      GCC8:
+        CC: gcc-8
+        CXX: g++-8
+        PackageDeps: g++-8
+        platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU
   steps:
-  - script: sudo apt-get --yes update && sudo apt-get --yes install libxerces-c-dev libssl-dev
+  - script: |
+      sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+      sudo apt-get --yes update
+      sudo apt-get --yes install libxerces-c-dev libssl-dev $(PackageDeps)
     displayName: install system package dependencies
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(DOC_ROOT)
     displayName: git clone ACE_TAO
   - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
     displayName: git clone MPC
@@ -116,7 +141,7 @@ jobs:
       'xerces3=1' > $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
       'ssl=1' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
       'dds4ccm_opendds=1' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
-      'include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
+      "$(platform_file)" >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
     displayName: Create platform_macros file
   - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type gnuace CIAO_TAO_DAnCE_OpenDDS.mwc
     displayName: Run mwc.pl on CIAO_TAO_DAnCE_OpenDDS.mwc
