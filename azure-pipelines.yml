@@ -41,6 +41,8 @@ jobs:
     displayName: Bootstrap vcpkg
   - script: .\vcpkg\vcpkg.exe install --recurse --triplet $(vcpkgarch) openssl xerces-c
     displayName: vcpkg install dependencies
+  - script: .\vcpkg\vcpkg.exe integrate install
+    displayName: vcpkg integrate install
   - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
     displayName: git clone ACE_TAO
   - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
