@@ -28,12 +28,12 @@ install:
   - git clone --depth 1 git://github.com/DOCGroup/DAnCE.git
   - cd ..
   - set PATH=%ACE_ROOT%\lib:%PATH%
-  - ps: |
+  - cmd: |
       '#include "ace/config-win32.h"' > ext\ACE_TAO\ACE\ace\config.h
-  - ps: |
+  - cmd: |
       'xerces3=1' > ext\ACE_TAO\ACE\bin\MakeProjectCreator\config\default.features
       'ssl=1' >> ext\ACE_TAO\ACE\bin\MakeProjectCreator\config\default.features
-  - ps: |
+  - cmd: |
       cat ext\ACE_TAO\ACE\bin\MakeProjectCreator\config\default.features
   - perl %ACE_ROOT%\bin\mwc.pl -type %MPC_TYPE% %CIAO_ROOT%\CIAO_TAO_DAnCE.mwc
 
