@@ -22,21 +22,27 @@ jobs:
         BuildPlatform: x64
         BuildConfiguration: Debug
         vcpkgarch: x64-windows
+        vcpkglibdir: debug\lib
       Release64:
         BuildPlatform: x64
         BuildConfiguration: Release
         vcpkgarch: x64-windows
+        vcpkglibdir: lib
       Debug32:
         BuildPlatform: Win32
         BuildConfiguration: Debug
         vcpkgarch: x86-windows
+        vcpkglibdir: debug\lib
       Release32:
         BuildPlatform: Win32
         BuildConfiguration: Release
         vcpkgarch: x86-windows
+        vcpkglibdir: lib
   variables:
     XERCESCROOT: $(Build.SourcesDirectory)\vcpkg\packages\xerces-c_$(vcpkgarch)
     SSL_ROOT: $(Build.SourcesDirectory)\vcpkg\packages\openssl-windows_$(vcpkgarch)
+    SSL_LIBDIR: $(SSL_ROOT)\$(vcpkglibdir)
+    XERCESC_LIBDIR: $(XERCESCROOT)\$(vcpkglibdir)
   steps:
   - powershell: git clone --depth 1 git://github.com/Microsoft/vcpkg.git $(Build.SourcesDirectory)\vcpkg
     displayName: git clone vcpkg
@@ -46,7 +52,7 @@ jobs:
     displayName: vcpkg install dependencies
   - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
     displayName: git clone ACE_TAO
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT) --branch jwi-inclibdir
     displayName: git clone MPC
   - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
     displayName: git clone DAnCE
