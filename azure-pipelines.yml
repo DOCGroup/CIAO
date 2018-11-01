@@ -52,7 +52,7 @@ jobs:
     displayName: vcpkg install dependencies
   - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
     displayName: git clone ACE_TAO
-  - powershell: git clone --depth 1 git://github.com/jwillemsen/MPC $(MPC_ROOT) --branch jwi-inclibdir
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
     displayName: git clone MPC
   - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
     displayName: git clone DAnCE
