@@ -31,9 +31,6 @@ install:
   - ps: |
       echo "#include ""ace/config-win32.h""" | out-file -encoding ASCII ext\ACE_TAO\ACE\ace\config.h
   - ps: |
-      echo "xerces3=1" | out-file -encoding ASCII ext\ACE_TAO\ACE\bin\MakeProjectCreator\config\default.features
-      echo "ssl=1" | out-file -append -encoding ASCII ext\ACE_TAO\ACE\bin\MakeProjectCreator\config\default.features
-  - ps: |
       cat ext\ACE_TAO\ACE\bin\MakeProjectCreator\config\default.features
   - perl %ACE_ROOT%\bin\mwc.pl -type %MPC_TYPE% %CIAO_ROOT%\CIAO_TAO_DAnCE.mwc
 
