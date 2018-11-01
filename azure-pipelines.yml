@@ -17,30 +17,39 @@ jobs:
   pool:
     vmImage: vs2017-win2016
   strategy:
-    maxParallel: 4
     matrix:
       Debug64:
         BuildPlatform: x64
         BuildConfiguration: Debug
+        vcpkgarch: x64-windows
+        vcpkglibdir: debug\lib
       Release64:
         BuildPlatform: x64
         BuildConfiguration: Release
+        vcpkgarch: x64-windows
+        vcpkglibdir: lib
       Debug32:
         BuildPlatform: Win32
         BuildConfiguration: Debug
+        vcpkgarch: x86-windows
+        vcpkglibdir: debug\lib
       Release32:
         BuildPlatform: Win32
         BuildConfiguration: Release
+        vcpkgarch: x86-windows
+        vcpkglibdir: lib
+  variables:
+    XERCESCROOT: $(Build.SourcesDirectory)\vcpkg\packages\xerces-c_$(vcpkgarch)
+    SSL_ROOT: $(Build.SourcesDirectory)\vcpkg\packages\openssl-windows_$(vcpkgarch)
+    SSL_LIBDIR: $(SSL_ROOT)\$(vcpkglibdir)
+    XERCESC_LIBDIR: $(XERCESCROOT)\$(vcpkglibdir)
   steps:
-  - powershell: |
-      $client = new-object System.Net.WebClient
-      $client.DownloadFile("http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.zip","strawberry-perl.zip")
-    displayName: PowerShell Script
-  - task: ExtractFiles@1
-    displayName: Extract files
-    inputs:
-      archiveFilePatterns: strawberry-perl.zip
-      destinationFolder: perl
+  - powershell: git clone --depth 1 git://github.com/Microsoft/vcpkg.git $(Build.SourcesDirectory)\vcpkg
+    displayName: git clone vcpkg
+  - script: .\vcpkg\bootstrap-vcpkg.bat
+    displayName: Bootstrap vcpkg
+  - script: .\vcpkg\vcpkg.exe install --recurse --triplet $(vcpkgarch) openssl xerces-c
+    displayName: vcpkg install dependencies
   - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
     displayName: git clone ACE_TAO
   - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
@@ -50,7 +59,11 @@ jobs:
   - powershell: |
       '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
     displayName: Create config.h file
-  - powershell: perl/perl/bin/perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc
+  - powershell: |
+      echo "xerces3=1" | out-file -encoding ASCII $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
+      echo "ssl=1" | out-file -append -encoding ASCII $(ACE_ROOT)\bin\MakeProjectCreator\config\default.features
+    displayName: Create default.features file
+  - powershell: perl $(ACE_ROOT)/bin/mwc.pl -type vs2017 CIAO_TAO_DAnCE.mwc
     displayName: Run script mwc.pl on CIAO_TAO_DAnCE.mwc
   - task: VSBuild@1
     displayName: Build solution CIAO_TAO_DAnCE.sln
@@ -152,7 +165,7 @@ jobs:
   pool:
     vmImage: macOS-10.13
   steps:
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
+  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(DOC_ROOT)
     displayName: git clone ACE_TAO
   - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
     displayName: git clone MPC
