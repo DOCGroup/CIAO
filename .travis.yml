@@ -22,39 +22,6 @@ env:
 
 matrix:
   include:
-    - compiler: clang
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-5.0
-          packages:
-            - libxerces-c-dev
-            - libssl-dev
-            - clang++-5.0
-      env: COMPILER=clang++-5.0 CCMLW=0 CCMNOEVENT=0
-    - compiler: clang
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-6.0
-          packages:
-            - libxerces-c-dev
-            - libssl-dev
-            - clang++-6.0
-      env: COMPILER=clang++-6.0 CCMLW=0 CCMNOEVENT=0
-    - compiler: clang
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-7
-          packages:
-            - libxerces-c-dev
-            - libssl-dev
-            - clang++-7
-      env: COMPILER=clang++-7 CCMLW=0 CCMNOEVENT=0
     - compiler: gcc
       addons:
         apt:
