@@ -1,4 +1,3 @@
-sudo: false
 group: travis_latest
 language: cpp
 
@@ -72,6 +71,7 @@ before_script:
   - if [ "$CCMLW" == "1" ]; then echo -e "ccm_lw=1" >> $ACE_ROOT/bin/MakeProjectCreator/config/default.features; fi
   - if [ "$CCMNOEVENT" == "1" ]; then echo -e "ccm_noevent=1" >> $ACE_ROOT/bin/MakeProjectCreator/config/default.features; fi
   - echo -e "inline=0\noptimize=0\nxerces3=1\nssl=1\nipv6=1\n" >> $ACE_ROOT/include/makeinclude/platform_macros.GNU
+  - if [ "$NO_DEPRECATED" == "1" ]; then echo -e "no_deprecated=1\n" >> $ACE_ROOT/include/makeinclude/platform_macros.GNU; fi
   - echo -e "xerces3=1\nssl=1\n" >> $ACE_ROOT/bin/MakeProjectCreator/config/default.features
   - echo -e "TAO/tests/Hello/run_test.pl" >> $TAO_ROOT/bin/travis-ci.lst
   - if [ "$CXX" == "g++" ]; then echo -e "c++11=1\n" >> $ACE_ROOT/include/makeinclude/platform_macros.GNU; fi
