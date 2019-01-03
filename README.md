@@ -1,3 +1,4 @@
+[![Lastest release](https://img.shields.io/github/release/docgroup/ciao.svg)](https://github.com/DOCGroup/CIAO/releases/latest)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4eecebd660844fee89b09f68a7f4de1d)](https://www.codacy.com/app/DOCGroup/CIAO?utm_source=github.com&utm_medium=referral&utm_content=DOCGroup/CIAO&utm_campaign=badger)
 [![Build Status](https://travis-ci.com/DOCGroup/CIAO.svg?branch=master)](https://travis-ci.com/DOCGroup/CIAO)
 [![Build Status](https://ci.appveyor.com/api/projects/status/9da6pofewpvwq845/branch/master?svg=true)](https://ci.appveyor.com/project/jwillemsen/ciao)
