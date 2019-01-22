@@ -2,6 +2,6 @@ feature (dds4ccm_ndds) {
   dds_ts_flags += -d GeneratedCode
 }
 
-feature (dds4ccm_opendds) {
+feature (dds4ccm_opendds) : dcps_ts_subdir {
   dds_ts_flags += -o GeneratedCode
 }
