@@ -68,7 +68,7 @@ from Display_Base.idl is linked to all the components of this example. <p></p>
 are available in the components directories. We use the <a href="http://downloads.ociweb.com/MPC/MakeProjectCreator.pdf">MPC</a>
 to generate makefiles and Visual C++ project/solutions files for
 all <a href="http://www.cs.wustl.edu/%7Eschmidt/ACE.html">ACE</a>,
-<a href="http://www.cs.wustl.edu/%7Eschmidt/TAO.html">TAO</a> and
+<a href="https://www.dre.vanderbilt.edu/~schmidt/TAO.html">TAO</a> and
 <a href="http://www.cs.wustl.edu/%7Eschmidt/CIAO.html">CIAO</a> libraries.
 
 </li><li>3. idl files for each component are placed in components directory.  </li>
@@ -135,9 +135,9 @@ Finally you are ready to test the application you have made. From different shel
 
 To run in console mode:<br>
 <ul>
-  <li> Start NodeManagers (NodeDameon), execution manager and dance_plan_launcher, using the Naming Service 
+  <li> Start NodeManagers (NodeDameon), execution manager and dance_plan_launcher, using the Naming Service
   and the deploymentplan the flattened_deploymentplannat.cdp by running <code> run_test.pl </code>
-   
+
   You can copy and modify the copy to deploy the components in various
   different locations to let the application truely "distributed".
   After this, components should be deployed successfully.
@@ -156,7 +156,7 @@ To run in console mode:<br>
 
 To run in GUI mode with one GPS component:<br>
 <ul>
-  <li> Start NodeManagers, execution manager and dance_plan_launcher, using the Naming Service 
+  <li> Start NodeManagers, execution manager and dance_plan_launcher, using the Naming Service
   and the deploymentplan deploymentplanone.cdp by running <code> run_test_one.pl </code>
   After this, components should be deployed successfully.
   </li>
@@ -173,11 +173,11 @@ To run in GUI mode with one GPS component:<br>
 
 To run in GUI mode with three GPS and RateGen components:<br>
 <ul>
-  <li> Start NodeManagers, execution manager and dance_plan_launcher, using the Naming Service 
+  <li> Start NodeManagers, execution manager and dance_plan_launcher, using the Naming Service
   and the deploymentplan deploymentplanmore.cdp by running <code> run_test_more.pl </code>
   After this, components should be deployed successfully.
   </li>
-  <li> 
+  <li>
   Go to the <em> $CIAO_ROOT/examples/Display/descriptor </em> directory and run <code>run_test_more_contr.pl </code>
   In this script the Rate Generators are activated and after a while are stopped.</code>
   </li>
@@ -186,17 +186,17 @@ To run in GUI mode with three GPS and RateGen components:<br>
 To experience in GUI mode   (or console mode) with a different number of GPS and RateGen components:<br>
 <ul>
   <li>Add to the deploymentplan.cdp (or flattened_deploymentplannat.cdp) new instances of GPS - and RateGen components.
-      Change in de deploymentplan the 
-       configProperty: number_of_GPS  from the HUDisplay-NavDisplay-comp display instance. 
+      Change in de deploymentplan the
+       configProperty: number_of_GPS  from the HUDisplay-NavDisplay-comp display instance.
        Add the new connections to the deploymentplan.
   </li>
   <li>
-      Change the scripts <code> run_test_more.pl  ( or run_test.pl) </code> and <code>run_test_more_contr.pl </code> 
+      Change the scripts <code> run_test_more.pl  ( or run_test.pl) </code> and <code>run_test_more_contr.pl </code>
       for the correct number of components.
   </li>
   <li>
      Run the scripts run_test_more.pl for GUI display or run_test.pl for console display. You will then need to run the
-     script <code>run_test_more_contr.pl </code> in a separate shell window to switch on/off the Rate Generator(s).  
+     script <code>run_test_more_contr.pl </code> in a separate shell window to switch on/off the Rate Generator(s).
 </ul>
 
 <hr>
