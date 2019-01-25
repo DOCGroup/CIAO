@@ -28,13 +28,11 @@ static const char copyright[] =
 "//       Washington University\n"
 "//       St. Louis, MO\n"
 "//       USA\n"
-"//       http://www.cs.wustl.edu/~schmidt/doc-center.html\n"
 "// and\n"
 "//       Distributed Object Computing Laboratory\n"
 "//       University of California at Irvine\n"
 "//       Irvine, CA\n"
 "//       USA\n"
-"//       http://doc.ece.uci.edu/\n"
 "// and\n"
 "//       Institute for Software Integrated Systems\n"
 "//       Vanderbilt University\n"
@@ -43,7 +41,7 @@ static const char copyright[] =
 "//       http://www.isis.vanderbilt.edu/\n"
 "//\n"
 "// Information about CIAO is available at:\n"
-"//     http://www.cs.wustl.edu/~schmidt/CIAO.html";
+"//     http://www.dre.vanderbilt.edu/~schmidt/CIAO.html";
 
 TAO_NL::TAO_NL (void)
 {
