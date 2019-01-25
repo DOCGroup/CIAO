@@ -1,0 +1,985 @@
+commit 442fb43b22d07a17ec991b45856cd095ac96d7b6
+Merge: 59036e36aeb be2640b902a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 24 13:35:35 2019 +0100
+
+    Merge pull request #84 from jwillemsen/master
+    
+    Fixed broken links and updated email address D. Schmidt to the correc…
+
+commit be2640b902a8b84009bfbed1c9843148ef1c027f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 24 13:31:24 2019 +0100
+
+    Use CIAO_ROOT
+
+commit b1ca24121e55dcba7e16af38fdf6b889a5c3c1e1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 24 13:27:14 2019 +0100
+
+    Link to github for reporting issues
+
+commit 52f99c148781037db69ba75108c472d52da5e4d5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 24 13:12:39 2019 +0100
+
+    List changes for next release
+    
+        * NEWS:
+
+commit 6904c8b52ed45340d0f9c98c3ba3aa1e7817b4e5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 24 12:59:49 2019 +0100
+
+    Fixed broken links and updated email address D. Schmidt to the correct one
+
+commit 59036e36aeb718a29fac3302d754d734fc0e4602
+Merge: e4c84d08212 fc9485d1e83
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 24 11:15:25 2019 +0100
+
+    Merge pull request #83 from jwillemsen/master
+    
+    Removed some references to bugzilla and comp.soft-sys.ace
+
+commit fc9485d1e831448ac7e5b8e2e48e71c3737d65cf
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 24 11:10:28 2019 +0100
+
+    Updated several broken links
+
+commit 08c6bb2eeab48a3982fad6309232b51ef351534a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 24 11:01:20 2019 +0100
+
+    Fixed broken links
+    
+        * examples/Display/README.html:
+        * tutorials/Quoter/Simple/README.html:
+        * tutorials/Quoter/Simple/index.html:
+
+commit 2a519d41c186a48834e0a0892047c58412bf7bf8
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 24 10:43:12 2019 +0100
+
+    Removed some references to bugzilla and comp.soft-sys.ace
+    
+        * CIAO-INSTALL.html:
+        * README.md:
+
+commit e4c84d08212b2fb4b7cdadc1da4bd9a26fea1353
+Merge: 8dd78716191 b8d656ad2fe
+Author: Adam Mitz <mitza@objectcomputing.com>
+Date:   Tue Jan 22 12:49:25 2019 -0800
+
+    Merge pull request #82 from mitza-oci/master
+    
+    Use a base project from OpenDDS to support generated code in a subdir
+
+commit b8d656ad2fe6e79e840789fc49b0345ec6440a78
+Author: Adam Mitz <mitza@objectcomputing.com>
+Date:   Tue Jan 22 11:39:44 2019 -0600
+
+    Use a base project from OpenDDS to support generated code in a subdirectory
+
+commit 8dd78716191b6d6afa72054ed65efcb2d0b8df4d
+Merge: adebfd0f9ee 8970f9d326f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 3 15:51:37 2019 +0100
+
+    Merge pull request #81 from jwillemsen/master
+    
+    Add latest release badge
+
+commit 8970f9d326f91a99d8bca306f73c9305c210b155
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jan 3 12:47:23 2019 +0100
+
+    Add latest release badge
+    
+        * README.md:
+
+commit adebfd0f9ee8c98ec7f0a3451c17339cc6572e0e
+Merge: bec8da2bdd5 8108b999da1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Dec 31 13:10:13 2018 +0100
+
+    Merge pull request #80 from jwillemsen/master
+    
+    Updated copyright year
+
+commit 8108b999da15a47879ce705ed2be4cfefdff18cf
+Merge: 121293e6d1d bec8da2bdd5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Dec 31 10:11:48 2018 +0100
+
+    Merge branch 'master' of https://github.com/DOCGroup/CIAO
+
+commit 121293e6d1dfda8194d94946df10cbd157013177
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Dec 31 10:11:13 2018 +0100
+
+    Updated copyright year
+
+commit bec8da2bdd51e06dc333cb9ada39e929a4b43c2e
+Merge: 8db035f2d8d bdee40ba5f3
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Dec 7 10:27:14 2018 +0100
+
+    Merge pull request #79 from jwillemsen/master
+    
+    Updated travis-ci badge
+
+commit bdee40ba5f3ddca3510461cdcc6861719e893399
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Dec 7 08:46:55 2018 +0100
+
+    Updated travis-ci badge
+    
+        * README.md:
+
+commit 8db035f2d8d47b4beb813715e3bada01aeb2d269
+Merge: e30d6b60046 c94fad9cb31
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Dec 5 21:31:43 2018 +0100
+
+    Merge pull request #78 from jwillemsen/jwi-azureclang
+    
+    No need for this lst file
+
+commit c94fad9cb31432d09923eb16d71e1727e55ba28e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Dec 5 16:09:41 2018 +0100
+
+    No need for this lst file
+
+commit e30d6b60046defb12ef262bb9702a52ab6c88604
+Merge: 84b7eaeb80c 8d0fa82531b
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 29 10:42:34 2018 +0100
+
+    Merge pull request #77 from jwillemsen/jwi-azureclang
+    
+    Add clang to azure-devops and remove it from travis-ci
+
+commit 8d0fa82531b2373a0aed4e139f3727b8df22100f
+Merge: 47343f1bda7 0b6d42681c4
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 29 09:04:01 2018 +0100
+
+    Merge with master
+
+commit 0b6d42681c4f4b1e509e9793ce172e5c93bd31a0
+Merge: 3e5ab76c2f6 84b7eaeb80c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 29 09:03:17 2018 +0100
+
+    Merge branch 'master' of https://github.com/DOCGroup/CIAO
+
+commit 47343f1bda7fb1f3c6a884d5184340abec663024
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 29 09:02:24 2018 +0100
+
+    Removed clang from travis now it works on azure
+    
+        * .travis.yml:
+
+commit 403916639dcaae7cfd0d259ea8543694d301bf5f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 29 09:01:14 2018 +0100
+
+    Use mwc.pl workers
+    
+        * azure-pipelines.yml:
+
+commit 949b16fab37b7d69e23468e654c65c57e136eb5a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 29 08:49:53 2018 +0100
+
+    Add clang5 and 7
+    
+        * azure-pipelines.yml:
+
+commit eb8abbd76768378948d13334b6618ca2ab71cb14
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 29 08:40:54 2018 +0100
+
+    Add clang6 to azure-devops
+    
+        * azure-pipelines.yml:
+
+commit 3e5ab76c2f6a1f6617ac9326d54873018c4e7fc7
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 29 08:29:57 2018 +0100
+
+    Removed space
+    
+        * connectors/dds4ccm/tests/QueryCondition/DDS/README:
+
+commit 84b7eaeb80c5d1d4785e9423bc98ee47497ff880
+Merge: d1dc3cfd085 ba3805988e1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Nov 5 20:13:49 2018 +0100
+
+    Merge pull request #76 from jwillemsen/jwi-travisci-nosudo
+    
+    Don't use sudo anymore as described in https://blog.travis-ci.com/201…
+
+commit ba3805988e1fc99e7cf5f8e39de6617c17d9c3eb
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Nov 5 16:43:38 2018 +0100
+
+    Don't use sudo anymore as described in https://blog.travis-ci.com/2018-10-04-combining-linux-infrastructures
+
+commit d1dc3cfd085fa3a79e0e2f6603c6ae56e3d4e7b7
+Merge: 2e13b277fa3 50450940fe5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 1 22:40:38 2018 +0100
+
+    Merge pull request #75 from jwillemsen/jwi-disabledeprecated
+    
+    Disable deprecated warnings with clang on travis-ci
+
+commit 50450940fe55fd3dfdb9ba6226d51ca210083585
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 1 14:02:12 2018 +0100
+
+    Allow msvc2017 builds to take longer, 90 minutes
+    
+        * azure-pipelines.yml:
+
+commit dca8cf757bcec0d28840e51fdd8601e56819dc5c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 1 11:32:03 2018 +0100
+
+    Disable deprecated warnings with clang on travis-ci
+    
+        * .travis.yml:
+
+commit 2e13b277fa3e15e2e7068d82ecbbb14f51266411
+Merge: e423c1b31d2 9075928200a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 1 11:24:00 2018 +0100
+
+    Merge pull request #73 from jwillemsen/jwi-appveyorazure
+    
+    Test more configurations on CI including xercesc and openssl on Windows
+
+commit 9075928200a057fb9408bfb538389f1025389d5a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 1 11:19:31 2018 +0100
+
+    No cat of default.features anymore
+    
+        * appveyor.yml:
+
+commit 7ae9570fa7e01aad0ef40f45e66a00dc96b1043d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 1 11:19:10 2018 +0100
+
+    Back to MPC master
+    
+        * azure-pipelines.yml:
+
+commit 7dc257bd5074f97564d1dec3280668c9594558d8
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 1 08:47:47 2018 +0100
+
+    Temporary get MPC from my fork for testing
+    
+        * azure-pipelines.yml:
+
+commit 02bb4c478fb7c9f8b062d8c1b4cfbe4b01aba0c7
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 1 08:28:35 2018 +0100
+
+    For the moment no ssl/xercesc on appveyor
+    
+        * appveyor.yml:
+
+commit 59227eb0e7835872dac66327c75397d44c1aa837
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 1 08:27:14 2018 +0100
+
+    Set custom libdir for ssl/xercesc libs
+    
+        * azure-pipelines.yml:
+
+commit 96cfc60e19c0e6495952584ec236dc8b18087f8e
+Merge: fb877fda69f e423c1b31d2
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 1 08:18:35 2018 +0100
+
+    Merge branch 'master' into jwi-appveyorazure
+
+commit e423c1b31d22b147d9a16d22de99b6f9e6238bb9
+Merge: 325a43d7871 ea668823f43
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 22:28:11 2018 +0100
+
+    Merge pull request #74 from jwillemsen/jwi-azuregcc
+    
+    Test with gcc4/6/7/8 on azure devops
+
+commit ea668823f43107b7ccf18691d40fe15a4e86a6b4
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 19:53:28 2018 +0100
+
+    Test with gcc4/6/7/8 on azure devops
+    
+        * azure-pipelines.yml:
+
+commit fb877fda69ffe4428d9c5be6c134dc58ee91ff45
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 16:13:02 2018 +0100
+
+    Revert changes, travis-ci sets CXX before starting job
+
+commit d58a1e48ec19a0b4e89f023f175b3f787325796c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 15:39:32 2018 +0100
+
+    No clang compilation for the moment on azure, not working yet
+
+commit 8445238021928ad456f75eb57f2999d050015db9
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 15:22:55 2018 +0100
+
+    Changed optional repo usage
+
+commit e383bf71b6c792200e618c653cd170cb88862393
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 15:13:25 2018 +0100
+
+    Fixed indent
+
+commit 863cec84b37c198e8ca53443a3a2f945f20b0d75
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 15:04:39 2018 +0100
+
+    Add necessary repositories for clang and set SSL_ROOT/XERCESC_ROOT on windows
+    
+        * azure-pipelines.yml:
+
+commit 73294fb9cc2ec3fafb0396e1bb3506032d89b375
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 14:28:35 2018 +0100
+
+    Add integrate install for vcpkg
+    
+        * azure-pipelines.yml:
+
+commit c107ef4d5d9d3aff6356d16fb0a7356a8c36dc2a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 13:29:41 2018 +0100
+
+    Added missing package deps for clang
+    
+        * azure-pipelines.yml:
+
+commit 2444ef4f4c914127b69e2d26e5610076329b646d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 12:57:30 2018 +0100
+
+    Added clang to azure devops on linux
+    
+        * azure-pipelines.yml:
+
+commit e2e45f7b11b62f6dba3a4c3750b05ebc2cd5d015
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 12:57:09 2018 +0100
+
+    clang7 has no .0 postfix
+    
+        * .travis.yml:
+
+commit 845a8a3b86745d1697801459f105e2bdad2e0b92
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 12:32:39 2018 +0100
+
+    Also use gcc4/6/7/8 on azure devops
+    
+        * azure-pipelines.yml:
+
+commit aea6caace9ad2fbcd9d55b8baa6df7c3f9ccfde0
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 12:08:59 2018 +0100
+
+    Don't set COMPILER anymore
+    
+        * .travis.yml:
+
+commit a7a2e0431256e7613bccb8bf76967ffea57abe17
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 11:57:49 2018 +0100
+
+    Use CXX and CC as compiler settings
+    
+        * .travis.yml:
+        * azure-pipelines.yml:
+
+commit cebefd9a5f49fecb49fa0e16bd992b675703e1b4
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 11:46:18 2018 +0100
+
+    Introduce new DOC_ROOT
+    
+        * azure-pipelines.yml:
+
+commit 636201ab950432b791d411da16bc80d6e63a0db2
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 11:44:15 2018 +0100
+
+    Use g++8 on linux
+    
+        * azure-pipelines.yml:
+
+commit 8a87750d2a4a7d1a0dadfc3c2a9f130d0bed9dba
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 11:22:02 2018 +0100
+
+    config.h can be unicode
+    
+        * azure-pipelines.yml:
+
+commit 350fba1be4f3ca33f7642f750436dc7ca1d2d0a1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 11:21:22 2018 +0100
+
+    Fixed error in creation of config.h
+    
+        * azure-pipelines.yml:
+
+commit 20eb039f3d75f15358160e8fbf662ca30b1726d5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 11:02:27 2018 +0100
+
+    Use powershell together with echo and out-file to force ascii files
+    
+        * appveyor.yml:
+        * azure-pipelines.yml:
+
+commit af41f5cf3f34186df733431194d0a3a7bb9a9042
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 10:35:07 2018 +0100
+
+    Use cmd for file creation
+    
+        * azure-pipelines.yml:
+
+commit 401d09617d2032d081c644b33edea2da2f437ca2
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 10:34:29 2018 +0100
+
+    Use cmd for file creation
+    
+        * appveyor.yml:
+        * azure-pipelines.yml:
+
+commit 45797adf8978a2da90b911c81472e745e683692e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 10:14:06 2018 +0100
+
+    Add opendds to windows and cat default.features for testing
+    
+        * azure-pipelines.yml:
+
+commit d9741a83f52ce34fad61ad8a9c113634676a742e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 09:51:54 2018 +0100
+
+    Fixed paths
+    
+        * azure-pipelines.yml:
+
+commit 01f8aa078b52396d65a1f3f83a6919f2a677de98
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 09:32:59 2018 +0100
+
+    Add git clone for vcpkg
+    
+        * appveyor.yml:
+        * azure-pipelines.yml:
+
+commit 96e560f91d7fe0e38b8edd971d25d6a0a80423c7
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 09:20:25 2018 +0100
+
+    Add repo to ubuntu
+    
+        * azure-pipelines.yml:
+
+commit b6ca1c34c76c3431680a5a701538ec45f27cd7a5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 09:18:58 2018 +0100
+
+    Testing further changes
+    
+        * appveyor.yml:
+        * azure-pipelines.yml:
+
+commit 42b3fa683d41e707dcbcde6961cf7864d52ba8cb
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 09:15:58 2018 +0100
+
+    Test for appveyor
+    
+        * appveyor.yml:
+
+commit c14e6666f3ee018bdcab9b0b474f4be0c95c562d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 09:15:36 2018 +0100
+
+    Attempt to use xercesc/openssl on azure
+    
+        * azure-pipelines.yml:
+
+commit f25e07a924f0d908fb3fc330dc9b626524a7f82d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 09:07:31 2018 +0100
+
+    Back to the full path
+    
+        * appveyor.yml:
+
+commit c827071db8932d2ba1d58709a291f825fe64112a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 09:03:41 2018 +0100
+
+    Changed usage of ACE_ROOT in ps
+    
+        * appveyor.yml:
+
+commit e977cdfbf5d0fa3e3769bc79e749984e49db5740
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 09:00:29 2018 +0100
+
+    Change creation of files
+    
+        * appveyor.yml:
+
+commit e9e7f8a9bc75f6fa91f62a648bd826e731813d3d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Oct 31 08:56:44 2018 +0100
+
+    Simplified creating configuration files
+    
+        * appveyor.yml:
+
+commit 325a43d78710217a987b4b5a7685309c74cc5d86
+Merge: f09cf6f273d c2140addafd
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 23 16:05:23 2018 +0200
+
+    Merge pull request #72 from jwillemsen/master
+    
+    Add clang7 to travis-ci configuration
+
+commit c2140addafddfd12f7ce6537143c9a1cd591cb0e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 23 10:46:46 2018 +0200
+
+    Add clang7 to travis-ci configuration
+
+commit f09cf6f273d466541265fbe4c64036561a70e30f
+Merge: 6bbe84b6c45 6a867cfa23d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sun Oct 21 14:02:09 2018 +0200
+
+    Merge pull request #71 from jwillemsen/master
+    
+    Enable dds4ccm with opendds as part of the CIAO Linux azure build
+
+commit 6a867cfa23d0becccde4edba4baee6f46db17f2e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sun Oct 21 10:48:39 2018 +0200
+
+    Enable dds4ccm with opendds as part of the CIAO Linux azure build
+    
+        * azure-pipelines.yml:
+
+commit 6bbe84b6c45b3c5dbee00337104a431c4057e5b2
+Merge: 44e2f1a2781 d16a65c165f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 20 17:19:44 2018 +0100
+
+    Merge pull request #70 from jwillemsen/master
+    
+    Add xerces3/ssl to Linux azure build
+
+commit d16a65c165f88a52512b26c592c123c3b05c72f1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 20 16:11:37 2018 +0200
+
+    Solve multiline issues
+
+commit e21d15ce503da63dfcf45d1730f5087c8dcba70e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 20 15:41:14 2018 +0200
+
+    Fixed end of line
+
+commit 2a0824fc5257bdfe1bf1783bf10d7de9e8799f7a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 20 15:40:45 2018 +0200
+
+    Simplify quoting
+
+commit 5df691aab126098412e5a9e926b4b9c195bf5c54
+Merge: 8589172f90d 44e2f1a2781
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 20 15:40:05 2018 +0200
+
+    Merge conflict
+
+commit 8589172f90d39ebcafac4edbdf8c39b2c122d206
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 20 15:38:22 2018 +0200
+
+    Add xerces3 and ssl to linux azure jobs
+    
+        * azure-pipelines.yml:
+
+commit 44e2f1a278188fb0f0f91ffa2f27a7292c2ff8d0
+Merge: b5d554b330d 97a83283f71
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Oct 5 10:47:55 2018 +0100
+
+    Merge pull request #69 from jwillemsen/jwi-azuremacosx
+    
+    Compile more msvc2017 configurations and simplified quoting
+
+commit 97a83283f715a45f3324aacfecbcd8313e4f8f5e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Oct 5 08:53:18 2018 +0200
+
+    Compile more msvc2017 configurations and simplified quoting
+
+commit b5d554b330daef3f386e93bc13e0b2f7d9605867
+Merge: 816e02ca32b a0b9167dbb8
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Oct 1 13:29:33 2018 +0100
+
+    Merge pull request #68 from jwillemsen/jwi-azuremacosx
+    
+    Added MacOSX configuration
+
+commit a0b9167dbb85eff716336672e0d31ae1d45cd0eb
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Oct 1 13:29:18 2018 +0200
+
+    Added MacOSX configuration
+    
+        * azure-pipelines.yml:
+
+commit 816e02ca32bda263f8afee9022959b5ac9cd4837
+Merge: 8610a858815 0567ecba15e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 20:54:36 2018 +0100
+
+    Merge pull request #66 from jwillemsen/jwi-appveyor
+    
+    Install xerces-c using vcpkg
+
+commit 0567ecba15eb9b3442cb64838676949a5366dabd
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 17:13:29 2018 +0200
+
+    Use .. again
+    
+        * appveyor.yml:
+
+commit 8610a858815bc7228897dec2e12339c12851307a
+Merge: e48d21bdb49 4de26c2eb45
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 15:36:42 2018 +0100
+
+    Merge pull request #67 from jwillemsen/jwi-azurejobs
+    
+    Add jobs part for azure pipeline
+
+commit 896bf15e55ad0fd1c83d77c1374d9f33849307e0
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 15:13:51 2018 +0200
+
+    Change default.features creation
+    
+        * appveyor.yml:
+
+commit 4de26c2eb450f3804f6dceceb29d09d86d1c2212
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 14:28:52 2018 +0200
+
+    Specify full workspace name
+    
+        * azure-pipelines.yml:
+
+commit 3acec583edb6b1df6cc3287646b185559f23c5e2
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 14:19:36 2018 +0200
+
+    Usee environment variables
+    
+        * azure-pipelines.yml:
+
+commit 3a29d071f73cf47c840cf3b30a1321ebc55aab23
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 14:03:12 2018 +0200
+
+    Fixed default.features generation
+    
+        * appveyor.yml:
+
+commit 9bf84462301f733d3a22a686705900bfe6dc9404
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 14:02:40 2018 +0200
+
+    Updated message
+    
+        * azure-pipelines.yml:
+
+commit ac8ec688c5495b3b43e87b03632995cb38b54bdf
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 13:43:02 2018 +0200
+
+    Linux changes
+    
+        * azure-pipelines.yml:
+
+commit 3f896d677f4deb0b13ae05dc03b1db0c70bb01a2
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 13:35:03 2018 +0200
+
+    Unix paths
+    
+        * azure-pipelines.yml:
+
+commit 78db615d68baf64e2c062b2071c52a019c9c275a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 13:29:17 2018 +0200
+
+    Use unix slashes
+    
+        * azure-pipelines.yml:
+
+commit 5f96ffadc046c9bffeb05ed506c7aed8b4ed1347
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 13:25:41 2018 +0200
+
+    Add linux job to azure
+    
+        * azure-pipelines.yml:
+
+commit 84166161214d82777c73154a0424385e4d2207b2
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 13:19:13 2018 +0200
+
+    Added Visual Studio 2015 job
+    
+        * azure-pipelines.yml:
+
+commit a8956e31392f0abe2ee95071509e62ad443b6408
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 13:17:29 2018 +0200
+
+    Jobs may not have spaces
+    
+        * azure-pipelines.yml:
+
+commit ed9c6971d9157895103703b70c82685d6f4909ca
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 13:16:28 2018 +0200
+
+    Use pool instead of queue
+    
+        * azure-pipelines.yml:
+
+commit 1bab177e38a14d6c2dcb78fd4e5662a1ec76cf30
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 13:13:58 2018 +0200
+
+    Fixed powershell
+        * azure-pipelines.yml:
+
+commit 240f2eb74e75733bc39991e3b7bf15c5baebf1d4
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 13:12:53 2018 +0200
+
+    Fix powershell
+    
+        * azure-pipelines.yml:
+
+commit a34ec91398f9a7abe478357633926ef2e7892534
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 13:09:02 2018 +0200
+
+    Add jobs part for azure pipeline
+    
+        * azure-pipelines.yml:
+
+commit 875fe5431167a3f7200453d92c3c7bd585d6ff07
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 12:46:21 2018 +0200
+
+    Add default.features creation
+    
+        * appveyor.yml:
+
+commit 9f6ad130ed111f4af5dfea3e6ce6818d2fbbb5fa
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 12:42:32 2018 +0200
+
+    Use appveyor environment and different builder images
+    
+        * appveyor.yml:
+
+commit 078cc82c7dc87953c87e4f7bd231d46457e172c0
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 12:33:18 2018 +0200
+
+    Added vcpkg caching
+    
+        * appveyor.yml:
+
+commit 51fd264346255e5238d6c20d984f1e121c0621da
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 25 12:30:17 2018 +0200
+
+    Install xerces-c using vcpkg
+    
+        * appveyor.yml:
+
+commit e48d21bdb49f2452739a9ae3c40bf881ea10b9a2
+Merge: 2b75c92d2da 636ca5f2e54
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 18 13:38:09 2018 +0100
+
+    Merge pull request #65 from jwillemsen/master
+    
+    Upgraded to latest doxygen file version format
+
+commit 636ca5f2e54b66d85a5e643612916b6f7a246a86
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 18 14:37:03 2018 +0200
+
+    Upgraded to latest doxygen file version format
+    
+        * etc/ciao.doxygen:
+        * etc/ciao_dds4ccm.doxygen:
+
+commit 2b75c92d2dad7c17b8120b07a587b9c979237fab
+Merge: cc30f3b5088 e99e5f6addf
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 13 11:06:26 2018 +0100
+
+    Merge pull request #64 from jwillemsen/master
+    
+    Use powershel for the additional git clones we need
+
+commit e99e5f6addfb2b5f54c5cbb183970e5832ba2235
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 13 11:26:22 2018 +0200
+
+    Use powershel for the additional git clones we need
+
+commit cc30f3b50889f9aa39bc30ed22013ec9d5c050cd
+Merge: b77103e509e ac14e6a2bb1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 13 09:56:20 2018 +0100
+
+    Merge pull request #63 from jwillemsen/master
+    
+    Use powershell to create config.h
+
+commit ac14e6a2bb1f05c732a227b0a9ce38a4eec4dc69
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 13 09:45:29 2018 +0200
+
+    Fixed path
+
+commit e553156b30ec760b734804fb6fc6211268809f40
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 13 09:43:38 2018 +0200
+
+    Use powershell to create config.h
+
+commit b77103e509e1d47999b2eeba301e17626232ef35
+Merge: dbaa39068f1 f91c8762c6d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 11 17:47:47 2018 +0100
+
+    Merge pull request #62 from jwillemsen/master
+    
+    Fixed mwc invocation
+
+commit f91c8762c6dff99f2a49ebecf984f41a8cfc9e3a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 11 18:46:57 2018 +0200
+
+    Fixed mwc invocation
+
+commit dbaa39068f12c69ba44b0c455d8753b9f15e6dc3
+Merge: c1744b395c7 0f518e49653
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 11 17:41:55 2018 +0100
+
+    Merge pull request #61 from jwillemsen/master
+    
+    Added azure badge
+
+commit 0f518e4965339eefb2d8bf984c346fc06b1fcfe8
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 11 18:40:51 2018 +0200
+
+    Added azure badge
+    
+        * README.md:
+
+commit c1744b395c795fab1cd9be8452e9f4405862710d
+Merge: 3a18fa31179 cf46275f889
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 11 17:37:05 2018 +0100
+
+    Merge pull request #60 from jwillemsen/master
+    
+    Fixed pipeline
+
+commit cf46275f88913d88728cd8879b933eab690e9950
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 11 18:35:58 2018 +0200
+
+    Fixed pipeline
+    
+        * azure-pipelines.yml:
+
+commit 3a18fa31179ff6903f10264fc90581dcdcf696b8
+Merge: 54468df4534 c1c8c56f938
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 11 17:31:14 2018 +0100
+
+    Merge pull request #59 from jwillemsen/master
+    
+    Starter file for Azure Devops
+
+commit c1c8c56f93807881c21fef598a45620057df5c93
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Sep 11 18:30:04 2018 +0200
+
+    Starter file for Azure Devops
+
+commit 54468df4534c0281770b76a710089c9d8e0c5f14
+Merge: b26dbf10979 786f4880617
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Jun 12 11:01:28 2018 +0200
+
+    Merge pull request #58 from jwillemsen/master
+    
+    When making a new minor also update micro tag
+
+commit 786f4880617fbd32fe6af7aeb846c02ba9a9e421
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Jun 12 10:06:01 2018 +0200
+
+    When making a new minor also update micro tag
+    
+        * bin/make_release.py:
