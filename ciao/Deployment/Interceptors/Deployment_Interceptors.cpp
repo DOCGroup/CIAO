@@ -32,7 +32,6 @@ namespace CIAO
   void CIAO_StoreReferences_i::pre_install (::Deployment::DeploymentPlan &,
                                             ::CORBA::ULong)
   {
-    // no-op
   }
 
   void CIAO_StoreReferences_i::post_install (const ::Deployment::DeploymentPlan &plan,
