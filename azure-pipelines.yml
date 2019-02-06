@@ -119,6 +119,8 @@ jobs:
     displayName: Build solution CIAO_TAO_DAnCE.sln
     inputs:
       solution: CIAO_TAO_DAnCE.sln
+      platform: $(BuildPlatform)
+      configuration: $(BuildConfiguration)
       maximumCpuCount: true
 
 - job: Linux
