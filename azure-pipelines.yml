@@ -74,8 +74,21 @@ jobs:
       maximumCpuCount: true
 
 - job: VisualStudio2015
+  timeoutInMinutes: 90
   pool:
     vmImage: vs2015-win2012r2
+  strategy:
+    matrix:
+      Debug64:
+        BuildPlatform: x64
+        BuildConfiguration: Debug
+        vcpkgarch: x64-windows
+        vcpkglibdir: debug\lib
+      Release64:
+        BuildPlatform: x64
+        BuildConfiguration: Release
+        vcpkgarch: x64-windows
+        vcpkglibdir: lib
   steps:
   - powershell: |
       git clone --depth 1 git://github.com/Microsoft/vcpkg.git $(Build.SourcesDirectory)\vcpkg
