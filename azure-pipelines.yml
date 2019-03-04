@@ -40,10 +40,10 @@ jobs:
         vcpkgarch: x86-windows
         vcpkglibdir: lib
   variables:
-    XERCESCROOT: $(VCPKG_ROOT)\installed\xerces-c_$(vcpkgarch)
-    SSL_ROOT: $(VCPKG_ROOT\installed\openssl-windows_$(vcpkgarch)
-    SSL_LIBDIR: $(SSL_ROOT)\$(vcpkglibdir)
-    XERCESC_LIBDIR: $(XERCESCROOT)\$(vcpkglibdir)
+    XERCESC_INCDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\include\xercesc
+    XERCESC_LIBDIR: $(VCPKG_ROOT)\installed\$(vcpkglibdir)
+    SSL_INCDIR: $(VCPKG_ROOT\installed\$(vcpkgarch)\include\openssl
+    SSL_LIBDIR: $(VCPKG_ROOT)\installed\$(vcpkglibdir)
   steps:
   - powershell: |
       bootstrap-vcpkg.bat
