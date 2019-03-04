@@ -40,8 +40,8 @@ jobs:
         vcpkgarch: x86-windows
         vcpkglibdir: lib
   variables:
-    XERCESCROOT: $(VCPKG_ROOT)\packages\xerces-c_$(vcpkgarch)
-    SSL_ROOT: $(VCPKG_ROOT\packages\openssl-windows_$(vcpkgarch)
+    XERCESCROOT: $(VCPKG_ROOT)\installed\xerces-c_$(vcpkgarch)
+    SSL_ROOT: $(VCPKG_ROOT\installed\openssl-windows_$(vcpkgarch)
     SSL_LIBDIR: $(SSL_ROOT)\$(vcpkglibdir)
     XERCESC_LIBDIR: $(XERCESCROOT)\$(vcpkglibdir)
   steps:
