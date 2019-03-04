@@ -40,16 +40,15 @@ jobs:
         vcpkgarch: x86-windows
         vcpkglibdir: lib
   variables:
-    XERCESCROOT: $(Build.SourcesDirectory)\vcpkg\packages\xerces-c_$(vcpkgarch)
-    SSL_ROOT: $(Build.SourcesDirectory)\vcpkg\packages\openssl-windows_$(vcpkgarch)
+    XERCESCROOT: $(VCPKG_ROOT)\packages\xerces-c_$(vcpkgarch)
+    SSL_ROOT: $(VCPKG_ROOT\packages\openssl-windows_$(vcpkgarch)
     SSL_LIBDIR: $(SSL_ROOT)\$(vcpkglibdir)
     XERCESC_LIBDIR: $(XERCESCROOT)\$(vcpkglibdir)
   steps:
   - powershell: |
-      git clone --depth 1 git://github.com/Microsoft/vcpkg.git $(Build.SourcesDirectory)\vcpkg
-      .\vcpkg\bootstrap-vcpkg.bat
-      .\vcpkg\vcpkg.exe install --recurse --triplet $(vcpkgarch) openssl xerces-c
-    displayName: vcpkg
+      bootstrap-vcpkg.bat
+      vcpkg install --recurse --triplet $(vcpkgarch) openssl xerces-c
+    displayName: Install additional packages using vcpkg
   - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
     displayName: git clone ACE_TAO
   - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
