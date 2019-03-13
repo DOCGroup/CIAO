@@ -4,7 +4,6 @@ workspace {
   $(ACE_ROOT)/apps/gperf/src
   $(ACE_ROOT)/apps/JAWS/server
   $(ACE_ROOT)/protocols/ace/INet
-  $(ACE_ROOT)/contrib/minizip
   $(TAO_ROOT)/TAO_IDL
   $(TAO_ROOT)/tao
   $(TAO_ROOT)/orbsvcs/orbsvcs/CosNaming.mpc
@@ -17,6 +16,7 @@ workspace {
   tools
   $(DANCE_ROOT)/dance
   $(DANCE_ROOT)/tools
+  $(DANCE_ROOT)/contrib/minizip
   connectors/ami4ccm/ami4ccm
   connectors/dds4ccm/idl
   connectors/dds4ccm/impl
