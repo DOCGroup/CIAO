@@ -1,0 +1,211 @@
+commit 9c0fa499ba21f04c93c68f88016413f8831b3981
+Merge: 41dd1dd7413 e878f37c569
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Apr 4 14:51:28 2019 +0200
+
+    Merge pull request #92 from jwillemsen/master
+    
+    Added item
+
+commit e878f37c5699b8ec808d831ad237861d350c4ef5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Apr 4 14:39:35 2019 +0200
+
+    Added item
+    
+        * NEWS:
+
+commit 41dd1dd741358e01fa57d6f818c7cc8ad158da07
+Merge: 04056f6d927 c6d91d304ea
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Mar 13 16:14:07 2019 +0000
+
+    Merge pull request #91 from jwillemsen/jwi-minizip
+    
+    Updated these workspaces to use minizip from DAnCE instead from ACE
+
+commit c6d91d304eaa6f3829c41eb1a004bc82e165957e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Mar 13 15:34:34 2019 +0100
+
+    Updated these workspaces to use minizip from DAnCE
+    
+        * CIAO_TAO.mwc:
+        * CIAO_TAO_DAnCE.mwc:
+        * CIAO_TAO_DAnCE_OpenDDS.mwc:
+        * CIAO_TAO_OpenDDS.mwc:
+
+commit 04056f6d927d1e94808b2394ab9272b6892e08cb
+Merge: b08c20977de c475c1d9efe
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Mar 5 10:53:43 2019 +0100
+
+    Merge pull request #90 from jwillemsen/jwi-azurevcpkg
+    
+    vcpkg should be preinstalled now
+
+commit c475c1d9efee3d51f895a48561563efe30726943
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Mar 5 08:46:55 2019 +0100
+
+    Corrected libdir settings
+    
+        * azure-pipelines.yml:
+
+commit 63f4949ce0a59df1ed22b3f971d58ac7dbcea435
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Mar 4 20:30:24 2019 +0100
+
+    ADD
+
+commit ea9272bb25083877703b0a0a7da27c07299aed2e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Mar 4 19:00:37 2019 +0100
+
+    Fixes SSL_INCDIR
+
+commit e84a62351b4818bfce79a9e5b4b95df15d8d4944
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Mar 4 17:55:24 2019 +0100
+
+    Corrected xercesc/openssl inc dir and it seems vs2015-win2012r2 doesn't have vcpkg installed
+    
+        * azure-pipelines.yml:
+
+commit f383f6cf788473e5bd0917c60c0a5386ee9d706a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Mar 4 16:53:25 2019 +0100
+
+    No bootstrap and updated also vs2015
+    
+        * azure-pipelines.yml:
+
+commit eddec3af88d307d6df80b80a96d5f873a57c1ec3
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Mar 4 16:03:01 2019 +0100
+
+    Corrected variables
+    
+        * azure-pipelines.yml:
+
+commit ef4156bf0ae0800bcdb6506884e481b4afefba55
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Mar 4 15:48:40 2019 +0100
+
+    Should use the installed package
+    
+        * azure-pipelines.yml:
+
+commit 0b83dacc37a7976641cc8a81ddb097ffba8aa9e6
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Mar 4 15:44:03 2019 +0100
+
+    vcpkg should be preinstalled now
+    
+        * azure-pipelines.yml:
+
+commit b08c20977dea23aabeba09888d8cf823e1a9e54e
+Merge: ca64c28aff9 3e690ec0a5f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Feb 6 16:49:55 2019 +0100
+
+    Merge pull request #89 from jwillemsen/master
+    
+    Use one script for vcpkg and added openssl/xerces to Visual Studio 2015
+
+commit 3e690ec0a5fdb1fd7845ab040278e1b746b53343
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Feb 6 12:54:48 2019 +0100
+
+    Add missing platform and configuration
+
+commit da80dd58b3a650832e43079ab672d85b33de7ef9
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Feb 6 11:15:40 2019 +0100
+
+    Add missing variables for Visual Studio 2015
+
+commit 3c1986eda81e74022bb2b25375ea1d183615fdcb
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Feb 6 09:04:05 2019 +0100
+
+    Added strategy section
+    
+        * azure-pipelines.yml:
+
+commit e5ac8d10754e9054e8cf60c297a0e15f526882e5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Feb 6 08:58:38 2019 +0100
+
+    Use one script for vcpkg and added openssl/xerces to Visual Studio 2015
+    
+        * azure-pipelines.yml:
+
+commit ca64c28aff9267bf7e785d2a55de97b429bb4af5
+Merge: d9439f46116 03ede038c22
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 30 11:35:56 2019 +0100
+
+    Merge pull request #88 from jwillemsen/master
+    
+    Point to github for the latest MPC documentation
+
+commit 03ede038c2217f3ddacd9c9f5f670580833124a5
+Merge: 4f7df448f65 d9439f46116
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 30 11:28:56 2019 +0100
+
+    Merge branch 'master' of https://github.com/DOCGroup/CIAO
+
+commit 4f7df448f659a449a07a302060fdcf3a7ed2c0d2
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 30 11:28:46 2019 +0100
+
+    Point to github for the latest MPC documentation
+
+commit d9439f46116964247e74d31c335a09fd4ea6f9cf
+Merge: 0c65d752c7c b20be5fcbc7
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Jan 29 13:37:23 2019 +0100
+
+    Merge pull request #87 from jwillemsen/master
+    
+    Removed some unncessary noop comments
+
+commit b20be5fcbc77270d9a75729c83a58d60435be2c1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Jan 29 11:12:39 2019 +0100
+
+    Removed some unncessary noop comments
+
+commit 0c65d752c7ce9ab28a1da46f0fab24a775eccf7f
+Merge: 0aa963a30b5 00ae6f2112f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Jan 25 22:28:37 2019 +0100
+
+    Merge pull request #86 from jwillemsen/master
+    
+    Fixed broken links
+
+commit 00ae6f2112f48b8bb28dede11f6b20d5947ec372
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Jan 25 18:32:49 2019 +0100
+
+    Fixed broken links
+
+commit 0aa963a30b53c0232fd10f60e8bf3a04fde7e935
+Merge: f17cf5c870f c3532d5fedd
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Jan 25 10:42:41 2019 +0100
+
+    Merge pull request #85 from jwillemsen/master
+    
+    Prepare for next micro release
+
+commit c3532d5fedd7593e81b41685825cda478f5b198c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Jan 25 10:14:12 2019 +0100
+
+    Prepare for next micro release
+    
+        * NEWS:
