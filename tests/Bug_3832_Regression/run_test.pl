@@ -1,4 +1,3 @@
-
 eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
@@ -23,9 +22,7 @@ $server->DeleteFile($TestCaseC_i);
 $ENV {'CIAO_LOG_LEVEL'} = 10;
 $ENV {'CIAO_LOG_FILE'} = 'test.log';
 
-my $node_app = $server->GetArchDir("$DANCE_ROOT/bin/") . "dance_locality_manager";
-
-$SV = $server->CreateProcess ("$node_app", "-u c7a07968-7ece-11df-8000-67c6697351ff");
+$SV = $server->CreateProcess ("$DANCE_ROOT/bin/dance_locality_manager", "-u c7a07968-7ece-11df-8000-67c6697351ff");
 
 $server_status = $SV->Spawn ();
 
