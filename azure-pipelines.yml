@@ -8,6 +8,14 @@ variables:
    DDS_ROOT: $(Build.SourcesDirectory)/DDS
    system.prefergit: true
 
+schedules:
+- cron: "0 7 * * SUN"
+  displayName: Weekly Sunday
+  branches:
+    include:
+    - master
+  always: true
+
 resources:
 - repo: self
   fetchDepth: 1
@@ -44,7 +52,7 @@ jobs:
         vcpkglibdir: lib
         vcpkgpackages: openssl xerces-c
   variables:
-    VCPKG_ROOT: C:\vcpkg
+    VCPKG_ROOT: $(Build.SourcesDirectory)\vcpkg
     XERCESC_INCDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\include
     XERCESC_LIBDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\$(vcpkglibdir)
     SSL_INCDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\include
@@ -97,7 +105,7 @@ jobs:
         vcpkglibdir: lib
         vcpkgpackages: openssl xerces-c
   variables:
-    VCPKG_ROOT: C:\vcpkg
+    VCPKG_ROOT: $(Build.SourcesDirectory)\vcpkg
     XERCESC_INCDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\include
     XERCESC_LIBDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\$(vcpkglibdir)
     SSL_INCDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\include
@@ -148,15 +156,16 @@ jobs:
         vcpkgarch: x64-windows
         vcpkglibdir: lib
   variables:
+    VCPKG_ROOT: $(Build.SourcesDirectory)\vcpkg
     XERCESCROOT: $(Build.SourcesDirectory)\vcpkg\packages\xerces-c_$(vcpkgarch)
     SSL_ROOT: $(Build.SourcesDirectory)\vcpkg\packages\openssl-windows_$(vcpkgarch)
     SSL_LIBDIR: $(SSL_ROOT)\$(vcpkglibdir)
     XERCESC_LIBDIR: $(XERCESCROOT)\$(vcpkglibdir)
   steps:
   - powershell: |
-      git clone --depth 1 git://github.com/Microsoft/vcpkg.git $(Build.SourcesDirectory)\vcpkg
-      .\vcpkg\bootstrap-vcpkg.bat
-      .\vcpkg\vcpkg.exe install --recurse --triplet $(vcpkgarch) openssl xerces-c
+      git clone --depth 1 git://github.com/Microsoft/vcpkg.git $(VCPKG_ROOT)
+      $(VCPKG_ROOT)\bootstrap-vcpkg.bat
+      $(VCPKG_ROOT)\vcpkg.exe install --recurse --triplet $(vcpkgarch) openssl xerces-c
     displayName: vcpkg
   - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
     displayName: git clone ACE_TAO
