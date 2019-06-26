@@ -8,6 +8,14 @@ variables:
    DDS_ROOT: $(Build.SourcesDirectory)/DDS
    system.prefergit: true
 
+schedules:
+- cron: "0 7 * * SUN"
+  displayName: Weekly Sunday
+  branches:
+    include:
+    - master
+  always: true
+
 resources:
 - repo: self
   fetchDepth: 1
