@@ -52,7 +52,7 @@ jobs:
         vcpkglibdir: lib
         vcpkgpackages: openssl xerces-c
   variables:
-    VCPKG_ROOT: C:\vcpkg
+    VCPKG_ROOT: $(Build.SourcesDirectory)\vcpkg
     XERCESC_INCDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\include
     XERCESC_LIBDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\$(vcpkglibdir)
     SSL_INCDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\include
@@ -105,7 +105,7 @@ jobs:
         vcpkglibdir: lib
         vcpkgpackages: openssl xerces-c
   variables:
-    VCPKG_ROOT: C:\vcpkg
+    VCPKG_ROOT: $(Build.SourcesDirectory)\vcpkg
     XERCESC_INCDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\include
     XERCESC_LIBDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\$(vcpkglibdir)
     SSL_INCDIR: $(VCPKG_ROOT)\installed\$(vcpkgarch)\include
