@@ -1,4 +1,5 @@
 project(CIAO_OpenDDS_Dcps_idl_gen): gen_ostream, ccm_lem_stub, ciaoidldefaults, \
+                               conditional_dcps_ts_defaults, \
                                taobaseidldefaults, ccm_lw, ccm_noevent, ccm_direct_collocation {
   requires   += dds4ccm_opendds
   custom_only = 1
