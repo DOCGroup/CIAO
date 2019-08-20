@@ -19,6 +19,10 @@ clone_depth: 5
 install:
   - cmd: if "%platform%"=="Win32" set VCPKG_ARCH=x86-windows
   - cmd: if "%platform%"=="x64"   set VCPKG_ARCH=x64-windows
+  - cmd: cd C:\Tools\vcpkg
+  - cmd: git pull
+  - cmd: .\bootstrap-vcpkg.bat
+  - cmd: cd %APPVEYOR_BUILD_FOLDER%
   - cmd: vcpkg remove --outdated --recurse
   - cmd: vcpkg install --recurse --triplet %VCPKG_ARCH% xerces-c openssl
   - cmd: vcpkg integrate install
