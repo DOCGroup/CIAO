@@ -1,3 +1,12 @@
+---
+name: Bug report
+about: Create a report to help us improve
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 ### Version
 
 The version of CIAO, ACE, and TAO you are using
@@ -39,6 +48,8 @@ Detailed description of problem.  Don't just say "<blah> doesn't work, here's a 
 ### Repeat by
 
 What you did to get the error; include test program or session transcript if at all possible.
+When it is a runtime problem attach the output when you run your example with the
+environment variables CIAO_LOG_LEVEL and DANCE_LOG_LEVEL set to 10.
 
 ### Sample fix/ workaround
 
