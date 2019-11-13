@@ -63,12 +63,11 @@ jobs:
       $(VCPKG_ROOT)\bootstrap-vcpkg.bat
       $(VCPKG_ROOT)\vcpkg install --recurse --triplet $(vcpkgarch) $(vcpkgpackages)
     displayName: Install additional packages using vcpkg
-  - powershell: git clone -q --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
-    displayName: git clone ACE_TAO
-  - powershell: git clone -q --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
-    displayName: git clone MPC
-  - powershell: git clone -q --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
-    displayName: git clone DAnCE
+  - powershell: |
+      git clone -q --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
+      git clone -q --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
+      git clone -q --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
+    displayName: git clone dependent repositories
   - powershell: |
       '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
     displayName: Create config.h file
@@ -116,12 +115,11 @@ jobs:
       $(VCPKG_ROOT)\bootstrap-vcpkg.bat
       $(VCPKG_ROOT)\vcpkg install --recurse --triplet $(vcpkgarch) $(vcpkgpackages)
     displayName: Install additional packages using vcpkg
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
-    displayName: git clone ACE_TAO
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
-    displayName: git clone MPC
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
-    displayName: git clone DAnCE
+  - powershell: |
+      git clone -q --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
+      git clone -q --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
+      git clone -q --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
+    displayName: git clone dependent repositories
   - powershell: |
       '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
     displayName: Create config.h file
@@ -167,12 +165,11 @@ jobs:
       $(VCPKG_ROOT)\bootstrap-vcpkg.bat
       $(VCPKG_ROOT)\vcpkg.exe install --recurse --triplet $(vcpkgarch) openssl xerces-c
     displayName: vcpkg
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)\ACE_TAO
-    displayName: git clone ACE_TAO
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
-    displayName: git clone MPC
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
-    displayName: git clone DAnCE
+  - powershell: |
+      git clone -q --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
+      git clone -q --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
+      git clone -q --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
+    displayName: git clone dependent repositories
   - powershell: |
       '#include "ace/config-win32.h"' > $(ACE_ROOT)\ace\config.h
     displayName: Create config.h file
@@ -256,14 +253,11 @@ jobs:
       sudo apt-get --yes update
       sudo apt-get --yes install libxerces-c-dev libssl-dev $(PackageDeps)
     displayName: install system package dependencies ($(PackageDeps))
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(DOC_ROOT)
-    displayName: git clone ACE_TAO
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
-    displayName: git clone MPC
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
-    displayName: git clone DAnCE
-  - powershell: git clone --depth 1 git://github.com/objectcomputing/OpenDDS $(DDS_ROOT)
-    displayName: git clone OpenDDS
+  - powershell: |
+      git clone -q --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
+      git clone -q --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
+      git clone -q --depth 1 git://github.com/objectcomputing/OpenDDS $(DDS_ROOT)
+      git clone -q --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
   - powershell: |
       '#include "ace/config-linux.h"' > $(ACE_ROOT)/ace/config.h
     displayName: Create config.h file
@@ -289,12 +283,10 @@ jobs:
   pool:
     vmImage: macOS-latest
   steps:
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(DOC_ROOT)
-    displayName: git clone ACE_TAO
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
-    displayName: git clone MPC
-  - powershell: git clone --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
-    displayName: git clone DAnCE
+  - powershell: |
+      git clone -q --depth 1 git://github.com/DOCGroup/ACE_TAO.git $(Build.SourcesDirectory)/ACE_TAO
+      git clone -q --depth 1 git://github.com/DOCGroup/DAnCE.git $(DAnCE_ROOT)
+      git clone -q --depth 1 git://github.com/DOCGroup/MPC.git $(MPC_ROOT)
   - powershell: |
       '#include "ace/config-macosx.h"' > $(ACE_ROOT)/ace/config.h
     displayName: Create config.h file
