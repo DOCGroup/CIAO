@@ -474,11 +474,18 @@ DDS_State_Connector_T<CCM_TYPE, DDS_TYPE, FIXED, SEQ_TYPE>::configuration_comple
                               "DDS_State_Connector_T::configuration_complete");
       throw;
     }
+  catch (const std::exception& ex)
+    {
+      DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                    "DDS_State_Connector_T::configuration_complete - "
+                    "std::exception <%C> caught\n", ex.what()));
+      throw ::CORBA::INTERNAL ();
+    }
   catch (...)
     {
       DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
                     "DDS_State_Connector_T::configuration_complete - "
-                    "Caught unexpected exception.\n"));
+                    "Unexpected exception caught.\n"));
       throw ::CORBA::INTERNAL ();
     }
 }
@@ -575,11 +582,18 @@ DDS_State_Connector_T<CCM_TYPE, DDS_TYPE, FIXED, SEQ_TYPE>::ccm_activate (void)
                               "DDS_State_Connector_T::ccm_activate");
       throw;
     }
+  catch (const std::exception& ex)
+    {
+      DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                    "DDS_State_Connector_T::ccm_activate - "
+                    "std::exception <%C> caught\n", ex.what ()));
+      throw ::CORBA::INTERNAL ();
+    }
   catch (...)
     {
       DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
                     "DDS_State_Connector_T::ccm_activate - "
-                    "Caught unexpected exception.\n"));
+                    "Unexpected exception caught.\n"));
       throw ::CORBA::INTERNAL ();
     }
 }
@@ -638,11 +652,18 @@ DDS_State_Connector_T<CCM_TYPE, DDS_TYPE, FIXED, SEQ_TYPE>::ccm_passivate (void)
                               "DDS_State_Connector_T::ccm_passivate");
       throw;
     }
+  catch (const std::exception& ex)
+    {
+      DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                    "DDS_State_Connector_T::ccm_passivate - "
+                    "std::exception <%C> caught\n", ex.what ()));
+      throw ::CORBA::INTERNAL ();
+    }
   catch (...)
     {
       DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
                     "DDS_State_Connector_T::ccm_passivate - "
-                    "Caught unexpected exception.\n"));
+                    "Unexpected exception caught.\n"));
       throw ::CORBA::INTERNAL ();
     }
 }
@@ -699,11 +720,18 @@ DDS_State_Connector_T<CCM_TYPE, DDS_TYPE, FIXED, SEQ_TYPE>::do_ccm_remove (void)
                               "DDS_State_Connector_T::do_ccm_remove");
       throw;
     }
+  catch (const std::exception& ex)
+    {
+      DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                    "DDS_State_Connector_T::do_ccm_remove - "
+                    "std::exception <%C> caught\n", ex.what ()));
+      throw ::CORBA::INTERNAL ();
+    }
   catch (...)
     {
       DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
                     "DDS_State_Connector_T::do_ccm_remove - "
-                    "Caught unexpected exception.\n"));
+                    "Unexpected exception caught.\n"));
       throw ::CORBA::INTERNAL ();
     }
 }

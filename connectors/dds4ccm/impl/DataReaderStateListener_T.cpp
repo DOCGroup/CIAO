@@ -241,6 +241,12 @@ namespace CIAO
                                   ex,
                                   "DataReaderStateListenerBase_T::on_data_available_i");
         }
+      catch (const std::exception& ex)
+        {
+          DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                        ACE_TEXT ("DataReaderStateListenerBase_T::on_data_available_i - ")
+                        ACE_TEXT ("std::exception <%C> caught\n"), ex.what ()));
+        }
       catch (...)
         {
           DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO

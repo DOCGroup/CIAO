@@ -371,11 +371,21 @@ namespace CIAO
       {
         CIAO_ERROR (1, (LM_ERROR, CLINFO
                         "Component_Handler_i::activate_instance - "
-                        "Caught CORBA Exception while activating instance <%C>: %C\n",
+                        "Caught CORBA Exception while activating instance <%C>: <%C>\n",
                         name,
                         ex._info ().c_str ()));
         throw ::Deployment::StartError (name,
                                         ex._info ().c_str ());
+      }
+    catch (const std::exception &ex)
+      {
+        CIAO_ERROR (1, (LM_ERROR, CLINFO
+                        "Component_Handler_i::activate_instance - "
+                        "Caught std::exception while activating instance <%C>: <%C>\n",
+                        name,
+                        ex.what ()));
+        throw ::Deployment::StartError (name,
+                                        ex.what ());
       }
     catch (...)
       {
@@ -434,11 +444,19 @@ namespace CIAO
       {
         CIAO_ERROR (1, (LM_ERROR, CLINFO
                         "Component_Handler_i::passivate_instance - "
-                        "Caught CORBA Exception while passivating instance <%C>: %C\n",
+                        "Caught CORBA Exception while passivating instance <%C>: <%C>\n",
                         name,
                         ex._info ().c_str ()));
-        throw ::Deployment::StopError (name,
-                                        ex._info ().c_str ());
+        throw ::Deployment::StopError (name, ex._info ().c_str ());
+      }
+    catch (const std::exception &ex)
+      {
+        CIAO_ERROR (1, (LM_ERROR, CLINFO
+                        "Component_Handler_i::passivate_instance - "
+                        "Caught std::exception while passivating instance <%C>: <%C>\n",
+                        name,
+                        ex.what ()));
+        throw ::Deployment::StopError (name, ex.what ());
       }
     catch (...)
       {
@@ -446,8 +464,7 @@ namespace CIAO
                         "Component_Handler_i::passivate_instance - "
                         "Caught C++ Exception while passivating instance <%C>\n",
                         name));
-        throw ::Deployment::StartError (name,
-                                        "Unknown C++ exception during passivation");
+        throw ::Deployment::StartError (name, "Unknown C++ exception during passivation");
       }
   }
 
@@ -528,16 +545,26 @@ namespace CIAO
         {
           CIAO_ERROR (1, (LM_ERROR, CLINFO
                           "Component_Handler_i::remove_instance - "
-                          "Caught CORBA exception <%C>\n",
+                          "Caught CORBA exception while removing instance <%C>: <%C>\n",
+                          name,
                           ex._info ().c_str ()));
-          throw ::Deployment::StopError (name,
-                                         ex._info ().c_str ());
+          throw ::Deployment::StopError (name, ex._info ().c_str ());
+        }
+      catch (const std::exception &ex)
+        {
+          CIAO_ERROR (1, (LM_ERROR, CLINFO
+                          "Component_Handler_i::remove_instance - "
+                          "Caught std::exception while removing instance <%C>: <%C>\n",
+                          name,
+                          ex.what ()));
+          throw ::Deployment::StopError (name, ex.what ());
         }
       catch (...)
         {
           CIAO_ERROR (1, (LM_ERROR, CLINFO
                           "Component_Handler_i::remove_instance - "
-                          "Caught unknown C++ exception\n"));
+                          "Caught unknown C++ exception while removing instance <%C>\n",
+                         name));
           throw ::Deployment::StopError (name,
                                           "Unknown C++ exception\n");
         }
@@ -618,11 +645,21 @@ namespace CIAO
       {
         CIAO_ERROR (1, (LM_ERROR, CLINFO
                         "Component_Handler_i::instance_configured - "
-                        "Caught CORBA Exception: %C for instance <%C>\n",
+                        "Caught CORBA Exception: <%C> for instance <%C>\n",
                         ex._info ().c_str (),
                         plan.instance[instanceRef].name.in ()));
         throw ::Deployment::StartError (plan.instance[instanceRef].name.in (),
                                         ex._info ().c_str ());
+      }
+    catch (const std::exception &ex)
+      {
+        CIAO_ERROR (1, (LM_ERROR, CLINFO
+                        "Component_Handler_i::instance_configured - "
+                        "Caught C++ Exception: %C for instance <%C>\n",
+                        ex.what (),
+                        plan.instance[instanceRef].name.in ()));
+        throw ::Deployment::StartError (plan.instance[instanceRef].name.in (),
+                                        ex.what ());
       }
     catch (...)
       {

@@ -69,6 +69,13 @@ namespace CIAO
                                       ex,
                                       "PublisherListener::on_unexpected_status");
             }
+          catch (const std::exception& ex)
+            {
+              DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                "PublisherListener::on_unexpected_status - "
+                "std::exception <%C> caught for <%C>\n",
+                ex.what(), translate_statuskind (status_kind)));
+            }
           catch (...)
             {
               DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
@@ -137,6 +144,12 @@ namespace CIAO
                                       DDS4CCM_LOG_LEVEL_ERROR,
                                       ex,
                                       "PublisherListener::on_offered_deadline_missed");
+            }
+          catch (const std::exception& ex)
+            {
+              DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                "PublisherListener::on_offered_deadline_missed - "
+                "std::exception <%C> caught\n", ex.what ()));
             }
           catch (...)
             {
@@ -210,6 +223,12 @@ namespace CIAO
                                       DDS4CCM_LOG_LEVEL_ERROR,
                                       ex,
                                       "PublisherListener::on_offered_incompatible_qos");
+            }
+          catch (const std::exception& ex)
+            {
+              DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                "PublisherListener::on_offered_incompatible_qos - "
+                "std::exception <%C> caught\n", ex.what()));
             }
           catch (...)
             {

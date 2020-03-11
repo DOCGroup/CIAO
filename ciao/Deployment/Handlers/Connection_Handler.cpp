@@ -213,7 +213,7 @@ namespace CIAO
         CIAO_ERROR (1, (LM_ERROR, CLINFO
                         "Connection_Handler::connect_instance - "
                         "Caught InvalidConnection exception whilst "
-                        "connecting %C connection <%C>: %C. Reason: %C\n",
+                        "connecting %C connection <%C>: <%C>. Reason: %C\n",
                         CIAO::kind_as_string (conn.internalEndpoint[endpointRef].kind),
                         conn.name.in (),
                         ex.name.in (),
@@ -225,7 +225,7 @@ namespace CIAO
       {
         CIAO_ERROR (1, (LM_ERROR, CLINFO
                         "Connection_Handler::connect_instance - "
-                        "Caught CORBA exception whilst connecting %C connection <%C>: %C\n",
+                        "Caught CORBA exception whilst connecting %C connection <%C>: <%C>\n",
                         CIAO::kind_as_string (conn.internalEndpoint[endpointRef].kind),
                         conn.name.in (),
                         ex._info ().c_str ()));
@@ -360,7 +360,7 @@ namespace CIAO
       {
         CIAO_ERROR (1, (LM_ERROR, CLINFO
                         "Connection_Handler::disconnect_instance - "
-                        "Caught CORBA exception whilst disconnecting %C connection <%C>: %C\n",
+                        "Caught CORBA exception whilst disconnecting %C connection <%C>: <%C>\n",
                         CIAO::kind_as_string (conn.internalEndpoint[endpointRef].kind),
                         conn.name.in (),
                         ex._info ().c_str ()));

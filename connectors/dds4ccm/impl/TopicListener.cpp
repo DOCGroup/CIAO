@@ -73,6 +73,12 @@ namespace CIAO
                     ex,
                     "TopicListener::on_inconsistent_topic");
             }
+          catch (const std::exception& ex)
+            {
+                DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                    "TopicListener::on_inconsistent_topic - "
+                    "std::exception <%C> caught\n", ex.what ()));
+            }
           catch (...)
             {
                 DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
