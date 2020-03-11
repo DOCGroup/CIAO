@@ -61,7 +61,6 @@ namespace CIAO
             "OnUnexpectedStatusHandler::handle_exception - "
             "std::exception <%C> caught for <%C>\n",
             ex.what(), translate_statuskind (this->status_kind_)));
-
         }
       catch (...)
         {
@@ -69,7 +68,6 @@ namespace CIAO
             "OnUnexpectedStatusHandler::handle_exception - "
             "Unexpected exception caught for <%C>\n",
             translate_statuskind (this->status_kind_)));
-
         }
       return 0;
     }
