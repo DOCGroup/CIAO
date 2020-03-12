@@ -79,7 +79,7 @@ namespace CIAO
                     (LM_ERROR,
                      CLINFO
                      "Session_Container_i::install_home "
-                     "- Error: %C\n",
+                     "- Error: <%C>\n",
                      err.str ().c_str ()));
 
         throw CIAO::Installation_Failure (name,
@@ -96,7 +96,7 @@ namespace CIAO
                     (LM_ERROR,
                      CLINFO
                      "Session_Container_i::install_home "
-                     "- Error: %C\n",
+                     "- Error: <%C>\n",
                      err.str ().c_str ()));
 
         throw CIAO::Installation_Failure (name,
@@ -212,12 +212,12 @@ namespace CIAO
         CIAO_ERROR (1,
                     (LM_ERROR,
                      CLINFO
-                     "Session_Container_i::install_component "
-                     "- Error: %C\n",
+                     "Session_Container_i::install_component for component <%C>"
+                     "- Error: <%C>\n",
+                     name,
                      err.str ().c_str ()));
 
-        throw CIAO::Installation_Failure (name,
-                                          err.str ().c_str ());
+        throw CIAO::Installation_Failure (name, err.str ().c_str ());
       }
 
     if (screator == 0)
@@ -229,31 +229,43 @@ namespace CIAO
         CIAO_ERROR (1,
                     (LM_ERROR,
                      CLINFO
-                     "Session_Container_i::install_component "
-                     "- Error: %C\n",
+                     "Session_Container_i::install_component for component <%C> "
+                     "- Error: <%C>\n",
+                     name,
                      err.str ().c_str ()));
 
-        throw CIAO::Installation_Failure (name,
-                                          err.str ().c_str ());
+        throw CIAO::Installation_Failure (name, err.str ().c_str ());
       }
 
     CIAO_DEBUG (9,
                 (LM_TRACE,
                  CLINFO
                  "Session_Container_i::install_component - "
-                 "Loading component executor\n"));
+                 "Loading component executor for component <%C>\n",
+                 name));
 
     Components::EnterpriseComponent_var component_executor;
     try
       {
         component_executor = ccreator ();
       }
+    catch (const std::exception& ex)
+      {
+        CIAO_ERROR (1,
+                    (LM_ERROR, CLINFO
+                    "Session_Container_i::install_component - "
+                     "Caught std::exception from component factory <%C> for component <%C>: <%C>\n",
+                    entry_point, name, ex.what ()));
+        throw CIAO::Installation_Failure (name,
+                                          "Component executor factory threw exception");
+      }
     catch (...)
       {
         CIAO_ERROR (1,
                     (LM_ERROR, CLINFO
                     "Session_Container_i::install_component - "
-                     "Caught unexpected exception from component factory."));
+                     "Caught unexpected exception from component factory <%C> for component <%C>.\n",
+                    entry_point, name));
         throw CIAO::Installation_Failure (name,
                                           "Component executor factory threw exception");
       }
@@ -264,7 +276,8 @@ namespace CIAO
                     (LM_ERROR,
                      CLINFO
                      "Session_Container_i::install_component - "
-                     "Component executor factory failed.\n"));
+                     "Component executor factory <%C> failed for component <%C>.\n",
+                     entry_point, name));
 
         throw CIAO::Installation_Failure (name,
                                           "Component executor factory failed");
@@ -284,14 +297,24 @@ namespace CIAO
                                       this,
                                       name);
       }
+    catch (const std::exception& ex)
+      {
+        CIAO_ERROR (1,
+                    (LM_ERROR, CLINFO
+                    "Session_Container_i::install_component - "
+                     "Caught std::exception from component servant factory <%C> for component <%C>: <%C>.\n",
+                    servant_entrypoint, name, ex.what ()));
+        throw CIAO::Installation_Failure (name,
+                                          "Component servant factory threw exception");
+      }
     catch (...)
       {
         CIAO_ERROR (1,
                     (LM_ERROR, CLINFO
                     "Session_Container_i::install_component - "
-                     "Caught unexpected exception from component servant factory."));
-        throw CIAO::Installation_Failure (name,
-                                          "Component servant factory threw exception");
+                     "Caught unexpected exception from component servant factory <%C> for component <%C>.\n",
+                    servant_entrypoint, name));
+        throw CIAO::Installation_Failure (name, "Component servant factory threw exception");
       }
 
 
@@ -301,10 +324,10 @@ namespace CIAO
                     (LM_ERROR,
                      CLINFO
                      "Session_Container_i::install_component - "
-                     "Component servant factory failed.\n"));
+                     "Component servant factory <%C> failed for component <%C>.\n",
+                     servant_entrypoint, name));
 
-        throw CIAO::Installation_Failure (name,
-                                          "Component servant factory failed");
+        throw CIAO::Installation_Failure (name, "Component servant factory failed");
       }
 
     PortableServer::ServantBase_var safe (component_servant);
@@ -313,7 +336,8 @@ namespace CIAO
                 (LM_TRACE,
                  CLINFO
                  "Session_Container_i::install_component - "
-                 "Installing component servant\n"));
+                 "Installing component servant for component <%C>\n",
+                 name));
 
     PortableServer::ObjectId_var oid;
 
@@ -327,7 +351,8 @@ namespace CIAO
 
     CIAO_DEBUG (9, (LM_TRACE, CLINFO
                     "Session_Container_i::install_component - "
-                    "Component successfully created\n"));
+                    "Component <%C> successfully created\n",
+                    name));
 
     return componentref._retn ();
   }

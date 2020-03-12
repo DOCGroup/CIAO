@@ -43,6 +43,12 @@ CIAO::DDS4CCM::DataReaderHandler_T<LISTENER>::handle_exception (ACE_HANDLE)
                               ex,
                               "DataReaderHandler_T::handle_exception");
     }
+  catch (const std::exception& ex)
+    {
+      DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+        "DataReaderHandler_T::handle_exception - "
+        "std::exception <%C> caught\n", ex.what ()));
+    }
   catch (...)
     {
       DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO

@@ -55,13 +55,19 @@ namespace CIAO
                                   ex,
                                   "OnUnexpectedStatusHandler::handle_exception");
         }
+      catch (const std::exception& ex)
+        {
+          DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+            "OnUnexpectedStatusHandler::handle_exception - "
+            "std::exception <%C> caught for <%C>\n",
+            ex.what(), translate_statuskind (this->status_kind_)));
+        }
       catch (...)
         {
           DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
             "OnUnexpectedStatusHandler::handle_exception - "
             "Unexpected exception caught for <%C>\n",
             translate_statuskind (this->status_kind_)));
-
         }
       return 0;
     }
@@ -103,6 +109,12 @@ namespace CIAO
                                   DDS4CCM_LOG_LEVEL_ERROR,
                                   ex,
                                   "OnRequestedOncompatibleQosHandler::handle_exception");
+        }
+      catch (const std::exception& ex)
+        {
+          DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+            "OnRequestedOncompatibleQosHandler::handle_exception - "
+            "std::exception <%C> caught\n", ex.what ()));
         }
       catch (...)
         {
@@ -151,6 +163,12 @@ namespace CIAO
                                   ex,
                                   "OnSampleRejectedHandler::handle_exception");
         }
+      catch (const std::exception& ex)
+        {
+          DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+            "OnSampleRejectedHandler::handle_exception - "
+            "std::exception <%C> caught\n", ex.what ()));
+        }
       catch (...)
         {
           DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
@@ -197,6 +215,12 @@ namespace CIAO
                                   DDS4CCM_LOG_LEVEL_ERROR,
                                   ex,
                                   "OnInconsistentTopicHandler::handle_exception");
+        }
+      catch (const std::exception& ex)
+        {
+          DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+            "OnInconsistentTopicHandler::handle_exception - "
+            "std::exception <%C> caught\n", ex.what ()));
         }
       catch (...)
         {
@@ -245,6 +269,12 @@ namespace CIAO
                                   ex,
                                   "OnOfferedDeadlineMissedHandler::handle_exception");
         }
+      catch (const std::exception& ex)
+        {
+          DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+            "OnOfferedDeadlineMissedHandler::handle_exception - "
+            "std::exception <%C> caught\n", ex.what ()));
+        }
       catch (...)
         {
           DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
@@ -291,6 +321,12 @@ namespace CIAO
                                   DDS4CCM_LOG_LEVEL_ERROR,
                                   ex,
                                   "OnOfferedIncompatibleQoSHandler::handle_exception");
+        }
+      catch (const std::exception& ex)
+        {
+          DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+            "OnOfferedIncompatibleQoSHandler::handle_exception - "
+            "std::exception <%C> caught\n", ex.what ()));
         }
       catch (...)
         {
@@ -339,6 +375,12 @@ namespace CIAO
                                   ex,
                                   "OnRequestedDeadlineMissedHandler::handle_exception");
         }
+      catch (const std::exception& ex)
+        {
+          DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+            "OnRequestedDeadlineMissedHandler::handle_exception - "
+            "std::exception <%C> caught\n", ex.what ()));
+        }
       catch (...)
         {
           DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
@@ -385,6 +427,12 @@ namespace CIAO
                                   DDS4CCM_LOG_LEVEL_ERROR,
                                   ex,
                                   "OnSampleLostHandler::handle_exception");
+        }
+      catch (const std::exception& ex)
+        {
+          DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+            "OnSampleLostHandler::handle_exception - "
+            "std::exception <%C> caught\n", ex.what ()));
         }
       catch (...)
         {

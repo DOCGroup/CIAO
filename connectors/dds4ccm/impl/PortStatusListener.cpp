@@ -75,6 +75,12 @@ namespace CIAO
                   ex,
                   "PortStatusListener::on_requested_deadline_missed");
             }
+          catch (const std::exception& ex)
+            {
+              DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                  "PortStatusListener::on_requested_deadline_missed - "
+                  "std::exception <%C> caught\n", ex.what ()));
+            }
           catch (...)
             {
               DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
@@ -140,6 +146,12 @@ namespace CIAO
                   DDS4CCM_LOG_LEVEL_ERROR,
                   ex,
                   "PortStatusListener::on_sample_lost");
+            }
+          catch (const std::exception& ex)
+            {
+              DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                  "PortStatusListener::on_sample_lost - "
+                  "std::exception <%C> caught\n", ex.what ()));
             }
           catch (...)
             {

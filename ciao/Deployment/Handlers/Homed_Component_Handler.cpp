@@ -164,7 +164,7 @@ namespace CIAO
       {
         CIAO_ERROR (1, (LM_ERROR, CLINFO
                         "Homed_Component_Handler_i::install_instance - "
-                        "Caught CORBA exception while installing component <%C>: %C\n",
+                        "Caught CORBA exception while installing component <%C>: <%C>\n",
                         idd.name.in (),
                         ex._info ().c_str ()));
         throw ::Deployment::StartError (idd.name.in (),
@@ -236,7 +236,7 @@ namespace CIAO
       {
         CIAO_ERROR (1, (LM_ERROR, CLINFO
                         "Homed_Component_Handler_i::activate_instance - "
-                        "Caught CORBA Exception while activating instance <%C>: %C\n",
+                        "Caught CORBA Exception while activating instance <%C>: <%C>\n",
                         name,
                         ex._info ().c_str ()));
         throw ::Deployment::StartError (name,
@@ -283,7 +283,7 @@ namespace CIAO
       {
         CIAO_ERROR (1, (LM_ERROR, CLINFO
                         "Homed_Component_Handler_i::passivate_instance - "
-                        "Caught CORBA Exception while passivating instance <%C>: %C\n",
+                        "Caught CORBA Exception while passivating instance <%C>: <%C>\n",
                         name,
                         ex._info ().c_str ()));
         throw ::Deployment::StopError (name,
@@ -369,7 +369,7 @@ namespace CIAO
       {
         CIAO_ERROR (1, (LM_ERROR, CLINFO
                         "Homed_Component_Handler_i::remove_instance - "
-                        "Caught CORBA exception while removing component <%C>: %C\n",
+                        "Caught CORBA exception while removing component <%C>: <%C>\n",
                         name,
                         ex._info ().c_str ()));
         throw ::Deployment::StopError (name,
