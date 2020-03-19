@@ -109,7 +109,43 @@ namespace CIAO
                  "Session_Container_i::install_home"
                  " - Loading home executor\n"));
 
-    Components::HomeExecutorBase_var home_executor = hcreator ();
+    Components::HomeExecutorBase_var home_executor;
+
+    try
+      {
+        home_executor = hcreator ();
+      }
+    catch (const CORBA::Exception &ex)
+      {
+        CIAO_ERROR (1,
+                    (LM_ERROR, CLINFO
+                    "Session_Container_i::install_home - "
+                     "Caught CORBA::Exception from home factory <%C> for home <%C>: <%C>\n",
+                    entry_point, name, ex._info ().c_str ()));
+
+        throw CIAO::Installation_Failure (name,
+                                          "Home executor factory threw exception");
+      }
+    catch (const std::exception& ex)
+      {
+        CIAO_ERROR (1,
+                    (LM_ERROR, CLINFO
+                    "Session_Container_i::install_home - "
+                     "Caught std::exception from home factory <%C> for home <%C>: <%C>\n",
+                    entry_point, name, ex.what ()));
+        throw CIAO::Installation_Failure (name,
+                                          "Home executor factory threw exception");
+      }
+    catch (...)
+      {
+        CIAO_ERROR (1,
+                    (LM_ERROR, CLINFO
+                    "Session_Container_i::install_home - "
+                     "Caught unexpected exception from home factory <%C> for home <%C>.\n",
+                    entry_point, name));
+        throw CIAO::Installation_Failure (name,
+                                          "Home executor factory threw exception");
+      }
 
     if (CORBA::is_nil (home_executor.in ()))
       {
@@ -129,8 +165,42 @@ namespace CIAO
                  "Session_Container_i::install_home"
                  " - Loading home servant\n"));
 
-    PortableServer::Servant home_servant =
-      screator (home_executor.in (), this, name);
+    PortableServer::Servant home_servant;
+
+    try
+      {
+        home_servant = screator (home_executor.in (), this, name);
+      }
+    catch (const CORBA::Exception &ex)
+      {
+        CIAO_ERROR (1,
+                    (LM_ERROR, CLINFO
+                    "Session_Container_i::install_home - "
+                     "Caught CORBA::Exception from home servant factory <%C> for home <%C>: <%C>.\n",
+                    servant_entrypoint, name, ex._info ().c_str ()));
+
+        throw CIAO::Installation_Failure (name,
+                                          "Home servant factory threw exception");
+      }
+    catch (const std::exception& ex)
+      {
+        CIAO_ERROR (1,
+                    (LM_ERROR, CLINFO
+                    "Session_Container_i::install_home - "
+                     "Caught std::exception from home servant factory <%C> for home <%C>: <%C>.\n",
+                    servant_entrypoint, name, ex.what ()));
+        throw CIAO::Installation_Failure (name,
+                                          "Home servant factory threw exception");
+      }
+    catch (...)
+      {
+        CIAO_ERROR (1,
+                    (LM_ERROR, CLINFO
+                    "Session_Container_i::install_home - "
+                     "Caught unexpected exception from home servant factory <%C> for home <%C>.\n",
+                    servant_entrypoint, name));
+        throw CIAO::Installation_Failure (name, "Home servant factory threw exception");
+      }
 
     if (home_servant == 0)
       {
@@ -249,6 +319,17 @@ namespace CIAO
       {
         component_executor = ccreator ();
       }
+    catch (const CORBA::Exception &ex)
+      {
+        CIAO_ERROR (1,
+                    (LM_ERROR, CLINFO
+                    "Session_Container_i::install_component - "
+                     "Caught CORBA::Exception from component factory <%C> for component <%C>: <%C>\n",
+                    entry_point, name, ex._info ().c_str ()));
+
+        throw CIAO::Installation_Failure (name,
+                                          "Component executor factory threw exception");
+      }
     catch (const std::exception& ex)
       {
         CIAO_ERROR (1,
@@ -297,6 +378,17 @@ namespace CIAO
                                       this,
                                       name);
       }
+    catch (const CORBA::Exception &ex)
+      {
+        CIAO_ERROR (1,
+                    (LM_ERROR, CLINFO
+                    "Session_Container_i::install_component - "
+                     "Caught CORBA::Exception from component servant factory <%C> for component <%C>: <%C>.\n",
+                    servant_entrypoint, name, ex._info ().c_str ()));
+
+        throw CIAO::Installation_Failure (name,
+                                          "Component servant factory threw exception");
+      }
     catch (const std::exception& ex)
       {
         CIAO_ERROR (1,
@@ -316,7 +408,6 @@ namespace CIAO
                     servant_entrypoint, name));
         throw CIAO::Installation_Failure (name, "Component servant factory threw exception");
       }
-
 
     if (component_servant == 0)
       {
