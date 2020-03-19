@@ -165,7 +165,7 @@ namespace CIAO
                  "Session_Container_i::install_home"
                  " - Loading home servant\n"));
 
-    PortableServer::Servant home_servant;
+    PortableServer::Servant home_servant = 0;
 
     try
       {
@@ -370,7 +370,7 @@ namespace CIAO
                  "Session_Container_i::install_component - "
                  "Loading component servant\n"));
 
-    PortableServer::Servant component_servant;
+    PortableServer::Servant component_servant = 0;
 
     try
       {
