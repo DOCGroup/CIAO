@@ -19,7 +19,7 @@ jobs:
       uses: actions/checkout@v1
     - name: git clone dependent repositories
       run: |
-        git clone --depth 1 --branch Latest_Micro  git://github.com/DOCGroup/ACE_TAO.git $DOC_ROOT
+        git clone --depth 1 git://github.com/DOCGroup/ACE_TAO.git $DOC_ROOT
     - name: Run fuzz
       run: |
         perl ${env:ACE_ROOT}/bin/fuzz.pl
