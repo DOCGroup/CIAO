@@ -1,0 +1,464 @@
+commit 48fb5194348186475c44333f714f479249916a19
+Merge: f8e5b67dbe3 bc4b30df3b1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed May 6 11:07:53 2020 +0200
+
+    Merge pull request #119 from jwillemsen/master
+    
+    List major change
+
+commit bc4b30df3b1d71118b10bb24559e25cc0372b7bb
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed May 6 11:06:53 2020 +0200
+
+    List major change
+    
+        * NEWS:
+
+commit f8e5b67dbe305ea837942eb0ac796bf5d7343853
+Merge: 90c2d513689 87f302281ee
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Apr 14 09:16:38 2020 +0200
+
+    Merge pull request #118 from jwillemsen/master
+    
+    Make use of https download link
+
+commit 87f302281ee5177b73c63f00bad034c6b274c31c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Apr 14 08:22:29 2020 +0200
+
+    make use of https download link
+    
+        * connectors/dds4ccm/DDS4CCM-INSTALL.html:
+        * tutorials/Quoter/Simple/index.html:
+
+commit 90c2d5136891ac1a4cd4658126e7f61b7b8d939f
+Merge: 08555f09f47 ac0f4c827a1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Mar 25 19:04:08 2020 +0100
+
+    Merge pull request #117 from jwillemsen/master
+    
+    Add clang10
+
+commit ac0f4c827a13860517b94c56b72b53077396a938
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Mar 25 15:53:31 2020 +0100
+
+    Add clang10
+    
+        * azure-pipelines.yml:
+
+commit 08555f09f47f0c9d2412cf5a24f454baa2918a26
+Merge: d5a24c1520b 05dec9596a6
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Mar 19 16:47:21 2020 +0100
+
+    Merge pull request #115 from jwillemsen/jwi-sessioncontainerlogging
+    
+    Extend logging around component/home executor/servant creation to log…
+
+commit d5a24c1520bdb41be0e48feabaced09582742daf
+Merge: 0ce56a35442 8ddc5bd1b40
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Mar 19 16:46:29 2020 +0100
+
+    Merge pull request #116 from jwillemsen/jwi-fuzz
+    
+    Add github action for fuzz
+
+commit 8ddc5bd1b40ee70f5814963037400f0e15fd858c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Mar 19 13:55:24 2020 +0100
+
+    Remove fuzz from travis
+    
+        * .travis.yml:
+
+commit 8defb48ae4037d383d3eb1cfa490cc8b5199a33a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Mar 19 13:53:40 2020 +0100
+
+    Use latest from ACE/TAO
+    
+        * .github/workflows/fuzz.yml:
+
+commit 769ccb4d448cc6c664490f461ff9d75ef8ef346c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Mar 19 13:52:17 2020 +0100
+
+    Add github action for fuzz
+
+commit 05dec9596a6dd4331fc9c8faea32aa41651bade7
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Mar 19 08:15:56 2020 +0100
+
+    Initialise Servant pointers explicitly with 0 to make sure they are not unitialized in a release build
+    
+        * ciao/Containers/Session/Session_Container.cpp:
+
+commit 99e7b61b9e6e43b317f9a414aa47c7e56b5a173d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Mar 19 08:11:47 2020 +0100
+
+    Extend logging around component/home executor/servant creation to log any exceptions from calling into the factory functions directly
+    
+        * ciao/Containers/Session/Session_Container.cpp:
+
+commit 0ce56a354428a7a6edcbb9749ab94acb85037e8a
+Merge: bcebf7443ad ae2684bd717
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Mar 12 13:18:50 2020 +0100
+
+    Merge pull request #113 from jwillemsen/jwi-loggingenhancements
+    
+    Logging enhancements
+
+commit ae2684bd717c3212b975d7f4a4db3cebb5f03aaa
+Merge: a97ce3933e1 bcebf7443ad
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Mar 12 08:00:17 2020 +0100
+
+    Merge branch 'master' into jwi-loggingenhancements
+
+commit bcebf7443ad7ded51aa6622e4e9b7e2ec6127ae5
+Merge: e69add1b5da 8e58190b221
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Mar 12 07:58:56 2020 +0100
+
+    Merge pull request #114 from jwillemsen/jwi-azurevs2015removal
+    
+    Removed vs2015, will not be supported from azure pipelines soon
+
+commit 8e58190b22164fd14eab92dec8fb12bea6557628
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Mar 11 15:47:39 2020 +0100
+
+    Removed vs2015, will not be supported from azure pipelines soon
+
+commit a97ce3933e1ed4048387ac613af3d271df34a25b
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Mar 11 14:37:37 2020 +0100
+
+    Remove redundant white lines
+    
+        * connectors/dds4ccm/impl/DDSCallbackStatusHandler.cpp:
+
+commit 0c932007abb83d9f6c712a16f96d20adad868354
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Mar 11 13:58:55 2020 +0100
+
+    Logging enhancements
+    
+        * ciao/Containers/Session/Session_Container.cpp:
+        * ciao/Deployment/Handlers/Component_Handler.cpp:
+        * ciao/Deployment/Handlers/Connection_Handler.cpp:
+        * ciao/Deployment/Handlers/Homed_Component_Handler.cpp:
+        * connectors/dds4ccm/impl/DDSCallbackStatusHandler.cpp:
+        * connectors/dds4ccm/impl/DDS_Event_Connector_T.cpp:
+        * connectors/dds4ccm/impl/DDS_State_Connector_T.cpp:
+        * connectors/dds4ccm/impl/DataReaderHandler_T.cpp:
+        * connectors/dds4ccm/impl/DataReaderListener_T.cpp:
+        * connectors/dds4ccm/impl/DataReaderStateListener_T.cpp:
+        * connectors/dds4ccm/impl/PortStatusListener.cpp:
+        * connectors/dds4ccm/impl/PublisherListener.cpp:
+        * connectors/dds4ccm/impl/Reader_T.cpp:
+        * connectors/dds4ccm/impl/SubscriberListener.cpp:
+        * connectors/dds4ccm/impl/TopicListener.cpp:
+
+commit e69add1b5da8e9602bcc85d581ecbf1bd41c49a3
+Merge: d20c07a5519 3e9fabe8516
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 29 15:58:10 2020 +0100
+
+    Merge pull request #112 from jwillemsen/master
+    
+    Add CodeFactor badge
+
+commit 3e9fabe851677d84ae4893ba04b14acfec02e1d1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 29 09:51:31 2020 +0100
+
+    Add CodeFactor badge
+
+commit d20c07a55199446cddfaadc7ea7dc56fb857edec
+Merge: 115d5f8c766 1b46e4bb21d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 22 12:38:55 2020 +0100
+
+    Merge pull request #111 from jwillemsen/jwi-openssl11
+    
+    Add openssl11=1 to Windows, vcpkg now has openssl 1.1.1
+
+commit 1b46e4bb21d78a5de5f89145b7a0b60caa987a6d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jan 22 08:39:24 2020 +0100
+
+    Add openssl11=1 to Windows, vcpkg now has openssl 1.1.1
+
+commit 115d5f8c7661e4bad75ca6144260f4cf24f0471e
+Merge: 29c5619dabe 6c2779cfdac
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Nov 14 07:16:51 2019 +0000
+
+    Merge pull request #110 from jwillemsen/master
+    
+    Use one step for all dependent git clones
+
+commit 6c2779cfdace3a6e3f3fd8d51a4b89201596d3a8
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Nov 13 17:32:16 2019 +0100
+
+    Use ubuntu 18.04
+
+commit eef11ca0fbee20f5d96d0475ca412b931998faaf
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Nov 13 13:36:25 2019 +0100
+
+    Use one step for all dependent git clones
+    
+        * azure-pipelines.yml:
+        * connectors/dds4ccm/examples/ShapesContr/README:
+
+commit 29c5619dabea7aea4df134025a8a6972ca2c1028
+Merge: 0d20c99dc7f bf615be09fb
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Nov 2 19:17:55 2019 +0000
+
+    Merge pull request #109 from jwillemsen/jwi-ciupdates
+    
+    Updated CI builds to use ubuntu 18.04
+
+commit bf615be09fb8adfd917c146773f27c0ba07f9b98
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Nov 2 18:06:49 2019 +0100
+
+    Move to ubuntu 18.04 with more available compilers
+    
+        * .travis.yml:
+        * azure-pipelines.yml:
+
+commit b5d9b7963b3d9a008a86fa6b00a1080e35ec30ce
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Nov 2 18:04:25 2019 +0100
+
+    Layout change
+    
+        * examples/DevGuideExamples/readme.txt:
+
+commit 0d20c99dc7f4bd1f68e9fd7b219f403886088730
+Merge: 91e0283ea7f 3a995a1ad6b
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 29 07:20:15 2019 +0000
+
+    Merge pull request #107 from jwillemsen/master
+    
+    Updated issue template to new github style
+
+commit 3a995a1ad6b51aaa135d52181a211f5878fcb50a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 29 08:19:42 2019 +0100
+
+    Formatting changes
+
+commit 871d7b9c276be42543597d4955606f92d5301b36
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 29 08:18:40 2019 +0100
+
+    Updated issue template to new style
+
+commit 91e0283ea7f741430d89acee1613ac07c427b750
+Merge: ce1cdb0ae0a 48f5c0dffa6
+Author: Adam Mitz <mitza@objectcomputing.com>
+Date:   Thu Aug 22 09:37:50 2019 -0500
+
+    Merge pull request #103 from mitza-oci/master
+    
+    dds4ccm: if configured to use OpenDDS, inherit from OpenDDS base project in order to get tao_idl flags
+
+commit ce1cdb0ae0a54c19f84fcfa5bb103356f773711e
+Merge: 44bacf12026 209fe09250b
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 21 08:48:40 2019 +0200
+
+    Merge pull request #105 from jwillemsen/master
+    
+    Removed appveyor integration, with the added vcpkg update our jobs ta…
+
+commit 209fe09250b321674be190973231696ed6ff29c1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 21 08:31:30 2019 +0200
+
+    Removed appveyor integration, with the added vcpkg update our jobs takes too long to be useful
+
+commit 48f5c0dffa62b321446e75d5c80b2cc6a6330844
+Author: Adam Mitz <mitza@objectcomputing.com>
+Date:   Tue Aug 20 10:29:48 2019 -0500
+
+    extend previous enhancement to lem_gen project
+
+commit 8f5bd122bfc362f637c47482cd5829bd5f523369
+Merge: 44b38826f0f 44bacf12026
+Author: Adam Mitz <mitza@objectcomputing.com>
+Date:   Tue Aug 20 08:57:17 2019 -0500
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 44bacf120268c0563e3889ac8e3a3a69712fd8ac
+Merge: 7a8421cefb9 54e8d3e8baa
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Aug 20 15:36:18 2019 +0200
+
+    Merge pull request #104 from jwillemsen/jwi-vcpkgupdate
+    
+    Update vcpkg as part of the install step
+
+commit 54e8d3e8baa6d44d02c2549a456481d8edd17ce5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Aug 20 08:19:28 2019 +0200
+
+    Update vcpkg as part of the install step
+    
+        * appveyor.yml:
+
+commit 44b38826f0ff5ed3ab57cd591c1ab5df340e70e4
+Author: Adam Mitz <mitza@objectcomputing.com>
+Date:   Mon Aug 19 16:39:02 2019 -0500
+
+    dds4ccm: if configured to use OpenDDS, inherit from OpenDDS base project in order to get tao_idl flags
+
+commit 7a8421cefb904b7353a0c39b68465f077fe72b97
+Merge: 0f4c61ef559 230cd3d0d74
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jun 27 12:22:32 2019 +0200
+
+    Merge pull request #102 from jwillemsen/master
+    
+    Make clear which badge is for what
+
+commit 230cd3d0d7493b75115eb6ceb65e4f442a06b4cb
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jun 27 12:20:20 2019 +0200
+
+    Make clear which badge is for what
+
+commit b0dd8f4ea66b734c8f7965034d25a4a028ad231f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Jun 27 12:19:55 2019 +0200
+
+    Make clear which badge is for what
+
+commit 0f4c61ef559b5a776c0360eb8b5dbc1645d37555
+Merge: f4f36c578f3 5991eea4266
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 26 21:37:16 2019 +0200
+
+    Merge pull request #101 from jwillemsen/jwi-azuredevopscron
+    
+    Add weekly crontab on Sunday for azure devops
+
+commit 5991eea42664294cf2f12b1ab257465cffb3f9cb
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 26 14:32:18 2019 +0200
+
+    Use VCPKG_ROOT
+
+commit a42c67a6be160dc94240675a7382a411a14342ea
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 26 14:31:27 2019 +0200
+
+    Put vcpkg under build.sourcesdirectory
+
+commit 10d9b3c43f92858b61d5f6c46c1321de37acefc9
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 26 13:36:51 2019 +0200
+
+    Updated azure devops badge
+
+commit b1bffe69f57f2f0d46d6ee4ae279061a2b55d2eb
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 26 11:38:30 2019 +0200
+
+    Add weekly crontab on Sunday for azure devops
+
+commit f4f36c578f3ccd894c6c132c9b79ca42717c1abd
+Merge: 0a235103e68 240662de205
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon May 20 12:30:06 2019 +0200
+
+    Merge pull request #100 from jwillemsen/jwi-3832
+    
+    Fix for test failure when architecture subdirectory is used
+
+commit 240662de2050c5bafcfe873eb13a12cb4f123178
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon May 20 11:02:56 2019 +0200
+
+    Fix for test failure when architecture subdirectory is used
+
+commit 0a235103e688d30d47fb8948a36a874ffe469dbc
+Merge: 85a4b0fc1c6 b7e29dea317
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu May 9 08:39:35 2019 +0200
+
+    Merge pull request #99 from jwillemsen/jwi-macosx1014
+    
+    Use MacOSX 10.14
+
+commit b7e29dea31710ed84c1d3ccb70d12d8c9a2ea233
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed May 8 16:31:21 2019 +0200
+
+    Use MacOSX 10.14
+
+commit 85a4b0fc1c6c3ffe407c0ae57839eb5550ad302b
+Merge: b05d9580af5 e04305c444f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Apr 15 18:05:20 2019 +0200
+
+    Merge pull request #95 from jwillemsen/jwi-clang8
+    
+    Add clang8 to azure pipelines
+
+commit b05d9580af5fdf8cc42533deb0f5a018e9104982
+Merge: 7660fe10269 412cdc9e779
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Apr 15 17:09:18 2019 +0200
+
+    Merge pull request #94 from jwillemsen/jwi-vs2019azure
+    
+    Add vs2019 to azure pipelines
+
+commit 412cdc9e779a2b978774f430283a83d40929ec0a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Apr 15 13:54:11 2019 +0200
+
+    Add vs2019 to azure pipelines
+    
+        * azure-pipelines.yml:
+
+commit e04305c444f92026031f670590795912ea2e4c98
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Apr 15 13:52:14 2019 +0200
+
+    Add clang8 to azure pipelines
+    
+        * azure-pipelines.yml:
+
+commit 7660fe1026956cf44cfe6aaec0a6162c97879e50
+Merge: d7bc47c98f9 1926b5b1a12
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Apr 8 09:52:28 2019 +0200
+
+    Merge pull request #93 from jwillemsen/master
+    
+    Prepare for next release
+
+commit 1926b5b1a123fe3cc8e33195f44e4519c563e42e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Apr 8 09:20:28 2019 +0200
+
+    Prepare for next release
+    
+        * NEWS:
