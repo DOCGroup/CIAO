@@ -1,6 +1,9 @@
 USER VISIBLE CHANGES BETWEEN CIAO-1.3.8 and CIAO-1.3.9
 =======================================================
 
+. Enhance logging in ciao core and dds4ccm in case exceptions
+  occur
+
 USER VISIBLE CHANGES BETWEEN CIAO-1.3.7 and CIAO-1.3.8
 =======================================================
 
