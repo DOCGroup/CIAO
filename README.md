@@ -7,6 +7,6 @@
 
 # CIAO #
 
-See [Douglas C. Schmidt website](http://www.dre.vanderbilt.edu/~schmidt)  for more information about CIAO. The quality of CIAO is monitored through our distributed [scoreboard](http://www.dre.vanderbilt.edu/scoreboard/)
+See [Douglas C. Schmidt website](https://www.dre.vanderbilt.edu/~schmidt)  for more information about CIAO. The quality of CIAO is monitored through our distributed [scoreboard](https://www.dre.vanderbilt.edu/scoreboard/)
 
-[CIAO](http://www.dre.vanderbilt.edu/~schmidt/CIAO.html) is a C++ implementation of the OMG's [LwCCM](http://www.omg.org/spec/CORBA/) standard. The main home page is [here](http://www.dre.vanderbilt.edu/~schmidt/). Mailing lists are available [here](http://www.dre.vanderbilt.edu/~schmidt/ACE-mail.html).
+[CIAO](https://www.dre.vanderbilt.edu/~schmidt/CIAO.html) is a C++ implementation of the OMG's [LwCCM](http://www.omg.org/spec/CORBA/) standard. The main home page is [here](https://www.dre.vanderbilt.edu/~schmidt/). Mailing lists are available [here](https://www.dre.vanderbilt.edu/~schmidt/ACE-mail.html).
