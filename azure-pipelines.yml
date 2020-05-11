@@ -231,8 +231,7 @@ jobs:
       'ssl=1' >> $(ACE_ROOT)/bin/MakeProjectCreator/config/default.features
     displayName: Create default.features file
   - powershell: |
-      'c++11=1' > $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
-      'xerces3=1' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
+      'xerces3=1' > $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
       'ssl=1' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
       'dds4ccm_opendds=1' >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
       "$(platform_file)" >> $(ACE_ROOT)/include/makeinclude/platform_macros.GNU
