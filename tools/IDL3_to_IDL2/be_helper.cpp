@@ -37,10 +37,10 @@ static const char copyright[] =
 "//       Vanderbilt University\n"
 "//       Nashville, TN\n"
 "//       USA\n"
-"//       http://www.isis.vanderbilt.edu/\n"
+"//       https://www.isis.vanderbilt.edu/\n"
 "//\n"
 "// Information about CIAO is available at:\n"
-"//     http://www.dre.vanderbilt.edu/~schmidt/CIAO.html";
+"//     https://www.dre.vanderbilt.edu/~schmidt/CIAO.html";
 
 TAO_NL::TAO_NL (void)
 {
