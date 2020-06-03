@@ -1,5 +1,5 @@
 // -*- MPC -*-
-project(ConvertIDL3) : taoidl3toidl2defaults, ciao_executor, avoids_ccm_noevent {
+project(ConvertIDL3) : taoidl3toidl2defaults, ciao_executor {
   avoids += mfc
   idlflags += -Sm
 
