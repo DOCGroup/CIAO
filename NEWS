@@ -7,26 +7,36 @@ USER VISIBLE CHANGES BETWEEN CIAO-1.3.8 and CIAO-1.3.9
 . Enhance logging in ciao core and dds4ccm in case exceptions
   occur
 
+. Upgraded ACE/TAO to 6.5.9/2.5.9
+
 USER VISIBLE CHANGES BETWEEN CIAO-1.3.7 and CIAO-1.3.8
 =======================================================
 
 . Minor fixes
+
+. Upgraded ACE/TAO to 6.5.5/2.5.5
 
 USER VISIBLE CHANGES BETWEEN CIAO-1.3.6 and CIAO-1.3.7
 =======================================================
 
 . Minor fixes
 
+. Upgraded ACE/TAO to 6.5.4/2.5.4
+
 USER VISIBLE CHANGES BETWEEN CIAO-1.3.5 and CIAO-1.3.6
 =======================================================
 
 . Doxygen changes
+
+. Upgraded ACE/TAO to 6.4.6/2.4.6
 
 USER VISIBLE CHANGES BETWEEN CIAO-1.3.4 and CIAO-1.3.5
 =======================================================
 
 . Fixed static initialization order issue when using
   DDS4CCM using RTI Connext DDS 5.2.3
+
+. Upgraded ACE/TAO to 6.4.4/2.4.4
 
 USER VISIBLE CHANGES BETWEEN CIAO-1.3.3 and CIAO-1.3.4
 =======================================================
@@ -36,6 +46,8 @@ USER VISIBLE CHANGES BETWEEN CIAO-1.3.3 and CIAO-1.3.4
 
 . CIAO is now a separate product with its own release
   schedule. It is not combined anymore with ACE/TAO
+
+. Upgraded ACE/TAO to 6.4.1/2.4.1
 
 USER VISIBLE CHANGES BETWEEN CIAO-1.3.2 and CIAO-1.3.3
 =======================================================
