@@ -4,6 +4,7 @@
 [![Coverity Scan](https://scan.coverity.com/projects/1/badge.svg)](https://scan.coverity.com/projects/1)
 [![Azure DevOps](https://dev.azure.com/docgroup/CIAO/_apis/build/status/DOCGroup.CIAO?branchName=master)](https://dev.azure.com/docgroup/CIAO/_build/latest?definitionId=2&branchName=master)
 [![CodeFactor](https://www.codefactor.io/repository/github/docgroup/ciao/badge)](https://www.codefactor.io/repository/github/docgroup/ciao)
+[![Linux CI](https://github.com/DOCGroup/CIAO/workflows/linux/badge.svg)](https://github.com/DOCGroup/CIAO/actions?query=workflow%3Alinux)
 
 # CIAO #
 
