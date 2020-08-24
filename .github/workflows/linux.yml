@@ -79,7 +79,7 @@ jobs:
       DOC_ROOT: ${{ github.workspace }}/ACE_TAO
       ACE_ROOT: ${{ github.workspace }}/ACE_TAO/ACE
       TAO_ROOT: ${{ github.workspace }}/ACE_TAO/TAO
-      MPC_ROOT: ${{ github.workspace }}/MPC
+      MPC_ROOT: ${{ github.workspace }}/ACE_TAO/MPC
       CIAO_ROOT: ${{ github.workspace }}
       DANCE_ROOT: ${{ github.workspace }}/DAnCE
       DDS_ROOT: ${{ github.workspace }}/OpenDDS
@@ -97,7 +97,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: DOCGroup/MPC
-        path: MPC
+        path: ACE_TAO/MPC
     - name: checkout DAnCE
       uses: actions/checkout@v2
       with:
