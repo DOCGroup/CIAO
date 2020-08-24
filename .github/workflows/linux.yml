@@ -136,7 +136,6 @@ jobs:
         'dds_suppress_anys=0' >> ${env:ACE_ROOT}/bin/MakeProjectCreator/config/default.features
         'xerces3=1' >> ${env:ACE_ROOT}/bin/MakeProjectCreator/config/default.features
         'ssl=1' >> ${env:ACE_ROOT}/bin/MakeProjectCreator/config/default.features
-        'versioned_namespace=1' >> ${env:ACE_ROOT}/bin/MakeProjectCreator/config/default.features
       shell: pwsh
     - name: Run mwc.pl on $(CIAO_ROOT)/CIAO_TAO_DAnCE_OpenDDS.mwc
       run: |
