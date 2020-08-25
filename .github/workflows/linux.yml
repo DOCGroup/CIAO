@@ -73,8 +73,22 @@ jobs:
             Repo: llvm-toolchain-$(lsb_release -cs)-10
             platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux_clang.GNU
             os: ubuntu-20.04
+          - feature: LwCCM
+            CC: gcc-10
+            CXX: g++-10
+            PackageDeps: g++-10
+            platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU
+            os: ubuntu-18.04
+            optional_feature: ccm_lw=1
+          - feature: NoEvent
+            CC: gcc-10
+            CXX: g++-10
+            PackageDeps: g++-10
+            platform_file: include $(ACE_ROOT)/include/makeinclude/platform_linux.GNU
+            os: ubuntu-18.04
+            optional_feature: ccm_noevent=1
     runs-on: ${{ matrix.os }}
-    name: ${{ matrix.os }} ${{ matrix.CXX }}
+    name: ${{ matrix.os }} ${{ matrix.CXX }} ${{ matrix.feature }}
     env:
       DOC_ROOT: ${{ github.workspace }}/ACE_TAO
       ACE_ROOT: ${{ github.workspace }}/ACE_TAO/ACE
@@ -127,6 +141,14 @@ jobs:
         'xerces3=1' >> ${env:ACE_ROOT}/include/makeinclude/platform_macros.GNU
         'ssl=1' >> ${env:ACE_ROOT}/include/makeinclude/platform_macros.GNU
         'dds4ccm_opendds=1' >> ${env:ACE_ROOT}/include/makeinclude/platform_macros.GNU
+      shell: pwsh
+    - name: add optional optional macros
+      run: |
+        '${{ matrix.optional_macros }}' >> ${env:ACE_ROOT}/include/makeinclude/platform_macros.GNU
+      shell: pwsh
+      if: matrix.optional_macros != ''
+    - name: extend $ACE_ROOT/include/makeinclude/platform_macros.GNU
+      run: |
         '${{ matrix.platform_file }}' >>  ${env:ACE_ROOT}/include/makeinclude/platform_macros.GNU
       shell: pwsh
     - name: create $ACE_ROOT/bin/MakeProjectCreator/config/default.features
@@ -136,6 +158,11 @@ jobs:
         'dds_suppress_anys=0' >> ${env:ACE_ROOT}/bin/MakeProjectCreator/config/default.features
         'xerces3=1' >> ${env:ACE_ROOT}/bin/MakeProjectCreator/config/default.features
         'ssl=1' >> ${env:ACE_ROOT}/bin/MakeProjectCreator/config/default.features
+      shell: pwsh
+    - name: add optional optional feature
+      run: |
+        '${{ matrix.optional_feature }}' >> ${env:ACE_ROOT}/bin/MakeProjectCreator/config/default.features
+      if: matrix.optional_feature != ''
       shell: pwsh
     - name: Run mwc.pl on $(CIAO_ROOT)/CIAO_TAO_DAnCE_OpenDDS.mwc
       run: |
