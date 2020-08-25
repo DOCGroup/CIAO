@@ -21,7 +21,7 @@ jobs:
       TAO_ROOT: ${{ github.workspace }}/ACE_TAO/TAO
       MPC_ROOT: ${{ github.workspace }}/ACE_TAO/MPC
       CIAO_ROOT: ${{ github.workspace }}
-      DANCE_ROO: ${{ github.workspace }}/DAnCE
+      DANCE_ROOT: ${{ github.workspace }}/DAnCE
     steps:
     - name: checkout ACE/TAO
       uses: actions/checkout@v2
