@@ -23,6 +23,8 @@ jobs:
       CIAO_ROOT: ${{ github.workspace }}
       DANCE_ROOT: ${{ github.workspace }}/DAnCE
     steps:
+    - name: checkout CIAO
+      uses: actions/checkout@v2
     - name: checkout ACE/TAO
       uses: actions/checkout@v2
       with:
