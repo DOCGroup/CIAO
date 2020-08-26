@@ -121,5 +121,7 @@ jobs:
       shell: pwsh
     - name: Setup msbuild
       uses: microsoft/setup-msbuild@v1.0.1
-    - name: Build solution CIAO_TAO_DAnCE/CIAO_TAO_DAnCE.sln
-      run: msbuild -maxcpucount -p:Platform=${{ matrix.BuildPlatform }} -p:Configuration=${{ matrix.BuildConfiguration }} CIAO_TAO_DAnCE.sln
+    - name: Build solution $(CIAO_ROOT)/CIAO_TAO_DAnCE.sln
+      run: |
+        msbuild -maxcpucount -p:Platform=${{ matrix.BuildPlatform }} -p:Configuration=${{ matrix.BuildConfiguration }} ${env:CIAO_ROOT}/CIAO_TAO_DAnCE.sln
+      shell: pwsh
