@@ -106,22 +106,22 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: DOCGroup/ACE_TAO
-        path: ACE_TAO
+        path: ${{ env.DOC_ROOT }}
     - name: checkout MPC
       uses: actions/checkout@v2
       with:
         repository: DOCGroup/MPC
-        path: ACE_TAO/MPC
+        path: ${{ env.MPC_ROOT }}
     - name: checkout DAnCE
       uses: actions/checkout@v2
       with:
         repository: DOCGroup/DAnCE
-        path: DAnCE
+        path: ${{ env.DANCE_ROOT }}
     - name: checkout OpenDDS
       uses: actions/checkout@v2
       with:
         repository: objectcomputing/OpenDDS
-        path: OpenDDS
+        path: ${{ env.DDS_ROOT }}
     - name: Add Repo
       run: |
         wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
