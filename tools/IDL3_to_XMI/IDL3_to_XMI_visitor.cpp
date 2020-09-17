@@ -1124,7 +1124,7 @@ namespace DAnCE
           if (node->field_type ()->node_type () == AST_Decl::NT_sequence)
             {
               AST_Sequence* sequence =
-                AST_Sequence::narrow_from_decl (node->field_type ());
+                dynamic_cast<AST_Sequence*> (node->field_type ());
               sequence->ast_accept (this);
               // There is no need to proceed any further.
               return 0;
@@ -1132,7 +1132,7 @@ namespace DAnCE
           else if (node->field_type ()->node_type () == AST_Decl::NT_array)
             {
               AST_Array* array =
-                AST_Array::narrow_from_decl (node->field_type ());
+                dynamic_cast<AST_Array*> (node->field_type ());
               array->ast_accept (this);
               // There is no need to proceed any further.
               return 0;
@@ -1454,7 +1454,7 @@ namespace DAnCE
 
           if (this->union_disc_->node_type () == AST_Decl::NT_typedef)
             {
-              AST_Typedef *td (AST_Typedef::narrow_from_decl (this->union_disc_));
+              AST_Typedef *td (dynamic_cast<AST_Typedef*> (this->union_disc_));
               type = td->base_type ()->node_type ();
             }
             else type = ev->et;*/
@@ -1488,7 +1488,7 @@ namespace DAnCE
         {
           AST_Enum *desc (0);
 
-          if ((desc = AST_Enum::narrow_from_decl (this->union_disc_)) == 0)
+          if ((desc = dynamic_cast<AST_Enum*> (this->union_disc_)) == 0)
             {
               throw Error ("Descriminator type is not an enum");
             }
@@ -1501,7 +1501,7 @@ namespace DAnCE
               throw Error ("Couldn't look up enum name");
             }
 
-          AST_EnumVal *ev = AST_EnumVal::narrow_from_decl (ev_decl);
+          AST_EnumVal *ev = dynamic_cast<AST_EnumVal*> (ev_decl);
 
           if (ev == 0)
             {
@@ -1969,7 +1969,7 @@ namespace DAnCE
               this->gen_common_elements (node, LITERALS[ST_SEQ]);
 
               AST_Sequence* sequence =
-                AST_Sequence::narrow_from_decl (base);
+                dynamic_cast<AST_Sequence*> (base);
               this->gen_sequence_associations (node, sequence);
             }
           else if (base->node_type () == AST_Decl::NT_array)
@@ -1977,7 +1977,7 @@ namespace DAnCE
               this->gen_common_elements (node, LITERALS[ST_ARR]);
 
               AST_Array* array =
-                AST_Array::narrow_from_decl (base);
+                dynamic_cast<AST_Array*> (base);
               this->gen_array_associations (node, array);
             }
           else
@@ -2408,7 +2408,7 @@ namespace DAnCE
           return this->lookup_xid (LITERALS[ST_WSTR]);
 
         case AST_Decl::NT_pre_defined:
-          pdt = AST_PredefinedType::narrow_from_decl (node);
+          pdt = dynamic_cast<AST_PredefinedType*> (node);
 
           switch (pdt->pt ())
             {
@@ -2544,7 +2544,7 @@ namespace DAnCE
     {
       if (port_node->node_type () == AST_Decl::NT_uses)
         {
-          AST_Uses *u = AST_Uses::narrow_from_decl (port_node);
+          AST_Uses *u = dynamic_cast<AST_Uses*> (port_node);
 
           if (u->is_multiple ())
             {

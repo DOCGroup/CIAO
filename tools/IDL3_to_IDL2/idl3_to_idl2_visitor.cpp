@@ -856,7 +856,7 @@ idl3_to_idl2_visitor::visit_porttype_scope_mirror (
           case AST_Decl::NT_provides:
             {
               AST_Provides *p =
-                AST_Provides::narrow_from_decl (d);
+                dynamic_cast<AST_Provides*> (d);
 
               AST_Uses mirror_node (p->name (),
                                     p->provides_type (),
@@ -877,7 +877,7 @@ idl3_to_idl2_visitor::visit_porttype_scope_mirror (
           case AST_Decl::NT_uses:
             {
               AST_Uses *u =
-                AST_Uses::narrow_from_decl (d);
+                dynamic_cast<AST_Uses*> (d);
 
               AST_Provides mirror_node (u->name (),
                                         u->uses_type ());

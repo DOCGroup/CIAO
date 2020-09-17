@@ -394,7 +394,7 @@ namespace DAnCE
         {
           AST_Type *t = node->inherits_concrete ();
           AST_ValueType *v =
-            AST_ValueType::narrow_from_decl (t);
+            dynamic_cast<AST_ValueType*> (t);
 
           if (v != 0)
             {
