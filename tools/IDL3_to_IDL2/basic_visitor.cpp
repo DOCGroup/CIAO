@@ -75,7 +75,7 @@ basic_visitor::visit_scope (UTL_Scope *node)
       /// it need. So we just generate the struct and sequence
       /// typedef literally as well, just before generating the
       /// operation.
-      if (AST_Component::narrow_from_scope (node) != 0
+      if (dynamic_cast<AST_Component*> (node) != 0
           && (nt == AST_Decl::NT_struct
               || nt == AST_Decl::NT_sequence
               || nt == AST_Decl::NT_typedef))
@@ -462,7 +462,7 @@ basic_visitor::visit_enum (AST_Enum *node)
     {
       *os << be_nl;
 
-      AST_EnumVal *ev = AST_EnumVal::narrow_from_decl (i.item ());
+      AST_EnumVal *ev = dynamic_cast<AST_EnumVal*> (i.item ());
 
       *os << IdentifierHelper::try_escape (ev->original_local_name ()).c_str ();
 
@@ -903,7 +903,7 @@ basic_visitor::type_name (AST_Type *t)
         (void) t->ast_accept (this);
         return "";
       case AST_Decl::NT_pre_defined:
-        pdt = AST_PredefinedType::narrow_from_decl (t);
+        pdt = dynamic_cast<AST_PredefinedType*> (t);
 
         switch (pdt->pt ())
           {
@@ -954,7 +954,7 @@ void
 basic_visitor::gen_anonymous_array (AST_Type *a,
                                     AST_Decl *wrapper)
 {
-  AST_Array *array = AST_Array::narrow_from_decl (a);
+  AST_Array *array = dynamic_cast<AST_Array*> (a);
   AST_Type *bt = array->base_type ();
 
   *os << this->type_name (bt);
@@ -1177,7 +1177,7 @@ basic_visitor::can_skip_module (AST_Module *m)
 
             return false;
           case AST_Decl::NT_module:
-            if (!this->can_skip_module (AST_Module::narrow_from_decl (d)))
+            if (!this->can_skip_module (dynamic_cast<AST_Module*> (d)))
               {
                 return false;
               }

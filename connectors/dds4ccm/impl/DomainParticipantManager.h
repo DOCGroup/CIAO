@@ -49,7 +49,6 @@ namespace CIAO
      *
      * This class maintains a reference count. It's save to remove
      * a topic once the reference count becomes one.
-     *
      */
     class DDSParticipantTopic
     {
@@ -124,7 +123,7 @@ namespace CIAO
       TAO_SYNCH_MUTEX dps_mutex_;
 
       typedef std::pair <std::string, DDS::DomainId_t> IdQosProfile;
-      typedef std::map < IdQosProfile, DDSParticipantTopic *> DomainParticipants;
+      typedef std::map <IdQosProfile, DDSParticipantTopic *> DomainParticipants;
       DomainParticipants dps_;
 
       typedef DomainParticipants::iterator DomainParticipants_iterator;
