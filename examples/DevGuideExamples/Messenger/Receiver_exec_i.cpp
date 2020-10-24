@@ -15,7 +15,7 @@
 //       http://www.isis.vanderbilt.edu/
 //
 // Information about CIAO is available at:
-//    http://www.dre.vanderbilt.edu/CIAO
+//    https://www.dre.vanderbilt.edu/CIAO
 
 #include "Receiver_exec_i.h"
 

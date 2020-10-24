@@ -2,7 +2,7 @@
 
 <!-- If this file is moved to a different directory, make sure to change the
      path to the DTD below. Otherwise the examples won't work. -->
-<!DOCTYPE componentassembly SYSTEM "http://www.dre.vanderbilt.edu/CIAO/DTD/componentassembly.dtd">
+<!DOCTYPE componentassembly SYSTEM "https://www.dre.vanderbilt.edu/CIAO/DTD/componentassembly.dtd">
 <componentassembly id="Multi-client Component Scalability test">
   <componentfiles>
     <componentfile id="com-RoundTrip">
