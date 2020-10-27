@@ -1,0 +1,552 @@
+commit bc75740d5f835fe30c2f1de33d11a09c8e73686c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 27 13:16:55 2020 +0100
+
+    Update VERSION
+
+commit df3eb301931dd3a6ca4e3a5f214d407b83b1557c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 27 13:16:33 2020 +0100
+
+    Update Version.h
+
+commit 50b15bb2f64eaa8064d4dba83ab61d791fb70b4e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 27 13:16:10 2020 +0100
+
+    Update PROBLEM-REPORT-FORM
+
+commit 8b4d0a14d7f1c685bbaf7c1127248899fd1efcee
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 27 13:15:47 2020 +0100
+
+    Delete CIAO-1_3_10
+
+commit 50d31137160927f39876e5a3454da4c0fca8c480
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Oct 27 13:12:04 2020 +0100
+
+    CIAO-1_3_10
+
+commit 31ec027fe3ac5474ca9b44118e157d7d957f64e7
+Merge: 3296739b4d5 ed8b03e36e5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 24 12:47:54 2020 +0200
+
+    Merge pull request #140 from jwillemsen/jwi-doxygenup
+    
+    Update NEWS file, use https for links, run CI builds earlier
+
+commit ed8b03e36e50a780bb329d56369ade522226642a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 24 10:45:16 2020 +0200
+
+    Use https links instead of http
+    
+        * CIAO-INSTALL.html:
+        * docs/releasenotes/index.html:
+        * examples/DevGuideExamples/Messenger/Administrator_exec_i.cpp:
+        * examples/DevGuideExamples/Messenger/Administrator_exec_i.h:
+        * examples/DevGuideExamples/Messenger/History_exec_i.cpp:
+        * examples/DevGuideExamples/Messenger/History_exec_i.h:
+        * examples/DevGuideExamples/Messenger/Messenger_exec_i.cpp:
+        * examples/DevGuideExamples/Messenger/Messenger_exec_i.h:
+        * examples/DevGuideExamples/Messenger/Publication_exec_i.cpp:
+        * examples/DevGuideExamples/Messenger/Publication_exec_i.h:
+        * examples/DevGuideExamples/Messenger/Receiver_exec_i.cpp:
+        * examples/DevGuideExamples/Messenger/Receiver_exec_i.h:
+        * examples/DevGuideExamples/Messenger/Runnable_exec_i.cpp:
+        * examples/DevGuideExamples/Messenger/Runnable_exec_i.h:
+        * examples/Hello_Event/step-by-step.html:
+        * performance-tests/Benchmark/descriptors/Benchmark.cad:
+        * performance-tests/Benchmark/descriptors/Multi_Threaded.cad:
+        * performance-tests/Benchmark/descriptors/RoundTripClient.cad:
+        * performance-tests/Benchmark/descriptors/Test-IOR.cad:
+
+commit f65c4ab5c0b09aede99e774a04f7a7511c456b53
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 24 10:45:04 2020 +0200
+
+    List changes
+    
+        * NEWS:
+
+commit 8abbb24964a713928773ab9d5b05dd4c0a26c687
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat Oct 24 10:44:49 2020 +0200
+
+    Run jobs earlier
+    
+        * .github/workflows/fuzz.yml:
+        * .github/workflows/linux.yml:
+        * .github/workflows/macosx.yml:
+        * .github/workflows/windows.yml:
+
+commit 3296739b4d5fb9b9c16d887f00170707531a8a35
+Merge: 6758cf80e1b 2e5f993d0a3
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Oct 12 15:03:32 2020 +0200
+
+    Merge pull request #139 from jwillemsen/jwillemsen-patch-1
+    
+    Change to use microsoft/setup-msbuild@v1
+
+commit 2e5f993d0a3f620ce47b672b707be5e7a7eb461f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Oct 12 14:09:14 2020 +0200
+
+    Change to use microsoft/setup-msbuild@v1
+
+commit 6758cf80e1b73329451c7752fa899b368f16cd11
+Merge: e8c14752657 522ae7a8f92
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Oct 12 10:22:09 2020 +0200
+
+    Merge pull request #138 from jwillemsen/jwillemsen-patch-1
+    
+    Upgrade to lukka/run-vcpkg@v4
+
+commit 522ae7a8f92501a3762a36fae06a10648095e2e5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Oct 12 09:16:58 2020 +0200
+
+    Upgrade to lukka/run-vcpkg@v4
+
+commit e8c14752657fed6fe7f45496041a7b099953dd00
+Merge: 525af6fd7a9 ee298165b90
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Oct 5 13:09:55 2020 +0200
+
+    Merge pull request #137 from jwillemsen/jwi-doxygenup
+    
+    Upgrade to latest doxygen
+
+commit ee298165b904b573084420b4e801aac330160066
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Oct 5 12:09:45 2020 +0200
+
+    Upgrade to latest doxygen
+
+commit 525af6fd7a97ce87319fe7f409ffe6bcb9d1e8ab
+Merge: d35d4d029c5 682cd96f340
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Oct 2 18:15:39 2020 +0200
+
+    Merge pull request #136 from jwillemsen/jwi-pythonshebang
+    
+    Python shebang changes
+
+commit 682cd96f340986d96c29d115d9f7dc08d2238404
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri Oct 2 16:49:58 2020 +0200
+
+    Python shebang changes
+    
+        * bin/make_release.py:
+        * connectors/dds4ccm/examples/Large_Deployment/descriptors/generate_large_plan.py:
+
+commit d35d4d029c5404e1b9498078c765769c3ba2290e
+Merge: 47a7d3d1760 71fceec5d8f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 17 14:54:17 2020 +0200
+
+    Merge pull request #135 from jwillemsen/jwi-narrowdynamiccast
+    
+    Use dynamic_cast instead of narrow
+
+commit 71fceec5d8f44e567b4fb32e91cf065f32f914f7
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 17 13:37:47 2020 +0200
+
+    Use dynamic_cast instead of narrow
+    
+        * connectors/dds4ccm/impl/DomainParticipantManager.h:
+        * tools/IDL3_to_IDL2/basic_visitor.cpp:
+        * tools/IDL3_to_IDL2/be_produce.cpp:
+        * tools/IDL3_to_IDL2/idl3_to_idl2_visitor.cpp:
+        * tools/IDL3_to_XMI/IDL3_to_XMI_visitor.cpp:
+        * tools/IDL3_to_XMI/IR_Simulator_visitor.cpp:
+        * tools/IDL3_to_XMI/be_produce.cpp:
+
+commit 47a7d3d1760f4edc149fdc556b4f809230437238
+Merge: d86bf206334 776d7a118a4
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 3 20:45:49 2020 +0200
+
+    Merge pull request #134 from DOCGroup/jwillemsen-patch-1
+    
+    Upgrade to vcpkg 2020.07 release
+
+commit 776d7a118a4533cdf2fb781bd56c9a8836a59c5b
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu Sep 3 18:56:40 2020 +0200
+
+    Upgrade to vcpkg 2020.07 release
+
+commit d86bf206334705bbbba248e919e1a353749c5e4f
+Merge: ca729c34442 f1942503aa9
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 26 13:46:18 2020 +0200
+
+    Merge pull request #133 from jwillemsen/jwi-windowsgithubaction
+    
+    Use environment variables for checkout paths
+
+commit f1942503aa9dc4c8a806de630eece32d024db169
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 26 12:55:43 2020 +0200
+
+    Use environment variables for checkout paths
+    
+        * .github/workflows/linux.yml:
+        * .github/workflows/macosx.yml:
+        * .github/workflows/windows.yml:
+
+commit ca729c34442940841d4e2acd190218a9b62a3d77
+Merge: e8b7bd9ad9d 0ed1df50b14
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 26 10:44:50 2020 +0200
+
+    Merge pull request #132 from jwillemsen/jwi-windowsgithubaction
+    
+    Replace azure pipelines with github actions for Windows CI
+
+commit 0ed1df50b1418724f79c43f799bcfa6ec7650dd0
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 26 09:02:37 2020 +0200
+
+    Fix MPC location
+    
+        * .github/workflows/windows.yml:
+
+commit 598d12611e9660cf12c16e2faa9ddc67ddb71e1f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 26 08:47:42 2020 +0200
+
+    Use CIAO_ROOT environment variable
+    
+        * .github/workflows/windows.yml:
+
+commit 941462c343c065659e914c00f22fd3a34b93117e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Aug 26 08:43:27 2020 +0200
+
+    Replace azure pipelines with github actions for Windows CI
+    
+        * azure-pipelines.yml:
+          Deleted.
+    
+        * .github/workflows/windows.yml:
+          Added.
+    
+        * README.md:
+
+commit e8b7bd9ad9db9855415082fb29653d8e41f8ecac
+Merge: 5fc84c78106 8050fbe5027
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Aug 25 13:26:00 2020 +0200
+
+    Merge pull request #131 from jwillemsen/jwi-githubactionfeatures
+    
+    Moved LwCCM and NoEvent configurations from travis-ci to github actions
+
+commit 5fc84c7810639417a0cfd11341b6afe609d07d3a
+Merge: dfcf6766ca4 bbcf77c48f1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Aug 25 09:48:56 2020 +0200
+
+    Merge pull request #130 from jwillemsen/jwi-githubactionsmacosx
+    
+    Move MacOSX CI builds from azure pipelines to github actions
+
+commit 8050fbe502744321db7f114ff806733cccb10d1d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Aug 25 08:23:30 2020 +0200
+
+    Removed travis-ci badge
+    
+        * README.md:
+
+commit dd514508a13007118b58ebb5df70b53e97ab522d
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Aug 25 08:23:04 2020 +0200
+
+    Moved LwCCM and CCM NoEvent configurations from travis to github actions
+    
+        * .travis.yml:
+          Deleted.
+    
+        * .github/workflows/linux.yml:
+
+commit bbcf77c48f132fb9b8aaced29138c6b343b23ffd
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Aug 25 08:16:03 2020 +0200
+
+    Checkout CIAO
+    
+        * .github/workflows/macosx.yml:
+
+commit 5623f973f6fa25caf1e4c16a9bd126ef11ba344b
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Aug 25 08:11:08 2020 +0200
+
+    Fixed typo
+    
+        * .github/workflows/macosx.yml:
+
+commit 49eff4a8d4e5fcdc7995d5d94104cac58c5f0534
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Aug 25 08:03:16 2020 +0200
+
+    Set name
+    
+        * .github/workflows/macosx.yml:
+
+commit 1169fe6a2216241cdae8cda05d065ec7616eec44
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Tue Aug 25 08:01:29 2020 +0200
+
+    Move MacOSX CI builds from azure pipelines to github actions
+    
+        * .github/workflows/macosx.yml:
+          Added.
+    
+        * README.md:
+        * azure-pipelines.yml:
+
+commit dfcf6766ca4f8d81122b4d18cd6c53b4211d79c0
+Merge: 49981de7f2c b6cbf4f6e97
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Aug 24 12:32:31 2020 +0200
+
+    Merge pull request #129 from jwillemsen/jwi-githubactions
+    
+    Move linux CI from azure to github actions
+
+commit b6cbf4f6e970d2115bd1ca6bd49cebeb1566e881
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Aug 24 11:21:15 2020 +0200
+
+    versioned namespaces doesn't seem to work correctly yet
+    
+        * .github/workflows/linux.yml:
+
+commit 2efe705f27521507c136f96ed0915b124d338d1c
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Aug 24 10:50:15 2020 +0200
+
+    Corrected MPC path
+    
+        * .github/workflows/linux.yml:
+
+commit 85fc1df8d15c1d1c284f2b9f68ae149ccc04f0fe
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Aug 24 10:46:42 2020 +0200
+
+    Move linux CI from azure to github actions
+    
+        * .github/workflows/linux.yml:
+          Added.
+    
+        * README.md:
+        * azure-pipelines.yml:
+
+commit 49981de7f2c135ebbf7a820677638891124e3072
+Merge: 030fc414987 bf340bfe537
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jul 1 11:13:49 2020 +0200
+
+    Merge pull request #128 from jwillemsen/jwi-doxygen2
+    
+    Upgrade all doxygen files
+
+commit bf340bfe53718c00748e88aeff0a1e39c0b75e96
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jul 1 10:39:38 2020 +0200
+
+    Upgrade all doxygen files
+
+commit 030fc4149877de4923b4d83fda82abb85c14b93b
+Merge: c70709580d6 09857fd671f
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Jun 22 16:25:25 2020 +0200
+
+    Merge pull request #127 from jwillemsen/master
+    
+    List which ACE/TAO release we are dependent on
+
+commit 09857fd671ff9efd7b8fa95ed4483a0a6c54a3a5
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon Jun 22 14:27:26 2020 +0200
+
+    List which ACE/TAO release we are dependent on
+    
+        * NEWS:
+
+commit c70709580d6c726ec2f0efeb7fd92cc51c2b44fb
+Merge: 11f3907570f 927140f7d98
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 3 18:47:09 2020 +0200
+
+    Merge pull request #126 from jwillemsen/jwi-idl3toidl2noevent
+    
+    Reworked IDL3/ImpliedIDL/All to also work with ccm_noevent
+
+commit 927140f7d98872dc0595092d37b50111363fc17e
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 3 17:01:51 2020 +0200
+
+    Removed empty lines
+    
+        * tests/IDL3/Lookup/README:
+
+commit 0632dcabf7dde7380e624eff1528e6738728b786
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 3 17:01:36 2020 +0200
+
+    Generate https links
+    
+        * tools/IDL3_to_IDL2/be_helper.cpp:
+
+commit d0dc243bb9e38b7a081f92288040cd65c8fff991
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 3 16:16:06 2020 +0200
+
+    Add ifdef for ccm_noevent
+    
+        * tests/IDL3/ImpliedIDL/All/convert.idl:
+        * tests/IDL3/ImpliedIDL/All/keyword_clash.idl:
+
+commit 81ef9b56d69fa4f1b05d375314e39d9710ab0a2a
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 3 16:15:48 2020 +0200
+
+    This test now works with ccm_noevent enabled
+    
+        * tests/IDL3/ImpliedIDL/All/all.mpc:
+
+commit 5c3a6812e014953358a247c8fa3b6026568f55e8
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 3 16:15:32 2020 +0200
+
+    Add support for ccm_noevent feature
+    
+        * MPC/config/taoidl3toid2_ccm_lw.mpb:
+
+commit bce4d5c94aa2c5b173dd633e8a5cccd8f1d44e42
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 3 16:15:15 2020 +0200
+
+    Don't generate old Id tag
+    
+        * tools/IDL3_to_IDL2/be_helper.cpp:
+        * tools/IDL3_to_XMI/be_helper.cpp:
+
+commit 11f3907570f6d79b8450b3ff4e87faab4c6b25e7
+Merge: 6d69b0601d4 86af745ae93
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 3 15:03:15 2020 +0200
+
+    Merge pull request #125 from jwillemsen/master
+    
+    Fixed typos
+
+commit 86af745ae930e37cd66f8cff78279af7682788f1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed Jun 3 12:34:38 2020 +0200
+
+    Fixed typos
+    
+        * examples/Hello_Event/step-by-step.html:
+        * tests/IDL3/ImpliedIDL/All/README:
+
+commit 6d69b0601d42a00e15d4fe9f34f18e9ecce14719
+Merge: b59374b556a 0c16fd25db4
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed May 13 16:02:44 2020 +0200
+
+    Merge pull request #124 from jwillemsen/jwi-nocpp11
+    
+    Upgrade to checkout v2
+
+commit 0c16fd25db4b2fbd2aa4f12344d8dc704bd7c2a9
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed May 13 13:00:09 2020 +0200
+
+    Upgrade to checkout v2
+    
+        * .github/workflows/fuzz.yml:
+
+commit b59374b556a6ab94369b1d9e6ddff145043a20fd
+Merge: 6d5ddc82402 86a5ff937ae
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon May 11 16:23:39 2020 +0200
+
+    Merge pull request #123 from jwillemsen/jwi-nocpp11
+    
+    Use the compile default c++ compliance level
+
+commit 86a5ff937aef8c1b1feaafdc70fcdc7ee9144246
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon May 11 14:00:19 2020 +0200
+
+    Change image to a variable in order to run gcc48 and clang5 on ubuntu1604
+    
+        * azure-pipelines.yml:
+
+commit 77c5c44ae3c2a36dd29e91294cb2ce7408099417
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Mon May 11 12:08:34 2020 +0200
+
+    Use the compile default c++ compliance level
+
+commit 6d5ddc82402f7c07187e8e901eaede1b7e00a3bd
+Merge: d453620b3da b68ceb48d30
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat May 9 15:03:28 2020 +0200
+
+    Merge pull request #122 from jwillemsen/jwi-azureci-gcc10
+    
+    Add gcc10 to CI
+
+commit b68ceb48d3060a1e856a369d13bcf0ac991dc0f1
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Sat May 9 09:46:02 2020 +0200
+
+    Add gcc10 to CI
+
+commit d453620b3da86cce83131b5f868531320a947868
+Merge: 19aaa77433d 864e1881596
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Fri May 8 11:03:05 2020 +0200
+
+    Merge pull request #121 from jwillemsen/master
+    
+    Update various links and point to github issues
+
+commit 864e1881596ad586b394b8fcbaa512ff0dbc3aed
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Thu May 7 14:20:20 2020 +0200
+
+    Update various links and point to github issues
+    
+        * COPYING:
+        * PROBLEM-REPORT-FORM:
+        * README.md:
+
+commit 19aaa77433d4132009b00cd41b40825a80380fff
+Merge: 4a64a2f57c1 3e45b379706
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed May 6 11:18:08 2020 +0200
+
+    Merge pull request #120 from jwillemsen/master
+    
+    Prepare for next release
+
+commit 3e45b379706586f331470c8593da2d16ce064fd8
+Author: Johnny Willemsen <jwillemsen@remedy.nl>
+Date:   Wed May 6 11:16:47 2020 +0200
+
+    Prepare for next release
+    
+        * NEWS:
