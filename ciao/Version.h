@@ -4,7 +4,7 @@
 
 #define CIAO_MAJOR_VERSION 1
 #define CIAO_MINOR_VERSION 3
-#define CIAO_MICRO_VERSION 9
-#define CIAO_VERSION "1.3.9"
-#define CIAO_VERSION_CODE 66313
+#define CIAO_MICRO_VERSION 10
+#define CIAO_VERSION "1.3.10"
+#define CIAO_VERSION_CODE 66314
 #define CIAO_MAKE_VERSION_CODE(a,b,c) (((a) << 16) + ((b) << 8) + (c))
