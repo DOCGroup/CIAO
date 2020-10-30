@@ -1,6 +1,5 @@
 [![Lastest release](https://img.shields.io/github/release/docgroup/ciao.svg)](https://github.com/DOCGroup/CIAO/releases/latest)
 [![Codacy](https://api.codacy.com/project/badge/Grade/4eecebd660844fee89b09f68a7f4de1d)](https://www.codacy.com/app/DOCGroup/CIAO?utm_source=github.com&utm_medium=referral&utm_content=DOCGroup/CIAO&utm_campaign=badger)
-[![Coverity Scan](https://scan.coverity.com/projects/1/badge.svg)](https://scan.coverity.com/projects/1)
 [![CodeFactor](https://www.codefactor.io/repository/github/docgroup/ciao/badge)](https://www.codefactor.io/repository/github/docgroup/ciao)
 [![Linux CI](https://github.com/DOCGroup/CIAO/workflows/linux/badge.svg)](https://github.com/DOCGroup/CIAO/actions?query=workflow%3Alinux)
 [![MacOSX CI](https://github.com/DOCGroup/CIAO/workflows/macosx/badge.svg)](https://github.com/DOCGroup/CIAO/actions?query=workflow%3Amacosx)
